@@ -9,6 +9,9 @@ use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 
 class AuthController extends Controller
 {
+    // Use Username
+    protected $username = 'username';
+
     /*
     |--------------------------------------------------------------------------
     | Registration & Login Controller
