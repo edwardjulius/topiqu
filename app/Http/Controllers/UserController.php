@@ -15,6 +15,7 @@ class UserController extends Controller
      */
     public function showProfile($username)
     {
-        return "test only";
+        $currentUser = App\User::where('username', '=', $username)->firstOrFail();
+        return "test only " + $currentUser.username;
     }
 }
