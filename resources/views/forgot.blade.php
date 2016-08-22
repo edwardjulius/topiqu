@@ -1,7 +1,7 @@
 @extends('master')
 @section('content')
 <style>
-	.form-login {width: 90%; max-width: 400px; margin: auto; padding-top:15px;}
+	.form-login {width: 90%; max-width: 400px; margin: auto; padding-top:20px;}
 	.input-group {padding: 2px;}
 </style>
 <form class="form-login" method="post">
