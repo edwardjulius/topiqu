@@ -39,6 +39,7 @@
             <div class="navbar-header pull-right">
                 <div class="btn-group navbar-btn" role="group">
                 @if(Auth::check())
+                    <a href="/user/{{Auth::user()->username}}" class="btn btn-default">My Profile</a>
                     <a href="/logout/" class="btn btn-default">Logout</a>
                 @else
                     <a href="/login/" class="btn btn-default">Masuk</a>
