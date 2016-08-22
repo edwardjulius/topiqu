@@ -49,6 +49,7 @@
          </nav>
          <div class="container">
             @yield('content')
+            <hr>
             <center>
             Copyright 2016, PT Topiqu Prima Multimedia.
             </center>

@@ -36,5 +36,7 @@ Route::get('/forgot', function () {
     return view('forgot');
 });
 
-// topiqu.com/user/{User.username}
-Route::get('user/{username}', 'UserController@showProfile');
+// Authenticated Users Routes
+Route::group(['middleware' => 'auth'], function () {
+    Route::get('user/{username}', 'UserController@showProfile');
+});
