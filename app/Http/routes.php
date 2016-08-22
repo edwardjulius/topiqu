@@ -35,3 +35,10 @@ Route::get('logout', 'Auth\AuthController@logout');
 Route::get('/forgot', function () {
     return view('forgot');
 });
+
+// topiqu.com/user/{User.username}
+Route::get('/user/{username}', function($username))
+{
+	$currentUser = User::where('username', '=', $username);
+	return 'Hello ';
+});
