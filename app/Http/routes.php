@@ -37,7 +37,7 @@ Route::get('/forgot', function () {
 });
 
 // topiqu.com/user/{User.username}
-Route::get('/user/{username}', function($username)) {
+Route::get('/user/{username}', function($username) {
 	$currentUser = User::where('username', '=', $username);
 	return 'Hello ';
 });
