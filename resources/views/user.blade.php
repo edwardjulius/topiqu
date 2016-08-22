@@ -1,6 +1,6 @@
 @extends('master')
 @section('content')
-
+@if($currentUser!=null)
 <div class="container">
 	<div class="row">
 		<div class="col-md-offset-2 col-md-8 col-lg-offset-3 col-lg-6">
@@ -48,5 +48,7 @@
 		</div>
 	</div>
 </div>
-
+@else
+<div class="alert alert-danger" role="alert"><b>Error!</b> No such user match our records. Click <a href="/">here</a> to go back to the homepage.</div>
+@endif
 @endsection
