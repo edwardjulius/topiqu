@@ -1,7 +1,7 @@
 @extends('master')
 @section('content')
 <style>
-	.form-register {width: 90%; max-width: 400px; margin:auto; padding-top:20px;}
+	.form-register {width: 90%; max-width: 400px; margin:auto; padding-top:25px;}
 	.input-group {padding: 2px;}
 	label{font-weight: normal;}
 </style>
