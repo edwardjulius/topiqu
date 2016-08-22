@@ -37,4 +37,4 @@ Route::get('/forgot', function () {
 });
 
 // topiqu.com/user/{User.username}
-Route::get('user/{id}', 'UserController@showProfile');
+Route::get('user/{username}', 'UserController@showProfile');

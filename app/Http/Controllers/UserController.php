@@ -13,8 +13,8 @@ class UserController extends Controller
      * @param  int  $id
      * @return Response
      */
-    public function showProfile($id)
+    public function showProfile($username)
     {
-        return view('user.profile', ['user' => User::findOrFail($id)]);
+        return "test only";
     }
 }
