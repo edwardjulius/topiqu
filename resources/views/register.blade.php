@@ -30,11 +30,11 @@
 			</div>
 			<div class="input-group">
 				  <span class="input-group-addon" id="password"><span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span></span>
-			      <input type="password" class="form-control" placeholder="Password" required="true" name="password">
+			      <input type="password" class="form-control" placeholder="Password" required="true" name="password" id="password">
 			</div>
 			<div class="input-group">
 				  <span class="input-group-addon" id="confirm-password"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span></span>
-			      <input type="password" class="form-control" placeholder="Confirm Password" required="true" name="confirm-password">
+			      <input type="password" class="form-control" placeholder="Confirm Password" required="true" name="confirm-password" id="confirm_password">
 			</div>
 			<div class="input-group">
 				<div class="input-group-addon">
@@ -56,7 +56,7 @@
 			</div>
 			</center>
 
-			<button class="btn btn-lg btn-primary btn-block" type="submit">Daftar</button>
+			<button class="btn btn-lg btn-primary btn-block" type="submit" onclick="confirmPasswordValidation()">Daftar</button>
 		</div>
 	</div>
 </form>
@@ -78,6 +78,21 @@
     	autoclose: true,
     });
   });
+</script>
+
+<script>
+function confirmPasswordValidation(){}
+	var confirm_password = document.getElementById("confirm_password").value;
+	var password = document.getElementById("password").value;
+	if(document.getElementById("password").value != confirm_password.value)
+	{
+    	confirm_password.setCustomValidity("Please enter the same password.");
+    }
+	else
+	{
+  		confirm_password.setCustomValidity("");
+  	}
+}
 </script>
 
 @endsection
