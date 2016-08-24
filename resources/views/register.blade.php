@@ -6,11 +6,11 @@
 	label{font-weight: normal;}
 </style>
 @if(count($errors))
-    <ul>
-        @foreach($errors->all() as $error)
-            <li>{{ $error }}</li>
-        @endforeach
-    </ul>
+	<div class="alert alert-danger" role="alert"> 
+    @foreach($errors->all() as $error)
+        <b>Error!</b> {{ $error }} <br>
+    @endforeach
+    </div>
 @endif
 <form class="form-register" role="form" method="POST" action="{{ url('/register') }}">
 {{ csrf_field() }}

@@ -6,10 +6,9 @@
 	label{font-weight: normal;}
 </style>
 @if(count($errors))
-	<div class="alert alert-danger" role="alert">
-	<b>Error!</b> 
+	<div class="alert alert-danger" role="alert"> 
     @foreach($errors->all() as $error)
-        {{ $error }}
+        <b>Error!</b> {{ $error }} <br>
     @endforeach
     </div>
 @endif
