@@ -18,19 +18,19 @@
 	  <div class="panel-body">
 			<div class="input-group">
 			  <span class="input-group-addon" id="username"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></span>
-			  <input type="text" class="form-control" placeholder="Username" required="true" name="username">
+			  <input type="text" class="form-control" placeholder="Username" required="true" name="username" pattern="[A-Za-z0-9_-]{6,32}" title="A-Z, 0-9, '_', and '-' characters only. Must be 6-32 characters.">
 			</div>
 			<div class="input-group">
 			  <span class="input-group-addon" id="fullname"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></span>
-			  <input type="text" class="form-control" placeholder="Full Name" required="true" name="fullname">
+			  <input type="text" class="form-control" placeholder="Full Name" required="true" name="fullname" pattern="[a-zA-Z0-9]+[a-zA-Z0-9 ]+" title="Must contain at least 2 characters">
 			</div>
 			<div class="input-group">
 			  <span class="input-group-addon" id="email"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span></span>
-			  <input type="email" class="form-control" placeholder="Email Address" required="true" name="email">
+			  <input type="email" class="form-control" placeholder="Email Address" required="true" name="email" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,64}$" title="Please enter a valid email address.">
 			</div>
 			<div class="input-group">
 				  <span class="input-group-addon" id="password"><span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span></span>
-			      <input type="password" class="form-control" placeholder="Password" required="true" name="password" id="password">
+			      <input type="password" class="form-control" placeholder="Password" required="true" name="password" id="password" pattern=".{6,32}" title="Must contain 6-32 characters.">
 			</div>
 			<div class="input-group">
 				  <span class="input-group-addon" id="confirm-password"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span></span>
@@ -56,7 +56,7 @@
 			</div>
 			</center>
 
-			<button class="btn btn-lg btn-primary btn-block" type="submit" onclick="confirmPasswordValidation()">Daftar</button>
+			<button class="btn btn-lg btn-primary btn-block" type="submit" onclick="validateForm();">Daftar</button>
 		</div>
 	</div>
 </form>
@@ -81,7 +81,7 @@
 </script>
 
 <script>
-function confirmPasswordValidation(){}
+function validateForm() {
 	var confirm_password = document.getElementById("confirm_password").value;
 	var password = document.getElementById("password").value;
 	if(document.getElementById("password").value != confirm_password.value)
@@ -92,6 +92,16 @@ function confirmPasswordValidation(){}
 	{
   		confirm_password.setCustomValidity("");
   	}
+  	var dateofbirth = document.getElementById("dateofbirth");
+  	if(dateofbirth.value == "")
+  	{
+  		dateofbirth.setCustomValidity("Please enter your date of birth.")
+  	}
+  	else
+  	{
+  		dateofbirth.setCustomValidity("");
+  	}
+  	dateofbirth.setCustomValidity("ASDSADDSA");
 }
 </script>
 

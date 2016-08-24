@@ -18,7 +18,7 @@
 	  <div class="panel-body">
 			<div class="input-group">
 			  <span class="input-group-addon" id="username"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></span>
-			  <input type="text" id="username" class="form-control" placeholder="Username" name="username" pattern="[A-Za-z0-9_-]{6,32}" title="A-Z, 0-9, '_', and '-' characters only. Must be 6-32 characters." required>
+			  <input type="text" id="username" class="form-control" placeholder="Username" name="username" required>
 			</div>
 			<div class="input-group">
 				  <span class="input-group-addon" id="password"><span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span></span>
