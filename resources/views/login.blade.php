@@ -30,9 +30,9 @@
 			<label class="unselectable"><input type="checkbox" value="rememberme"> Remember me</label>
 			<br>
 			<font size=2>
-			<a href="/forgot">Forgot my password?</a>
+			<a href="/forgot">Lupa password?</a>
 			<br>
-			<a href="/register">Don't have an account?</a>
+			<a href="/register">Belum Daftar?</a>
 			</font>
 			</center>
 			<br>
