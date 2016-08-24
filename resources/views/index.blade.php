@@ -3,7 +3,7 @@
 @section('content')
 @if(Auth::check())
   @if(Auth::user()->confirmed==0)
-    <div class="alert alert-warning" role="alert"><b>Warning!</b> You have not authenticated your email address. Click <a href="">here</a> to resend your verification code.</div>
+    <div class="alert alert-warning" role="alert"><b>Warning!</b> You have not authenticated your email address. Please check your email or click <a href="">here</a> to resend your verification code.</div>
   @endif
 @endif
 <div class="media">
