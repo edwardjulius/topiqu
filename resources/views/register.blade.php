@@ -18,11 +18,11 @@
 	  <div class="panel-body">
 			<div class="input-group">
 			  <span class="input-group-addon" id="username"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></span>
-			  <input type="text" class="form-control" placeholder="Username" required="true" name="username" pattern="[A-Za-z0-9_-]{6,32}" title="A-Z, 0-9, '_', and '-' characters only. Must be 6-32 characters.">
+			  <input type="text" class="form-control" placeholder="Username" required="true" name="username" pattern="[A-Za-z0-9_-]{6,32}" title="Alphanumeric with '_', and '-' characters. Must be 6-32 characters.">
 			</div>
 			<div class="input-group">
 			  <span class="input-group-addon" id="fullname"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></span>
-			  <input type="text" class="form-control" placeholder="Full Name" required="true" name="fullname" pattern="[a-zA-Z0-9]+[a-zA-Z0-9 ]+" title="Must contain at least 2 characters">
+			  <input type="text" class="form-control" placeholder="Full Name" required="true" name="fullname" pattern="[a-zA-Z0-9]+[a-zA-Z0-9 '-]+" title="Must contain at least 2 characters.">
 			</div>
 			<div class="input-group">
 			  <span class="input-group-addon" id="email"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span></span>
@@ -30,17 +30,17 @@
 			</div>
 			<div class="input-group">
 				  <span class="input-group-addon" id="password"><span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span></span>
-			      <input type="password" class="form-control" placeholder="Password" required="true" name="password" id="password" pattern=".{6,32}" title="Must contain 6-32 characters.">
+			      <input type="password" class="form-control" placeholder="Password" required="true" name="password" id="passwordid" pattern=".{6,32}" title="Must contain 6-32 characters.">
 			</div>
 			<div class="input-group">
 				  <span class="input-group-addon" id="confirm-password"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span></span>
-			      <input type="password" class="form-control" placeholder="Confirm Password" required="true" name="confirm-password" id="confirm_password">
+			      <input type="password" class="form-control" placeholder="Confirm Password" required="true" name="confirmpassword" id="confirmpasswordid">
 			</div>
 			<div class="input-group">
 				<div class="input-group-addon">
 				    <span class="glyphicon glyphicon-calendar"></span>
 				</div>
-		        <input class="form-control" id="dateofbirth" placeholder="Date of Birth" type="text" name="dateofbirth" readonly/>
+		        <input class="form-control" id="dateofbirth" placeholder="Date of Birth" type="text" name="dateofbirth" required="true" pattern="\d{1,2}/\d{1,2}/\d{4}" title="Use the built in Calendar or you must enter a valid date. (dd/mm/yyyy)">
 		    </div>
 
 			<br>
@@ -56,7 +56,7 @@
 			</div>
 			</center>
 
-			<button class="btn btn-lg btn-primary btn-block" type="submit" onclick="validateForm();">Daftar</button>
+			<button class="btn btn-lg btn-primary btn-block" type="submit" onclick="validateForm()">Daftar</button>
 		</div>
 	</div>
 </form>
@@ -71,6 +71,21 @@
 <script src='https://www.google.com/recaptcha/api.js'></script>
 
 <script>
+function validateForm() {
+	
+	var confirmpassword = document.getElementById("confirmpasswordid");
+	var password = document.getElementById("passwordid");
+	var dateofbirth = document.getElementById("dateofbirth");
+	if(confirmpassword.value != password.value)
+	{
+		confirmpassword.setCustomValidity("Password must match.")
+	}
+	else
+	{
+		confirmpassword.setCustomValidity("");
+	}
+}
+
 	$(function() {
     $( "#dateofbirth" ).datepicker({
     	format: 'dd/mm/yyyy',
@@ -79,30 +94,4 @@
     });
   });
 </script>
-
-<script>
-function validateForm() {
-	var confirm_password = document.getElementById("confirm_password").value;
-	var password = document.getElementById("password").value;
-	if(document.getElementById("password").value != confirm_password.value)
-	{
-    	confirm_password.setCustomValidity("Please enter the same password.");
-    }
-	else
-	{
-  		confirm_password.setCustomValidity("");
-  	}
-  	var dateofbirth = document.getElementById("dateofbirth");
-  	if(dateofbirth.value == "")
-  	{
-  		dateofbirth.setCustomValidity("Please enter your date of birth.")
-  	}
-  	else
-  	{
-  		dateofbirth.setCustomValidity("");
-  	}
-  	dateofbirth.setCustomValidity("ASDSADDSA");
-}
-</script>
-
 @endsection
