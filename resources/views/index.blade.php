@@ -7,7 +7,7 @@
   @endif
 @endif
 <ul class="nav nav-tabs">
-  <li role="presentation" class="active">Trending</li>
+  <li role="presentation" class="active"><a href="">Trending</a></li>
   <li role="presentation"><a href="/top">Top</a></li>
   <li role="presentation"><a href="/new">New</a></li>
 </ul>
