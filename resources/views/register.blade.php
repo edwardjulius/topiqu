@@ -22,7 +22,7 @@
 			</div>
 			<div class="input-group">
 			  <span class="input-group-addon" id="fullname"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></span>
-			  <input type="text" class="form-control" placeholder="Full Name" required="true" name="fullname" pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,63}$" title="Must contain 2-64 characters, alpha numeric only">
+			  <input type="text" class="form-control" placeholder="Full Name" required="true" name="fullname" pattern="^[a-zA-Z][a-zA-Z0-9-_\. ]{1,63}$" title="Must contain 2-64 characters, alpha numeric only">
 			</div>
 			<div class="input-group">
 			  <span class="input-group-addon" id="email"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span></span>
