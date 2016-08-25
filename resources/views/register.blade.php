@@ -22,7 +22,7 @@
 			</div>
 			<div class="input-group">
 			  <span class="input-group-addon" id="fullname"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></span>
-			  <input type="text" class="form-control" placeholder="Full Name" required="true" name="fullname" pattern="[a-zA-Z0-9]+[a-zA-Z0-9 '-]+" title="Must contain at least 2 characters.">
+			  <input type="text" class="form-control" placeholder="Full Name" required="true" name="fullname" pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,63}$" title="Must contain 2-64 characters, alpha numeric only">
 			</div>
 			<div class="input-group">
 			  <span class="input-group-addon" id="email"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span></span>
@@ -40,7 +40,7 @@
 				<div class="input-group-addon">
 				    <span class="glyphicon glyphicon-calendar"></span>
 				</div>
-		        <input class="form-control" id="dateofbirth" placeholder="Date of Birth" type="text" name="dateofbirth" required="true" pattern="\d{1,2}/\d{1,2}/\d{4}" title="Use the built in Calendar or you must enter a valid date. (dd/mm/yyyy)">
+		        <input class="form-control" id="dateofbirth" placeholder="Date of Birth" type="text" name="dateofbirth" pattern="\d{1,2}/\d{1,2}/\d{4}" required="true" title="Use the built in Calendar or you must enter a valid date. (dd/mm/yyyy)" onfocus="blur();">
 		    </div>
 
 			<br>
