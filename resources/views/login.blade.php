@@ -26,10 +26,10 @@
 			</div>
 			<br>
 			<center>
-			<label class="unselectable"><input type="checkbox" value="rememberme"> Remember me</label>
+			<label class="unselectable"><input type="checkbox" value="rememberme"> Ingat akun</label>
 			<br>
 			<font size=2>
-			<a href="/forgot">Lupa password?</a>
+			<a href="/forgot">Lupa kredensial?</a>
 			<br>
 			<a href="/register">Belum Daftar?</a>
 			</font>

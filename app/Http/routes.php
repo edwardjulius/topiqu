@@ -37,7 +37,9 @@ Route::get('/forgot', function () {
 });
 
 // topiqu.com/thread/{topiq}
+Route::get('thread/{topiq}', 'ThreadController@showThread($topiq)');
 // topiqu.com/thread/{topiq}/{post}
+Route::get('thread/{topiq}/{post}', 'ThreadController@showThread($topiq)');
 
 // Authenticated Users Routes
 Route::group(['middleware' => 'auth'], function () {
