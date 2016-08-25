@@ -16,6 +16,16 @@ Route::get('/', function () {
     return view('index');
 });
 
+// topiqu.com/top
+Route::get('/top', function () {
+    return view('top');
+});
+
+// topiqu.com/new
+Route::get('/new', function () {
+    return view('new');
+});
+
 // topiqu.com/login
 Route::get('/login', function () {
     return view('login');
@@ -36,9 +46,9 @@ Route::get('/forgot', function () {
     return view('forgot');
 });
 
-// topiqu.com/thread/{topiq}
+// topiqu.com/t/{topiq}
 Route::get('thread/{topiq}', 'ThreadController@showThread($topiq)');
-// topiqu.com/thread/{topiq}/{post}
+// topiqu.com/t/{topiq}/{post}
 Route::get('thread/{topiq}/{post}', 'ThreadController@showThread($topiq)');
 
 // Authenticated Users Routes
@@ -50,6 +60,6 @@ Route::get('user/{username}', 'UserController@showProfile');
 // topiqu.com/settings
 // topiqu.com/dashboard
 // topiqu.com/post
-// topiqu.com/thread/{topiq}/post
-// topiqu.com/thread/{topiq}/{post}/comment
+// topiqu.com/t/{topiq}/post
+// topiqu.com/t/{topiq}/{post}/comment
 });
