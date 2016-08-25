@@ -18,15 +18,15 @@
 	  <div class="panel-body">
 			<div class="input-group">
 			  <span class="input-group-addon" id="username"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></span>
-			  <input type="text" class="form-control" placeholder="Username" required="true" name="username" pattern="[A-Za-z0-9_-]{6,32}" title="Alphanumeric with '_', and '-' characters. Must be 6-32 characters.">
+			  <input type="text" class="form-control" placeholder="Username" required="true" name="username" pattern="[A-Za-z0-9_-]{6,32}" title="Alphanumeric with '_', and '-' characters. Must be 6-32 characters." value="{{ old('username') }}">
 			</div>
 			<div class="input-group">
 			  <span class="input-group-addon" id="fullname"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></span>
-			  <input type="text" class="form-control" placeholder="Full Name" required="true" name="fullname" pattern="^[a-zA-Z][a-zA-Z0-9-_\. ]{1,63}$" title="Must contain 2-64 characters, alpha numeric only">
+			  <input type="text" class="form-control" placeholder="Full Name" required="true" name="fullname" pattern="^[a-zA-Z][a-zA-Z0-9-_\. ]{1,63}$" title="Must contain 2-64 characters, alpha numeric only" value="{{ old('fullname') }}">
 			</div>
 			<div class="input-group">
 			  <span class="input-group-addon" id="email"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span></span>
-			  <input type="email" class="form-control" placeholder="Email Address" required="true" name="email" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z0-9]{1,64}$" title="Please enter a valid email address.">
+			  <input type="email" class="form-control" placeholder="Email Address" required="true" name="email" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z0-9]{1,64}$" title="Please enter a valid email address." value="{{ old('email') }}">
 			</div>
 			<div class="input-group">
 				  <span class="input-group-addon" id="password"><span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span></span>
@@ -40,13 +40,21 @@
 				<div class="input-group-addon">
 				    <span class="glyphicon glyphicon-calendar"></span>
 				</div>
-		        <input class="form-control" id="dateofbirth" placeholder="Date of Birth" type="text" name="dateofbirth" pattern="\d{1,2}/\d{1,2}/\d{4}" required="true" title="Use the built in Calendar or you must enter a valid date. (dd/mm/yyyy)" onfocus="blur();">
+		        <input class="form-control" id="dateofbirth" placeholder="Date of Birth" type="text" name="dateofbirth" pattern="\d{1,2}/\d{1,2}/\d{4}" required="true" title="Use the built in Calendar or you must enter a valid date. (dd/mm/yyyy)" onfocus="blur();" value="{{ old('dateofbirth') }}">
 		    </div>
 
 			<br>
 			<center>
-			  <label><input type="radio" name="gender" value="M" required="true"> Male </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			  <label><input type="radio" name="gender" value="F"> Female </label>
+			@if(old('gender') == "M")
+				<label><input type="radio" name="gender" value="M" required="true" checked="checked"> Male </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			@else
+				<label><input type="radio" name="gender" value="M" required="true"> Male </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			@endif
+			@if(old('gender') == "F")
+				<label><input type="radio" name="gender" value="F" required="true" checked="checked"> Female </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			@else
+				<label><input type="radio" name="gender" value="F" required="true"> Female </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			@endif
 			<br>
 			<div class="checkbox">
   			<label>
