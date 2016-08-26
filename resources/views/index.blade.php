@@ -1,7 +1,4 @@
 <!-- topiqu.com -->
-<style>
-.dropdown {padding-top: 11px;}
-</style>
 @extends('master')
 @section('content')
 @if(Auth::check())

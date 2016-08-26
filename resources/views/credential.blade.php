@@ -27,13 +27,13 @@
         <style>
             body {width:100%; padding-top:65px; font-family: 'Work Sans', sans-serif;}
             .navbar-btn {padding-right:5px;}
-            .container{float:none; width:100%;}
+            .container{float:none; width:80%;}
             .right-sidebar{float:right;}
         </style>
     </head>
     <body>
         <nav class="navbar navbar-default navbar-fixed-top">
-            <div class="container-fluid">
+            <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header pull-left">
                 <a class="navbar-brand" href="/">topiqu</a>
@@ -51,24 +51,8 @@
             </div>
          </nav>
 
-        <div class="container-fluid">
-            <div class="row">
-                @if(Auth::check())
-                <div class="col-md-2">
-                    <ul id="leftsidebar" class="nav nav-stacked affix">
-                        <li><a href="#">The Next Web</a></li>
-                        <li><a href="#">Mashable</a></li>
-                        <li><a href="#">TechCrunch</a></li>
-                        <li><a href="#">GitHub</a></li>
-                        <li><a href="#">In1</a></li>
-                        <li><a href="#">TechMeMe</a></li>
-                    </ul>
-                </div>
-                @endif
-                <div class="col-md-10">
-                    @yield('content')
-                </div>
-            </div>
+        <div class="container">
+            @yield('content')
         </div>
     <hr>
     <center>
