@@ -28,14 +28,152 @@
 
 <div class="media">
   <div class="media-left">
+  <h4 class="media-heading"><p align=center>123 <span class="glyphicon glyphicon-heart"></span></p></h4>
     <a href="#">
-      <img class="media-object" data-src="..." alt="Generic placeholder image">
+      <img class="media-object" data-src="..." alt="Thumbnail Thumbnail Thumbnail Thumbnail" height="80" width="80">
     </a>
   </div>
   <div class="media-body">
-    <h4 class="media-heading">Top aligned media</h4>
+    <h4 class="media-heading"><a href="#">Title title title title title title</a></h4>
     <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
-    <p>Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+    <p><a href="#">123 comments</a> <a href="#">share</a> <a href="#">flag</a></p>
+    <p>posted by<a href="#"> eddard </a>in<a href="#"> berita </a> 2 hours ago.</p>
   </div>
 </div>
+<hr>
+<div class="media">
+  <div class="media-left">
+  <h4 class="media-heading"><p align=center>123</p></h4>
+    <a href="#">
+      <img class="media-object" data-src="..." alt="Thumbnail Thumbnail Thumbnail Thumbnail" height="80" width="80">
+    </a>
+  </div>
+  <div class="media-body">
+    <h4 class="media-heading"><a href="#">Title title title title title title</a></h4>
+    <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
+    <p><a href="#">123 comments</a> <a href="#">share</a> <a href="#">flag</a></p>
+    <p>posted by<a href="#"> eddard </a>in<a href="#"> berita </a> 2 hours ago.</p>
+  </div>
+</div>
+<hr>
+<div class="media">
+  <div class="media-left">
+  <h4 class="media-heading"><p align=center>123</p></h4>
+    <a href="#">
+      <img class="media-object" data-src="..." alt="Thumbnail Thumbnail Thumbnail Thumbnail" height="80" width="80">
+    </a>
+  </div>
+  <div class="media-body">
+    <h4 class="media-heading"><a href="#">Title title title title title title</a></h4>
+    <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
+    <p><a href="#">123 comments</a> <a href="#">share</a> <a href="#">flag</a></p>
+    <p>posted by<a href="#"> eddard </a>in<a href="#"> berita </a> 2 hours ago.</p>
+  </div>
+</div>
+<hr>
+<div class="media">
+  <div class="media-left">
+  <h4 class="media-heading"><p align=center>123</p></h4>
+    <a href="#">
+      <img class="media-object" data-src="..." alt="Thumbnail Thumbnail Thumbnail Thumbnail" height="80" width="80">
+    </a>
+  </div>
+  <div class="media-body">
+    <h4 class="media-heading"><a href="#">Title title title title title title</a></h4>
+    <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
+    <p><a href="#">123 comments</a> <a href="#">share</a> <a href="#">flag</a></p>
+    <p>posted by<a href="#"> eddard </a>in<a href="#"> berita </a> 2 hours ago.</p>
+  </div>
+</div>
+<hr>
+<div class="media">
+  <div class="media-left">
+  <h4 class="media-heading"><p align=center>123</p></h4>
+    <a href="#">
+      <img class="media-object" data-src="..." alt="Thumbnail Thumbnail Thumbnail Thumbnail" height="80" width="80">
+    </a>
+  </div>
+  <div class="media-body">
+    <h4 class="media-heading"><a href="#">Title title title title title title</a></h4>
+    <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
+    <p><a href="#">123 comments</a> <a href="#">share</a> <a href="#">flag</a></p>
+    <p>posted by<a href="#"> eddard </a>in<a href="#"> berita </a> 2 hours ago.</p>
+  </div>
+</div>
+<hr>
+<div class="media">
+  <div class="media-left">
+  <h4 class="media-heading"><p align=center>123</p></h4>
+    <a href="#">
+      <img class="media-object" data-src="..." alt="Thumbnail Thumbnail Thumbnail Thumbnail" height="80" width="80">
+    </a>
+  </div>
+  <div class="media-body">
+    <h4 class="media-heading"><a href="#">Title title title title title title</a></h4>
+    <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
+    <p><a href="#">123 comments</a> <a href="#">share</a> <a href="#">flag</a></p>
+    <p>posted by<a href="#"> eddard </a>in<a href="#"> berita </a> 2 hours ago.</p>
+  </div>
+</div>
+<hr>
+<div class="media">
+  <div class="media-left">
+  <h4 class="media-heading"><p align=center>123</p></h4>
+    <a href="#">
+      <img class="media-object" data-src="..." alt="Thumbnail Thumbnail Thumbnail Thumbnail" height="80" width="80">
+    </a>
+  </div>
+  <div class="media-body">
+    <h4 class="media-heading"><a href="#">Title title title title title title</a></h4>
+    <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
+    <p><a href="#">123 comments</a> <a href="#">share</a> <a href="#">flag</a></p>
+    <p>posted by<a href="#"> eddard </a>in<a href="#"> berita </a> 2 hours ago.</p>
+  </div>
+</div>
+<hr>
+<div class="media">
+  <div class="media-left">
+  <h4 class="media-heading"><p align=center>123</p></h4>
+    <a href="#">
+      <img class="media-object" data-src="..." alt="Thumbnail Thumbnail Thumbnail Thumbnail" height="80" width="80">
+    </a>
+  </div>
+  <div class="media-body">
+    <h4 class="media-heading"><a href="#">Title title title title title title</a></h4>
+    <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
+    <p><a href="#">123 comments</a> <a href="#">share</a> <a href="#">flag</a></p>
+    <p>posted by<a href="#"> eddard </a>in<a href="#"> berita </a> 2 hours ago.</p>
+  </div>
+</div>
+<hr>
+<div class="media">
+  <div class="media-left">
+  <h4 class="media-heading"><p align=center>123</p></h4>
+    <a href="#">
+      <img class="media-object" data-src="..." alt="Thumbnail Thumbnail Thumbnail Thumbnail" height="80" width="80">
+    </a>
+  </div>
+  <div class="media-body">
+    <h4 class="media-heading"><a href="#">Title title title title title title</a></h4>
+    <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
+    <p><a href="#">123 comments</a> <a href="#">share</a> <a href="#">flag</a></p>
+    <p>posted by<a href="#"> eddard </a>in<a href="#"> berita </a> 2 hours ago.</p>
+  </div>
+</div>
+<hr>
+<div class="media">
+  <div class="media-left">
+  <h4 class="media-heading"><p align=center>123</p></h4>
+    <a href="#">
+      <img class="media-object" data-src="..." alt="Thumbnail Thumbnail Thumbnail Thumbnail" height="80" width="80">
+    </a>
+  </div>
+  <div class="media-body">
+    <h4 class="media-heading"><a href="#">Title title title title title title</a></h4>
+    <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
+    <p><a href="#">123 comments</a> <a href="#">share</a> <a href="#">flag</a></p>
+    <p>posted by<a href="#"> eddard </a>in<a href="#"> berita </a> 2 hours ago.</p>
+  </div>
+</div>
+
 @endsection

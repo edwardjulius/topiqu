@@ -1,4 +1,4 @@
-@extends('master')
+@extends('credential')
 @section('content')
 <style>
 	.form-register {width: 90%; max-width: 400px; margin:auto; padding-top:30px;}
