@@ -33,7 +33,7 @@
                     <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
                 </button>
             </div>
-            <div class="navbar-header pull-left hidden-xs">
+            <div class="navbar-header pull-left">
                 <a class="navbar-brand" href="/">topiqu</a>
             </div>
             <div class="navbar-header pull-right">
