@@ -46,7 +46,7 @@
         <!-- Custom Style -->
         <style>
             body {padding-top:65px; font-family: 'Work Sans', sans-serif;}
-            .hidden-xs {max-width: 100%;}
+            .containner-fluid{max-width: 100%}
         </style>
     </head>
     <body>
