@@ -1,6 +1,6 @@
 <!-- topiqu.com -->
 <style>
-.dropdown-tab {padding-top: 11px; padding-left:10px;}
+.dropdown-tab {padding-top: 11px;}
 .btn-loadmore{text-align: center;}
 </style>
 @extends('master')
@@ -16,7 +16,7 @@
   <li role="presentation"><a href="/top">Top</a></li>
   <li role="presentation"><a href="/new">New</a></li>
   <div class="dropdown pull-left dropdown-tab">
-    <a id="drop1" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown"> past 24 hours <b class="caret"></b></a>
+    <a id="drop1" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Today<b class="caret"></b></a>
     <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
       <li><a tabindex="-1" href="#">Action</a></li>
       <li><a tabindex="-1" href="#">Another action</a></li>
