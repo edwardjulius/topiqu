@@ -55,7 +55,13 @@
             <!-- Content -->
             <div class="col-md-10">@yield('content')</div>
             <!-- Right Sidebar -->
-            <div class="col-md-2 hidden-xs"><img src="{{asset('/topiquad.png')}}"></div>
+            <div class="col-md-2 hidden-xs">
+            <div class="input-group">
+              <span class="input-group-addon" id="search"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></span>
+              <input type="text" class="form-control" placeholder="Search" name="search">
+            </div>
+            <br>
+            <img src="{{asset('/topiquad.png')}}"></div>
         </div>
     </div>
     <hr>
