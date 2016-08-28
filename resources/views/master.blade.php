@@ -59,7 +59,7 @@
     <div class="container-fluid">
         <div class="row">
             <!-- Content -->
-            <div class="col-md-10">@yield('content')</div>
+            <div class="col-md-10 hidden-xs">@yield('content')</div>
             <!-- Right Sidebar -->
             <div class="col-md-2 hidden-xs right-column">
             <div class="input-group">
@@ -70,6 +70,8 @@
             <p align="center">- Our Sponsors -</p>
             <img src="{{asset('/topiquad.png')}}">
             </div>
+            <!-- Only for Xtra small devices -->
+            <div class="col-md-12 visible-xs-block">@yield('contnent')</div>
         </div>
     </div>
     <hr>

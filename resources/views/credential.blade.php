@@ -28,6 +28,11 @@
         <nav class="navbar navbar-default navbar-fixed-top">
             <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header navbar-btn pull-left navbar-menubtn">
+                <button type="button" class="btn btn-default" aria-label="Menu">
+                    <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
+                </button>
+            </div>
             <div class="navbar-header pull-left">
                 <a class="navbar-brand" href="/">topiqu</a>
             </div>
@@ -45,7 +50,9 @@
         </nav>
         <!-- Custom Style -->
         <style>
-            body {padding-top:65px; font-family: 'Work Sans', sans-serif;}
+            body {padding-top:70px; font-family: 'Work Sans', sans-serif;}
+            .container-fluid{max-width: 100%}
+            .navbar-menubtn{padding-top: 3px; padding-right: 25px;}
         </style>
     </head>
     <body>
