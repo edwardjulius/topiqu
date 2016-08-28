@@ -52,8 +52,6 @@
         <style>
             body {padding-top:70px; font-family: 'Work Sans', sans-serif;}
             .containner-fluid{max-width: 100%}
-            .navbar-fixed-top{height: 60px;}
-            .navbar-header{padding-top: 6px;}
         </style>
     </head>
     <body>
