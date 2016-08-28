@@ -60,7 +60,8 @@
               <input type="text" class="form-control" placeholder="Search" name="search">
             </div>
             <br>
-            <!--img src="{{asset('/topiquad.png')}}"></div-->
+            <img src="{{asset('/topiquad.png')}}">
+            </div>
         </div>
     </div>
     <hr>
