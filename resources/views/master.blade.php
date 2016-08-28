@@ -51,7 +51,7 @@
         <!-- Custom Style -->
         <style>
             body {padding-top:70px; font-family: 'Work Sans', sans-serif;}
-            .containner-fluid{max-width: 100%}
+            .container-fluid{max-width: 100%}
         </style>
     </head>
     <body>
