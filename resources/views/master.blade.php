@@ -55,7 +55,6 @@
             .navbar-fixed-top{height: 60px; max-width: 100%;}
             .navbar-header{padding-top: 6px;}
             .nav.nav-center {margin:0;float:none;}
-            .navbar-logo {padding-left:20px;}
         </style>
     </head>
     <body>
