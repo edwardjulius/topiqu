@@ -21,16 +21,19 @@
   <li role="presentation" class="active"><a href="">Trending</a></li>
   <li role="presentation"><a href="/top">Top</a></li>
   <li role="presentation"><a href="/new">New</a></li>
-  <div class="dropdown pull-left dropdown-tab">
-    <a id="drop1" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Today<b class="caret"></b></a>
-    <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-      <li><a tabindex="1" href="#">Action</a></li>
-      <li><a tabindex="-1" href="#">Another action</a></li>
-      <li><a tabindex="-1" href="#">Something else here</a></li>
-      <li class="divider"></li>
-      <li><a tabindex="-1" href="#">Separated link</a></li>
-    </ul>
-  </div>
+  <div class="dropdown">
+  <button class="btn btn-default dropdown-toggle pull-right" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+    Dropdown
+    <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+    <li><a href="#">Action</a></li>
+    <li><a href="#">Another action</a></li>
+    <li><a href="#">Something else here</a></li>
+    <li role="separator" class="divider"></li>
+    <li><a href="#">Separated link</a></li>
+  </ul>
+</div>
 </ul>
 
 <div class="media">
