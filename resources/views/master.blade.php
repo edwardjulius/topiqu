@@ -26,7 +26,7 @@
         <!-- Font Work Sans -->
         <link href='https://fonts.googleapis.com/css?family=Work+Sans' rel='stylesheet' type='text/css'>
         <nav class="navbar navbar-default navbar-fixed-top">
-            <div class="container-fluid">
+            <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header pull-left">
                 <a class="navbar-brand" href="/">topiqu</a>
@@ -46,7 +46,6 @@
         <!-- Custom Style -->
         <style>
             body {padding-top:65px; font-family: 'Work Sans', sans-serif;}
-            .navbar-btn {padding-right:5px;}
         </style>
     </head>
     <body>
@@ -55,13 +54,13 @@
             <!-- Content -->
             <div class="col-md-10">@yield('content')</div>
             <!-- Right Sidebar -->
-            <div class="col-md-2 hidden-xs">
+            <div class="col-md-2 hidden-xs right-column">
             <div class="input-group">
               <span class="input-group-addon" id="search"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></span>
               <input type="text" class="form-control" placeholder="Search" name="search">
             </div>
             <br>
-            <img src="{{asset('/topiquad.png')}}"></div>
+            <!--img src="{{asset('/topiquad.png')}}"></div-->
         </div>
     </div>
     <hr>

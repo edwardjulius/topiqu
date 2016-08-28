@@ -1,16 +1,19 @@
 @extends('credential')
 @section('content')
 <style>
-	.form-register {width: 90%; max-width: 400px; margin:auto; padding-top:30px;}
+	.form-register {width: 100%; max-width: 400px; margin:auto; padding-top:30px;}
 	.input-group {padding: 2px;}
 	label{font-weight: normal;}
 </style>
 @if(count($errors))
-	<div class="alert alert-danger" role="alert"> 
     @foreach($errors->all() as $error)
-        <b>Error!</b> {{ $error }} <br>
+        <div class="alert alert-danger" role="alert">
+			<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+			<span class="sr-only">Error:</span>
+				{{ $error }}
+		</div>
+		<br>
     @endforeach
-    </div>
 @endif
 <form class="form-register" role="form" method="POST" action="{{ url('/register') }}">
 {{ csrf_field() }}
