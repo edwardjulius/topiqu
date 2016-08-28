@@ -37,7 +37,7 @@
                 <a class="navbar-brand" href="/">topiqu</a>
             </div>
             <div class="navbar-header pull-right">
-                <div class="btn-group navbar-btn" role="group">
+                <div class="btn-group navbar-btn navbar-rightbtn" role="group">
                 @if(Auth::check())
                     <a href="/user/{{Auth::user()->username}}" class="btn btn-default">My Profile</a>
                     <a href="/logout/" class="btn btn-default">Logout</a>
@@ -52,7 +52,8 @@
         <style>
             body {padding-top:70px; font-family: 'Work Sans', sans-serif;}
             .container-fluid{max-width: 100%}
-            .navbar-menubtn{padding-top: 3px; padding-right: 25px;}
+            .navbar-menubtn{padding-top: 3px; padding-right: 25px; padding-left:3px;}
+            .navbar-rightbtn{padding-right: 3px;}
         </style>
     </head>
     <body>
