@@ -52,9 +52,8 @@
         <style>
             body {padding-top:70px; font-family: 'Work Sans', sans-serif;}
             .containner-fluid{max-width: 100%}
-            .navbar-fixed-top{height: 60px; max-width: 100%;}
+            .navbar-fixed-top{height: 60px;}
             .navbar-header{padding-top: 6px;}
-            .nav.nav-center {margin:0;float:none;}
         </style>
     </head>
     <body>
