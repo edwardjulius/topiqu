@@ -122,7 +122,7 @@
     <p>posted by<a href="#"> eddard </a>in<a href="#"> berita </a> 2 hours ago.</p>
   </div>
 </div>  
-
+<br>
 <div class="btn-loadmore">
   <button type="button" class="btn btn-default btn-sm">
     <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Load More
