@@ -54,6 +54,7 @@
             .container-fluid{max-width: 100%}
             .navbar-menubtn{padding-top: 3px; padding-right: 25px; padding-left:3px;}
             .navbar-rightbtn{padding-right: 3px;}
+            .ad-rightbar{max-width:100%;}
         </style>
     </head>
     <body>
@@ -69,7 +70,7 @@
             </div>
             <hr>
             <p align="center">- Our Sponsors -</p>
-            <img src="{{asset('/topiquad.png')}}">
+            <img src="{{asset('/topiquad.png')}}" class="ad-rightbar">
             </div>
         </div>
     </div>
