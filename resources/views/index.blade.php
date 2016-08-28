@@ -1,4 +1,8 @@
 <!-- topiqu.com -->
+<style>
+.dropdown-tab {padding-top: 11px; padding-left:10px;}
+.btn-loadmore{text-align: center;}
+</style>
 @extends('master')
 @section('content')
 @if(Auth::check())
@@ -11,7 +15,7 @@
   <li role="presentation" class="active"><a href="">Trending</a></li>
   <li role="presentation"><a href="/top">Top</a></li>
   <li role="presentation"><a href="/new">New</a></li>
-  <div class="dropdown pull-right">
+  <div class="dropdown pull-left dropdown-tab">
     <a id="drop1" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown"> past 24 hours <b class="caret"></b></a>
     <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
       <li><a tabindex="-1" href="#">Action</a></li>
@@ -171,6 +175,12 @@
     <p><a href="#">123 comments</a> <a href="#">share</a> <a href="#">flag</a></p>
     <p>posted by<a href="#"> eddard </a>in<a href="#"> berita </a> 2 hours ago.</p>
   </div>
+</div>
+
+<div class="btn-loadmore">
+  <button type="button" class="btn btn-default btn-sm">
+    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Load More
+  </button>
 </div>
 
 @endsection
