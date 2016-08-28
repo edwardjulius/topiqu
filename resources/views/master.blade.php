@@ -26,9 +26,14 @@
         <!-- Font Work Sans -->
         <link href='https://fonts.googleapis.com/css?family=Work+Sans' rel='stylesheet' type='text/css'>
         <nav class="navbar navbar-default navbar-fixed-top">
-            <div class="container">
+            <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header pull-left">
+            <div class="navbar-header navbar-btn">
+                <button type="button" class="btn btn-default" aria-label="Menu">
+                    <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
+                </button>
+            </div>
+            <div class="navbar-header navbar-logo">
                 <a class="navbar-brand" href="/">topiqu</a>
             </div>
             <div class="navbar-header pull-right">
@@ -45,8 +50,12 @@
         </nav>
         <!-- Custom Style -->
         <style>
-            body {padding-top:65px; font-family: 'Work Sans', sans-serif;}
+            body {padding-top:70px; font-family: 'Work Sans', sans-serif;}
             .containner-fluid{max-width: 100%}
+            .navbar-fixed-top{height: 60px;}
+            .navbar-header{padding-top: 6px;}
+            .nav.nav-center {margin:0;float:none;}
+            .navbar-logo {padding-left:20px;}
         </style>
     </head>
     <body>
@@ -60,7 +69,8 @@
               <span class="input-group-addon" id="search"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></span>
               <input type="text" class="form-control" placeholder="Search" name="search">
             </div>
-            <br>
+            <hr>
+            <p align="center">- Our Sponsors -</p>
             <img src="{{asset('/topiquad.png')}}">
             </div>
         </div>

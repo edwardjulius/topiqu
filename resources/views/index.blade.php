@@ -121,7 +121,7 @@
     <p><a href="#">123 comments</a> <a href="#">share</a> <a href="#">flag</a></p>
     <p>posted by<a href="#"> eddard </a>in<a href="#"> berita </a> 2 hours ago.</p>
   </div>
-</div>
+</div>  
 
 <div class="btn-loadmore">
   <button type="button" class="btn btn-default btn-sm">
