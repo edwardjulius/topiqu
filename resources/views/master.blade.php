@@ -52,7 +52,7 @@
         <style>
             body {padding-top:70px; font-family: 'Work Sans', sans-serif;}
             .container-fluid{max-width: 100%}
-            .navbar-menubtn{padding-top: 3px; padding-right: 8px;}
+            .navbar-menubtn{padding-top: 3px; padding-right: 18px;}
         </style>
     </head>
     <body>
