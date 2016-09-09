@@ -6,10 +6,25 @@
     <div class="alert alert-warning" role="alert"><b>Warning!</b> You have not authenticated your email address. Please check your email or click <a href="">here</a> to resend your verification code.</div>
   @endif
 @endif
+
+<style>
+.dropdown {padding-top: 11px;}
+</style>
+
 <ul class="nav nav-tabs">
   <li role="presentation"><a href="/">Trending</a></li>
   <li role="presentation"><a href="/top">Top</a></li>
   <li role="presentation" class="active"><a href="">New</a></li>
+  <div class="dropdown pull-right">
+    <a id="drop1" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown"> 24 jam <b class="caret"></b></a>
+    <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+      <li><a tabindex="-1" href="#">Action</a></li>
+      <li><a tabindex="-1" href="#">Another action</a></li>
+      <li><a tabindex="-1" href="#">Something else here</a></li>
+      <li class="divider"></li>
+      <li><a tabindex="-1" href="#">Separated link</a></li>
+    </ul>
+  </div>
 </ul>
 <div class="media">
   <div class="media-left">
