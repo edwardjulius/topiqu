@@ -2,6 +2,7 @@
 <style>
 .dropdown-tab {padding-top: 11px;}
 .btn-loadmore{text-align: center;}
+.btn-backtotop{text-align: right;}
 .dropdown {padding-top: 11px;}
 </style>
 @extends('master')
@@ -127,6 +128,12 @@
 <div class="btn-loadmore">
   <button type="button" class="btn btn-default btn-sm">
     <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Load More
+  </button>
+</div>
+
+<div class="btn-backtotop">
+  <button type="button" class="btn btn-default btn-sm">
+    <span class="glyphicon glyphicon-hand-up" aria-hidden="true"></span> Back To Top
   </button>
 </div>
 
