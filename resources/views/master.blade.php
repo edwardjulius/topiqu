@@ -29,6 +29,7 @@
             <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header navbar-btn pull-left navbar-menubtn">
+            &nbsp;
                 <button type="button" class="btn btn-default" aria-label="Menu">
                     <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
                 </button>
@@ -46,12 +47,12 @@
                     <a href="/register" class="btn btn-default">Daftar</a>
                 @endif
                 </div>
+                &nbsp;
             </div>
         </nav>
         <!-- Custom Style -->
         <style>
             body {padding-top:70px; font-family: 'Work Sans', sans-serif;}
-            .container-fluid{max-width: 100%}
             .navbar-menubtn{padding-top: 3px; padding-right: 25px; padding-left:3px;}
             .navbar-rightbtn{padding-right: 3px;}
             .ad-rightbar{max-width:100%;}
