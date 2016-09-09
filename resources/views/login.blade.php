@@ -1,4 +1,4 @@
-@extends('credential')
+@extends('master')
 @section('content')
 <style>
 	.form-login {max-width: 400px; margin: auto; padding-top:30px;}

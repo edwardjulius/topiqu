@@ -26,7 +26,7 @@
         <!-- Font Work Sans -->
         <link href='https://fonts.googleapis.com/css?family=Work+Sans' rel='stylesheet' type='text/css'>
         <nav class="navbar navbar-default navbar-fixed-top">
-            <div class="container-fluid">
+            <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header navbar-btn pull-left navbar-menubtn">
                 <button type="button" class="btn btn-default" aria-label="Menu">
@@ -58,21 +58,8 @@
         </style>
     </head>
     <body>
-    <div class="container-fluid">
-        <div class="row">
-            <!-- Content -->
-            <div class="col-md-10">@yield('content')</div>
-            <!-- Right Sidebar -->
-            <div class="col-md-2 hidden-xs right-column">
-            <div class="input-group">
-              <span class="input-group-addon" id="search"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></span>
-              <input type="text" class="form-control" placeholder="Search" name="search">
-            </div>
-            <hr>
-            <p align="center">- Our Sponsors -</p>
-            <img src="{{asset('/topiquad.png')}}" class="ad-rightbar">
-            </div>
-        </div>
+    <div class="container">
+        @yield('content')
     </div>
     <hr>
     <center>
