@@ -35,7 +35,7 @@
                 </button>
             </div>
             <div class="navbar-header pull-left">
-                <a class="navbar-brand" href="/">topiqu</a>
+                <a href="/" class="navbar-left navbar-brandimage"><img src="{{ asset('/topiqu.png') }}" height="50px"></a>
             </div>
             <div class="navbar-header pull-right">
                 <div class="btn-group navbar-btn navbar-rightbtn" role="group">
@@ -56,6 +56,7 @@
             .navbar-menubtn{padding-top: 3px; padding-right: 25px; padding-left:3px;}
             .navbar-rightbtn{padding-right: 3px;}
             .ad-rightbar{max-width:100%;}
+            .navbar-brand{vertical-align: center;}
         </style>
     </head>
     <body>

@@ -11,6 +11,24 @@
 |
 */
 
+Route::get('sendemail', function () {
+
+    $data = array(
+        'name' => "Learning Laravel 2222",
+    );
+
+    Mail::send('emails.welcome', $data, function ($message) {
+
+        $message->from('admin@topiqu.com', 'Topiqu Administrator');
+
+        $message->to('edwardjulius@gmail.com')->subject('Welcome to Topiqu.com!');
+
+    });
+
+    return "Your email has been sent successfully";
+
+});
+
 // topiqu.com
 Route::get('/', function () {
     return view('index');
@@ -62,4 +80,5 @@ Route::get('user/{username}', 'UserController@showProfile');
 // topiqu.com/post
 // topiqu.com/t/{topiq}/post
 // topiqu.com/t/{topiq}/{post}/comment
+
 });
