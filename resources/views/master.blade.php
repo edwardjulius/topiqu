@@ -28,20 +28,15 @@
         <nav class="navbar navbar-default navbar-fixed-top">
             <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header navbar-btn pull-left navbar-menubtn">
-            &nbsp;
-                <button type="button" class="btn btn-default" aria-label="Menu">
-                    <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
-                </button>
-            </div>
             <div class="navbar-header pull-left">
                 <a href="/" class="navbar-left navbar-brandimage"><img class="topiqulogo" src="{{ asset('/topiqu.png') }}" height="50px" width="122px"></a>
             </div>
             <div class="navbar-header pull-right">
                 <div class="btn-group navbar-btn navbar-rightbtn" role="group">
                 @if(Auth::check())
-                    <a href="/user/{{Auth::user()->username}}" class="btn btn-default">My Profile</a>
-                    <a href="/logout/" class="btn btn-default">Logout</a>
+                    <button type="button" class="btn btn-default" aria-label="Menu">
+                        <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
+                    </button>
                 @else
                     <a href="/login/" class="btn btn-default">Masuk</a>
                     <a href="/register" class="btn btn-default">Daftar</a>
