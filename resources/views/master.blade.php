@@ -57,6 +57,7 @@
             .navbar-rightbtn{padding-right: 3px;}
             .ad-rightbar{max-width:100%;}
             .navbar-brand{vertical-align: center;}
+            .navbar{height:55px;}
         </style>
     </head>
     <body>
