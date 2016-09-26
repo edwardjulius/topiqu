@@ -55,7 +55,7 @@
             body {padding-top:70px; font-family: 'Work Sans', sans-serif;}
             .navbar-menubtn{padding-top: 3px; padding-right: 25px; padding-left:3px;}
             .navbar-rightbtn{padding-right: 3px;}
-            .navbar-brandimage{padding-left:5px;}
+            .navbar-brandimage{padding-left:10px;}
         </style>
     </head>
     <body>
