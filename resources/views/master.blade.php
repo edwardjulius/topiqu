@@ -56,6 +56,7 @@
             .navbar-rightbtn{padding-right: 3px;}
             .navbar-brandimage{padding-left:5px;}
             .navbar-hamburger{padding-top: 3px;}
+            .navbar-credential{padding-top: 1px;}
         </style>
     </head>
     <body>
