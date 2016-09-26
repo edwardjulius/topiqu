@@ -31,29 +31,31 @@
             <div class="navbar-header pull-left">
                 <a href="/" class="navbar-left navbar-brandimage"><img class="topiqulogo" src="{{ asset('/topiqu.png') }}" height="50px" width="122px"></a>
             </div>
+
+            @if(Auth::check())
             <div class="navbar-header pull-right">
-                <div class="btn-group navbar-btn navbar-rightbtn" role="group">
-                @if(Auth::check())
-                    &nbsp;
-                    <button type="button" class="btn-hamburger" aria-label="Menu">
+                <div class="btn-group navbar-btn navbar-rightbtn navbar-hamburger" role="group">
+                    <button type="button" class="btn btn-default" aria-label="Menu">
                         <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
                     </button>
-                @else
+                </div>
+            </div>
+            @else
+            <div class="navbar-header pull-right">
+                <div class="btn-group navbar-btn navbar-rightbtn navbar-credential" role="group">
                     <a href="/login/" class="btn btn-default">Masuk</a>
                     <a href="/register" class="btn btn-default">Daftar</a>
-                @endif
                 </div>
-                &nbsp;
             </div>
+            @endif
         </nav>
         <!-- Custom Style -->
         <style>
             body {padding-top:70px; font-family: 'Work Sans', sans-serif;}
             .navbar-menubtn{padding-top: 3px; padding-right: 25px; padding-left:3px;}
             .navbar-rightbtn{padding-right: 3px;}
-            .navbar-brandimage{padding-left:10px;}
-            .btn-hamburger{padding-top: 1px;}
-            .navbar{height: 55px;}
+            .navbar-brandimage{padding-left:5px;}
+            .navbar-hamburger{padding-top: 3px;}
         </style>
     </head>
     <body>
