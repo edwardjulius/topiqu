@@ -131,10 +131,4 @@
   </button>
 </div>
 
-<div class="btn-backtotop">
-  <button type="button" class="btn btn-default btn-sm">
-    <span class="glyphicon glyphicon-hand-up" aria-hidden="true"></span> Back To Top
-  </button>
-</div>
-
 @endsection
