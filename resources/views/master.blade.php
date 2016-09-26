@@ -34,7 +34,7 @@
             <div class="navbar-header pull-right">
                 <div class="btn-group navbar-btn navbar-rightbtn" role="group">
                 @if(Auth::check())
-                    <button type="button" class="btn btn-default" aria-label="Menu">
+                    <button type="button" class="btn-hamburger" aria-label="Menu">
                         <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
                     </button>
                 @else
@@ -49,8 +49,10 @@
         <style>
             body {padding-top:70px; font-family: 'Work Sans', sans-serif;}
             .navbar-menubtn{padding-top: 3px; padding-right: 25px; padding-left:3px;}
-            .navbar-rightbtn{padding-right: 3px;}
+            .navbar-rightbtn{padding-right: 3px; padding-top:2px;}
             .navbar-brandimage{padding-left:10px;}
+            .btn-hamburger{padding-top: 1px;}
+            .navbar{height: 55px;}
         </style>
     </head>
     <body>
