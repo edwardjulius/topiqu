@@ -15,7 +15,6 @@
   <li role="presentation" class="active"><a href="/new">New</a></li>
 
   <div class="dropdown pull-right">
-    <a id="drop1" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown"> 24 jam <b class="caret"></b></a>
     <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
       <li><a tabindex="-1" href="#">Action</a></li>
       <li><a tabindex="-1" href="#">Another action</a></li>
