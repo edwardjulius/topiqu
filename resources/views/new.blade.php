@@ -6,7 +6,11 @@
 @section('content')
 @if(Auth::check())
   @if(Auth::user()->confirmed==0)
-    <div class="alert alert-warning" role="alert"><strong>Warning!</strong> You have not authenticated your email address. Please check your email or click <a href="">here</a> to resend your verification code.</div>
+    <div class="alert alert-warning" role="alert">
+      <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+      <span class="sr-only">Error:</span>
+        You have not authenticated your email address. Please check your email or click <a href="">here</a> to resend your verification code.
+    </div>
   @endif
 @endif
 <ul class="nav nav-tabs">
