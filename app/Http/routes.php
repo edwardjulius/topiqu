@@ -64,6 +64,14 @@ Route::get('/forgot', function () {
     return view('forgot');
 });
 
+Route::get('/about', function () {
+    return view('about');
+});
+
+Route::get('/contact', function () {
+    return view('contact');
+});
+
 // topiqu.com/t/{topiq}
 Route::get('thread/{topiq}', 'ThreadController@showThread($topiq)');
 // topiqu.com/t/{topiq}/{post}
