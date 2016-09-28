@@ -2,7 +2,7 @@
 @section('content')
 <div class="panel panel-default">
   <!-- Default panel contents -->
-  <div class="panel-heading">tentang topiqu.com</div>
+  <div class="panel-heading">tentang kami</div>
   <div class="panel-body">
     <p></p>
     <br>
