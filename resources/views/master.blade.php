@@ -38,11 +38,19 @@
             @if(Auth::check())
             <div class="navbar-header pull-right">
                 <div class="btn-group navbar-btn navbar-rightbtn navbar-hamburger" role="group">
-                    <button type="button" class="btn btn-default" aria-label="Menu">
+                    <button type="button" class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                         <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
                     </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                        <li><a href="#">Search</a></li>
+                        <li><a href="#">Browse</a></li>
+                        <li><a href="#">Settings</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="/logout">Logout</a></li>
+                    </ul>
                 </div>
             </div>
+
             @else
             <div class="navbar-header pull-right">
                 <div class="btn-group navbar-btn navbar-rightbtn navbar-credential" role="group">
