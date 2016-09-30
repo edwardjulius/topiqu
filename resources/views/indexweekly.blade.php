@@ -19,10 +19,10 @@
   <li role="presentation"><a href="/new">New</a></li>
 
   <div class="dropdown pull-right">
-    <a id="drop1" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown"> 24 jam <b class="caret"></b></a>
+    <a id="drop1" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown"> 1 minggu <b class="caret"></b></a>
     <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-      <li><a>24 jam</a></li>
-      <li><a href="/weekly">1 minggu</a></li>
+      <li><a href="/">24 jam</a></li>
+      <li><a>1 minggu</a></li>
       <li><a href="/monthly">1 bulan</a></li>
       <li><a href="/yearly">1 tahun</a></li>
       <li><a href="/alltime">sepanjang waktu</a></li>
