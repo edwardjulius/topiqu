@@ -25,7 +25,7 @@
       <li><a href="/top/weekly">1 minggu</a></li>
       <li><a href="/top/monthly">1 bulan</a></li>
       <li><a>1 tahun</a></li>
-      <li><a href="/top/alltime">sepanjang waktu</a></li>
+      <li><a href="/top/alltime">semua</a></li>
     </ul>
   </div>
 
