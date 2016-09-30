@@ -59,6 +59,26 @@ Route::get('/top', function () {
     return view('top');
 });
 
+// topiqu.com/top/weekly
+Route::get('/top/weekly', function () {
+    return view('topweekly');
+});
+
+// topiqu.com/top/monthly
+Route::get('/top/monthly', function () {
+    return view('topmonthly');
+});
+
+// topiqu.com/top/yearly
+Route::get('/top/yearly', function () {
+    return view('topyearly');
+});
+
+// topiqu.com/top/alltime
+Route::get('/top/alltime', function () {
+    return view('topalltime');
+});
+
 // topiqu.com/new
 Route::get('/new', function () {
     return view('new');
