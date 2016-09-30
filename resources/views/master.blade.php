@@ -67,7 +67,7 @@
     <center>
             © 2016 topiqu prima multimedia.
         <br>
-        <a href="/about">tentang kami</a> &middot; <a href="/contact">hubungu kami</a>
+        <a href="/about">tentang kami</a> &middot; <a href="/contact">hubungi kami</a>
     </center>
     </body>
 </html>
