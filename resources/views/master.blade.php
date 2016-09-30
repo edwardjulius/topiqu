@@ -41,7 +41,7 @@
                     <button type="button" class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                         <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
                     </button>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                    <ul class="dropdown-menu pull-right" aria-labelledby="dropdownMenu1">
                         <li><a href="#">Search</a></li>
                         <li><a href="#">Browse</a></li>
                         <li><a href="#">Settings</a></li>
