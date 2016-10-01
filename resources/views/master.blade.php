@@ -67,9 +67,9 @@
             body {padding-top:70px; font-family: 'Work Sans', sans-serif;}
             .navbar-menubtn{padding-top: 3px; padding-right: 25px; padding-left:3px;}
             .navbar-rightbtn{padding-right: 3px;}
-            .navbar-brandimage{padding-left:5px;}
-            .navbar-hamburger{padding-top: 7px; padding-left:5px;}
-            .navbar-credential{padding-top: 3px; padding-left: 5px;}
+            .navbar-brandimage{padding-left:8px;}
+            .navbar-hamburger{padding-top: 7px; padding-left:8px;}
+            .navbar-credential{padding-top: 3px; padding-left:8px;}
             .dropdown-menu{max-width: 20px;}
         </style>
     </head>
