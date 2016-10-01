@@ -79,9 +79,9 @@
     </div>
     <hr>
     <center>
-            © 2016 topiqu prima multimedia.
+            &middot; © 2016 topiqu prima multimedia &middot;
         <br>
-        <a href="/about">tentang kami</a> &middot; <a href="/contact">hubungi kami</a>
+        &middot; <a href="/about">tentang kami</a> &middot; <a href="/contact">hubungi kami</a> &middot;
     </center>
     </body>
 </html>
