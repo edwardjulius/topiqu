@@ -79,7 +79,7 @@
     </div>
     <hr>
     <center>
-            &middot; © 2016 topiqu prima multimedia &middot;
+            © 2016 topiqu prima multimedia
         <br>
         &middot; <a href="/about">tentang kami</a> &middot; <a href="/contact">hubungi kami</a> &middot;
     </center>
