@@ -42,6 +42,8 @@
                         <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
                     </button>
                     <ul class="dropdown-menu pull-right" aria-labelledby="dropdownMenu1">
+                        <li><a href="#">Post</a></li>
+                        <li role="separator" class="divider"></li>
                         <li><a href="#">Search</a></li>
                         <li><a href="#">Browse</a></li>
                         <li><a href="#">Settings</a></li>
@@ -66,8 +68,9 @@
             .navbar-menubtn{padding-top: 3px; padding-right: 25px; padding-left:3px;}
             .navbar-rightbtn{padding-right: 3px;}
             .navbar-brandimage{padding-left:5px;}
-            .navbar-hamburger{padding-top: 7px;}
-            .navbar-credential{padding-top: 3px;}
+            .navbar-hamburger{padding-top: 7px; padding-left:5px;}
+            .navbar-credential{padding-top: 3px; padding-left: 5px;}
+            .dropdown-menu{max-width: 20px;}
         </style>
     </head>
     <body>
