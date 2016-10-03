@@ -108,9 +108,6 @@ Route::get('/about', function () {
     return view('about');
 });
 
-Route::get('/contact', function () {
-    return view('contact');
-});
 
 // topiqu.com/t/{topiq}
 Route::get('thread/{topiq}', 'ThreadController@showThread($topiq)');
@@ -128,5 +125,7 @@ Route::get('user/{username}', 'UserController@showProfile');
 // topiqu.com/post
 // topiqu.com/t/{topiq}/post
 // topiqu.com/t/{topiq}/{post}/comment
-
+Route::get('/contact', function () {
+    return view('contact');
+});
 });
