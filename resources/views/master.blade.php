@@ -42,7 +42,7 @@
                         <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
                     </button>
                     <ul class="dropdown-menu pull-right" aria-labelledby="dropdownMenu1">
-                        <li><a href="#">Post</a></li>
+                        <li><a href="/post">Post</a></li>
                         <li role="separator" class="divider"></li>
                         <li><a href="#">Search</a></li>
                         <li><a href="#">Browse</a></li>

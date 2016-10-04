@@ -117,7 +117,7 @@ Route::get('thread/{topiq}/{post}', 'ThreadController@showThread($topiq)');
 // Authenticated Users Routes
 Route::group(['middleware' => 'auth'], function () {
 // topiqu.com/user/{username}
-Route::get('user/{username}', 'UserController@showProfile');
+    Route::get('user/{username}', 'UserController@showProfile');
 // topiqu.com/inbox
 // topiqu.com/message/{username}
 // topiqu.com/settings
@@ -125,7 +125,10 @@ Route::get('user/{username}', 'UserController@showProfile');
 // topiqu.com/post
 // topiqu.com/t/{topiq}/post
 // topiqu.com/t/{topiq}/{post}/comment
-Route::get('/contact', function () {
-    return view('contact');
-});
+    Route::get('/contact', function () {
+        return view('contact');
+    });
+    Route::get('/post', function () {
+    return view('post');
+    });
 });
