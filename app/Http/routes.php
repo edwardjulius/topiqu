@@ -104,6 +104,7 @@ Route::get('/forgot', function () {
     return view('forgot');
 });
 
+// topiqu.com/about
 Route::get('/about', function () {
     return view('about');
 });

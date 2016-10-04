@@ -14,10 +14,9 @@ class CreateModeratorsTable extends Migration
     {
         Schema::create('moderators', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('threadid');
-            $table->integer('userid');
+            $table->integer('threadid')->unsigned();
+            $table->integer('userid')->unsigned();
             $table->timestamps();
-
             $table->foreign('userid')->references('id')->on('users');
             $table->foreign('threadid')->references('id')->on('threads');
         });

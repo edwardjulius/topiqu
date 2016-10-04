@@ -17,7 +17,6 @@ class CreateThreadsTable extends Migration
             $table->string('name')->unique();
             $table->text('description');
             $table->string('banner');
-            $table->string('widget');
         });
     }
 

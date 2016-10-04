@@ -19,9 +19,8 @@ class CreatePostsTable extends Migration
             $table->integer('threadid')->unsigned();
             $table->foreign('threadid')->references('id')->on('threads');
             $table->string('title');
-            $table->string('link');
-            $table->text('text');
-            $table->string('image');
+            $table->string('url');
+            $table->string('thumbnail_url');
             $table->timestamps();
         });
     }
