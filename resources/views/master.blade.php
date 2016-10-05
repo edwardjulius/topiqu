@@ -69,7 +69,7 @@
             body {padding-top:70px; font-family: 'Work Sans', sans-serif;}
             .navbar-menubtn{padding-top: 3px; padding-right: 25px; padding-left:3px;}
             .navbar-rightbtn{padding-right: 3px;}
-            .navbar-hamburger{padding-top: 10px; padding-right:8px;}
+            .navbar-hamburger{padding-top: 10px; padding-right:16px;}
             .navbar-credential{padding-top: 3px; padding-left:8px;}
             .navbar{height: 50px; min-width: 100%;}
             .navbar-logo{position: relative; bottom: 8px; padding-left: 8px;}
