@@ -59,7 +59,6 @@
             <div class="navbar-header pull-right">
                 <ul class="nav navbar-nav">
                     <li><a href="/login">Masuk</a></li>
-                    <li class="nav-divider"></li>
                     <li><a href="/register">Daftar</a></li>
                 </ul>
             </div>
