@@ -51,6 +51,7 @@
                         <li role="separator" class="divider"></li>
                         <li><a href="#">Search</a></li>
                         <li><a href="#">Browse</a></li>
+                        <li><a href="#">Subscription</a></li>
                         <li><a href="#">Settings</a></li>
                         <li role="separator" class="divider"></li>
                         <li><a href="/logout">Logout</a></li>
