@@ -56,7 +56,7 @@
                 </div>
             </div>
             @else
-            <div class="navbar-header pull-right">
+            <div class="navbar-header pull-right navbar-credential">
                 <ul class="nav navbar-nav">
                     <li><a href="/login">Masuk</a></li>
                     <li><a href="/register">Daftar</a></li>
@@ -68,12 +68,12 @@
         <style>
             body {padding-top:70px; font-family: 'Work Sans', sans-serif;}
             .navbar-menubtn{padding-top: 3px; padding-right: 25px; padding-left:3px;}
-            .navbar-rightbtn{padding-right: 3px;}
             .navbar-hamburger{padding-top: 10px; padding-right:16px;}
             .navbar-credential{padding-top: 3px; padding-left:8px;}
             .navbar{height: 50px; min-width: 100%;}
             .navbar-logo{position: relative; bottom: 8px; padding-left: 8px;}
             .btn-hamburger{padding: 0; border: none; background: none;}
+            .navbar-credential{position: fixed;}
         </style>
     </head>
     <body>
