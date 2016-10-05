@@ -56,7 +56,7 @@
                 </div>
             </div>
             @else
-            <div class="navbar-header pull-right" style="white-space: nowrap;">
+            <div class="navbar-header pull-right" style="white-space: nowrap; padding-right: 16px">
                 <ul class="nav navbar-nav" style="white-space: nowrap;">
                     <li style="display: inline-block;"><a href="/login">Masuk</a></li>
                     <li style="display: inline-block;"><a href="/register">Daftar</a></li>
