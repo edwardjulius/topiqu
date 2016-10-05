@@ -33,7 +33,7 @@
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header pull-left navbar-logo">
                 <ul class="nav navbar-nav">
-                    <li><a href="/" class="navbar-left navbar-brandimage"><img class="topiqulogo" src="{{ asset('/topiqulogo.png') }}" width="35px" height="35px"></a></li>
+                    <li><a href="/" class="navbar-left navbar-brandimage"><img class="topiqulogo" src="{{ asset('/topiqulogo.png') }}" width="30px" height="30px"></a></li>
                     <li></li>
                 </ul>
             </div>
@@ -71,7 +71,7 @@
             .navbar-hamburger{padding-top: 11px; padding-right:16px;}
             .navbar-credential{padding-top: 3px; padding-left:8px;}
             .navbar{height: 50px; min-width: 100%;}
-            .navbar-logo{position: relative; bottom: 9px; padding-left: 8px;}
+            .navbar-logo{position: relative; bottom: 6px; padding-left: 8px;}
             .btn-hamburger{padding: 0; border: none; background: none;}
         </style>
     </head>
