@@ -47,6 +47,8 @@
                     <ul class="dropdown-menu pull-right" aria-labelledby="dropdownMenu1">
                         <li><a href="/post">Post</a></li>
                         <li role="separator" class="divider"></li>
+                        <li><a href="#">Messages</a></li>
+                        <li role="separator" class="divider"></li>
                         <li><a href="#">Search</a></li>
                         <li><a href="#">Browse</a></li>
                         <li><a href="#">Settings</a></li>
