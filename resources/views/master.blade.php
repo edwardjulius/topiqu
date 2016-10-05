@@ -71,8 +71,7 @@
             .navbar-rightbtn{padding-right: 3px;}
             .navbar-hamburger{padding-top: 10px; padding-left:8px;}
             .navbar-credential{padding-top: 3px; padding-left:8px;}
-            .navbar{height: 50px; min-width: 1000px;}
-            .dropdown-menu{max-width: 20px;}
+            .navbar{height: 50px; min-width: 100%;}
             .navbar-logo{position: relative; bottom: 8px;}
             .btn-hamburger{padding: 0; border: none; background: none;}
         </style>
