@@ -29,19 +29,19 @@
         <!-- Font Work Sans -->
         <link href='https://fonts.googleapis.com/css?family=Work+Sans' rel='stylesheet' type='text/css'>
         <nav class="navbar navbar-default navbar-fixed-top">
-            <div class="container">
+            <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header pull-left">
-                <a href="/" class="navbar-left navbar-brandimage"><img class="topiqulogo" src="{{ asset('/topiqu.png') }}"></a>
+            <div class="navbar-header pull-left navbar-logo">
+                <ul class="nav navbar-nav">
+                    <li><a href="/" class="navbar-left navbar-brandimage"><img class="topiqulogo" src="{{ asset('/topiqulogo.png') }}" width="35px" height="35px"></a></li>
+                    <li></li>
+                </ul>
             </div>
 
             @if(Auth::check())
-            <div class="navbar-header pull-right">
-                <div class="btn-group navbar-btn navbar-rightbtn navbar-hamburger" role="group">
-                    <button type="button" class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                        <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
-                    </button>
-                    <ul class="dropdown-menu pull-right" aria-labelledby="dropdownMenu1">
+            <div class="navbar-header pull-right dropdown-hamburger">
+                <a id="dropdown-hamburger" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown" style="color: black"><span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span></a>
+                    <ul class="dropdown-menu pull-right" aria-labelledby="dropdownMenuHamburger">
                         <li><a href="/post">Post</a></li>
                         <li role="separator" class="divider"></li>
                         <li><a href="#">Search</a></li>
@@ -50,15 +50,14 @@
                         <li role="separator" class="divider"></li>
                         <li><a href="/logout">Logout</a></li>
                     </ul>
-                </div>
             </div>
-
             @else
             <div class="navbar-header pull-right">
-                <div class="btn-group navbar-btn navbar-rightbtn navbar-credential" role="group">
-                    <a href="/login/" class="btn btn-default">Masuk</a>
-                    <a href="/register" class="btn btn-default">Daftar</a>
-                </div>
+                <ul class="nav navbar-nav">
+                    <li><a href="/login">Masuk</a></li>
+                    <li class="nav-divider"></li>
+                    <li><a href="/register">Daftar</a></li>
+                </ul>
             </div>
             @endif
         </nav>
@@ -67,10 +66,12 @@
             body {padding-top:70px; font-family: 'Work Sans', sans-serif;}
             .navbar-menubtn{padding-top: 3px; padding-right: 25px; padding-left:3px;}
             .navbar-rightbtn{padding-right: 3px;}
-            .navbar-brandimage{padding-left:8px;}
-            .navbar-hamburger{padding-top: 7px; padding-left:8px;}
+            .dropdown-hamburger{padding-top: 17px; padding-right:15px;}
             .navbar-credential{padding-top: 3px; padding-left:8px;}
+            .navbar{height: 50px;}
             .dropdown-menu{max-width: 20px;}
+            .navbar-logo{position: relative; bottom: 8px;}
+
         </style>
     </head>
     <body>

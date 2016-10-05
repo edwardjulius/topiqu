@@ -21,19 +21,19 @@
 	  <div class="panel-body">
 			<div class="input-group">
 			  <span class="input-group-addon" id="username"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></span>
-			  <input type="text" class="form-control" placeholder="Username" required="true" name="username" pattern="[A-Za-z0-9_-]{6,32}" title="Alphanumeric with '_', and '-' characters. Must be 6-32 characters." value="{{ old('username') }}">
+			  <input type="text" class="form-control" placeholder="Username" required="true" name="username" pattern="[A-Za-z0-9_-]{6,32}" title="Alphanumeric dengan '_' atau '-'. Musti diantara 6-32 karakter." value="{{ old('username') }}">
 			</div>
 			<div class="input-group">
 			  <span class="input-group-addon" id="fullname"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></span>
-			  <input type="text" class="form-control" placeholder="Full Name" required="true" name="fullname" pattern="^[a-zA-Z][a-zA-Z0-9-_\. ]{1,63}$" title="Must contain 2-64 characters, alpha numeric only" value="{{ old('fullname') }}">
+			  <input type="text" class="form-control" placeholder="Full Name" required="true" name="fullname" pattern="^[a-zA-Z][a-zA-Z0-9-_\. ]{1,63}$" title="Musti diantara 2-64 karakter, dan alphanumeric." value="{{ old('fullname') }}">
 			</div>
 			<div class="input-group">
 			  <span class="input-group-addon" id="email"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span></span>
-			  <input type="email" class="form-control" placeholder="Email Address" required="true" name="email" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z0-9]{1,64}$" title="Please enter a valid email address." value="{{ old('email') }}">
+			  <input type="email" class="form-control" placeholder="Email Address" required="true" name="email" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z0-9]{1,64}$" title="Tolong ketik dengan email address format yang benar." value="{{ old('email') }}">
 			</div>
 			<div class="input-group">
 				  <span class="input-group-addon" id="password"><span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span></span>
-			      <input type="password" class="form-control" placeholder="Password" required="true" name="password" id="passwordid" pattern=".{6,32}" title="Must contain 6-32 characters.">
+			      <input type="password" class="form-control" placeholder="Password" required="true" name="password" id="passwordid" pattern=".{6,32}" title="Musti diantara 6-32 karakter.">
 			</div>
 			<div class="input-group">
 				  <span class="input-group-addon" id="confirm-password"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span></span>
@@ -43,7 +43,7 @@
 				<div class="input-group-addon">
 				    <span class="glyphicon glyphicon-calendar"></span>
 				</div>
-		        <input class="form-control" id="dateofbirth" placeholder="Date of Birth" type="text" name="dateofbirth" pattern="\d{1,2}/\d{1,2}/\d{4}" required="true" title="Use the built in Calendar or you must enter a valid date. (dd/mm/yyyy)" onfocus="blur();" value="{{ old('dateofbirth') }}">
+		        <input class="form-control" id="dateofbirth" placeholder="Date of Birth (dd/mm/yyyy)" type="text" name="dateofbirth" pattern="\d{1,2}/\d{1,2}/\d{4}" required="true" title="Tolong ketik tanggal lahir dengan format 'dd/mm/yyyy'. Contoh: 15/01/1992" value="{{ old('dateofbirth') }}">
 		    </div>
 
 			<br>
@@ -71,15 +71,6 @@
 		</div>
 	</div>
 </form>
-<!-- Extra JavaScript/CSS added manually in "Settings" tab -->
-<!-- Include jQuery -->
-<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-
-<!-- Include Date Range Picker -->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
-
-<script src='https://www.google.com/recaptcha/api.js'></script>
 
 <script>
 function validateForm() {
@@ -96,13 +87,5 @@ function validateForm() {
 		confirmpassword.setCustomValidity("");
 	}
 }
-
-	$(function() {
-    $( "#dateofbirth" ).datepicker({
-    	format: 'dd/mm/yyyy',
-    	startView: 2,
-    	autoclose: true,
-    });
-  });
 </script>
 @endsection
