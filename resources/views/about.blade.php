@@ -7,7 +7,7 @@
   <!-- Default panel contents -->
   <div class="panel-heading"><b>Tentang Kami</b></div>
   <div class="panel-body">
-  	<p>Topiqu.com adalah komunitas internet yang sangat percaya bahwa informasi adalah sesuatu aspek penting di dunia kami. Tidak hanya harus informasi itu dengan mudah bisa di bagi sesama lain, tetapi proses bagi membagi itu mesti mudah, menyenangkan, dan menarik. Di topiqu.com kami menyambut semua masyarakat Indonesia untuk mengunakan topiqu.com untuk terinspirasi, terhibur, dan selalu diinformasikan oleh berita terbaru yang akurat.
+  	<p>Topiqu.com adalah komunitas internet yang sangat percaya bahwa informasi adalah sesuatu aspek penting di dunia kami. Tidak hanya harus informasi itu dengan mudah bisa di bagi sesama lain, tetapi proses bagi membagi itu mesti mudah, menyenangkan, dan menarik. Di topiqu.com kami menyambut semua masyarakat Indonesia untuk mengunakan topiqu.com setiap saat dan dimana aja.
   	<br><br>
 	Pelajari lebih lanjut tentang topiqu.com dengan menonton video di bawah:</p>
 	<div class="embed-responsive embed-responsive-16by9">
