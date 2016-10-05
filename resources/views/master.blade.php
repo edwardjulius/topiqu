@@ -57,9 +57,9 @@
             </div>
             @else
             <div class="navbar-header pull-right" style="white-space: nowrap;">
-                <ul class="nav navbar-nav">
-                    <li><a href="/login">Masuk</a></li>
-                    <li><a href="/register">Daftar</a></li>
+                <ul class="nav navbar-nav" style="white-space: nowrap;">
+                    <li style="display: inline-block;"><a href="/login">Masuk</a></li>
+                    <li style="display: inline-block;"><a href="/register">Daftar</a></li>
                 </ul>
             </div>
             @endif
