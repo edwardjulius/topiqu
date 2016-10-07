@@ -30,9 +30,7 @@ Route::get('sendemail', function () {
 });
 
 // topiqu.com
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/', 'BrowseController@index');
 
 // topiqu.com/weekly
 Route::get('/weekly', function () {
