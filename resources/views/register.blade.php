@@ -21,7 +21,7 @@
 	  <div class="panel-body">
 			<div class="input-group">
 			  <span class="input-group-addon" id="username"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></span>
-			  <input type="text" class="form-control" placeholder="Username" required="true" name="username" pattern="[A-Za-z0-9_-]{6,32}" title="Alphanumeric dengan '_' atau '-'. Musti diantara 6-32 karakter." value="{{ old('username') }}">
+			  <input type="text" class="form-control" placeholder="Username" required="true" name="username" pattern="[A-Za-z0-9_-]{5,32}" title="Alphanumeric dengan '_' atau '-'. Musti diantara 5-32 karakter." value="{{ old('username') }}">
 			</div>
 			<div class="input-group">
 			  <span class="input-group-addon" id="fullname"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></span>

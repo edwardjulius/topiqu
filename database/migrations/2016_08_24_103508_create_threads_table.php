@@ -16,7 +16,7 @@ class CreateThreadsTable extends Migration
             $table->increments('id');
             $table->string('name')->unique();
             $table->text('description');
-            $table->string('banner');
+            $table->timestamps();
         });
     }
 

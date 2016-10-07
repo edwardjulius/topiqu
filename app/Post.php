@@ -8,7 +8,7 @@ class Post extends Model
 {
 	protected $table = 'posts';
     protected $fillable = [
-        'threadid', 'title', 'link', 'text', 'image'
+        'userid', 'threadid', 'title', 'url', 'description'
     ];
 
     public function user()

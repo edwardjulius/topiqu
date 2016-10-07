@@ -20,7 +20,7 @@ class CreatePostsTable extends Migration
             $table->foreign('threadid')->references('id')->on('threads');
             $table->string('title');
             $table->string('url');
-            $table->string('thumbnail_url');
+            $table->string('description');
             $table->timestamps();
         });
     }

@@ -9,8 +9,6 @@ class Thread extends Model
 	protected $table = 'threads';
     protected $fillable = [
         'name',
-        'description',
-        'banner',
-        'widget'
+        'description'
     ];
 }

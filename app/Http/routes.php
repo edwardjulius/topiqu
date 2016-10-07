@@ -109,6 +109,7 @@ Route::get('/about', function () {
     return view('about');
 });
 
+Route::get('/getThreadName',  'ThreadController@getThreadName');
 
 // topiqu.com/t/{topiq}
 Route::get('thread/{topiq}', 'ThreadController@showThread($topiq)');
@@ -132,4 +133,5 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/post', function () {
     return view('post');
     });
+    Route::post('/post', 'PostController@post');
 });
