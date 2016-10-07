@@ -22,8 +22,24 @@ class BrowseController extends Controller
     public function index(Request $request)
     {
         $queries = DB::table('posts')
-            ->select('title', 'description', 'url', 'threadid', 'userid')
+            ->select('title', 'description', 'url', 'threadid', 'userid', 'created_at')
             ->get();
+        $result = array();
+        foreach($queries as $query)
+        {
+            $threadname = DB::table('threads')
+                ->select('name')
+                ->where('id', $query->threadid)
+                ->first();
+
+            $username = DB::table('users')
+                ->select('username')
+                ->where('id', $query->userid)
+                ->first();
+
+            $query->threadid = $threadname->name;
+            $query->userid = $username->username;
+        }
         return view('index', ['queries' => $queries]);
     }
 }
