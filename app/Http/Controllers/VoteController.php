@@ -16,6 +16,12 @@ class VoteController extends Controller
 {
     public function vote($postid)
     {
+        // If user is not logged in, go back
+        if(Auth::user() == null)
+        {
+            return back();
+        }
+
         $findVote = DB::table('votes')
             ->select('id')
             ->where('postid', $postid)
@@ -44,6 +50,12 @@ class VoteController extends Controller
 
     public function devote($postid)
     {
+        // If user is not logged in, go back
+        if(Auth::user() == null)
+        {
+            return back();
+        }
+        
         $findVote = DB::table('votes')
             ->select('id')
             ->where('postid', $postid)
