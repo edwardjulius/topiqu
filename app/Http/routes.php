@@ -132,4 +132,6 @@ Route::group(['middleware' => 'auth'], function () {
     return view('post');
     });
     Route::post('/post', 'PostController@post');
+    Route::get('api/vote/{postid}', 'VoteController@vote');
+    Route::get('api/devote/{postid}', 'VoteController@devote');
 });

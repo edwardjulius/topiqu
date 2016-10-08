@@ -2,7 +2,12 @@
 <style>
 .dropdown {padding-top: 11px;}
 .glyphicon.glyphicon-heart {font-size: 25px;}
+.glyphicon.glyphicon-heart-empty {font-size:25px;}
 .votecount {font-size: 20px; padding-left: 3px; padding-top: 5px;}
+.media-body{padding-left: 10px; padding-top: 5px;}
+.media-left{padding-left: 5px;}
+.heart-empty{color: #FFB6C1;}
+.heart{color: #FFB6C1;}
 </style>
 @extends('master')
 @section('content')
@@ -32,19 +37,24 @@
   </div>
 
 </ul>
+
 @foreach ($queries as $query)
 <div class="media">
   <div class="media-left">
   <center>
-    <span class="glyphicon glyphicon-heart"></span>
+    @if($query->voted==true)
+    <a href="/api/devote/{{$query->id}}" class="heart"><span class="glyphicon glyphicon-heart"></span></a>
+    @else
+    <a href="/api/vote/{{$query->id}}" class="heart-empty"><span class="glyphicon glyphicon-heart-empty"></span></a>
+    @endif
     <br>
-    <p class="votecount">{{$query->voteCount}}</p>
+    <p class="votecount">{{$query->votecount}}</p>
     </center>
   </div>
   <div class="media-body">
     <h4 class="media-heading"><a href="{{$query->url}}">{{$query->title}}</a></h4>
     <p>{{$query->description}}</p>
-    <p>posted by <a href="/user/{{$query->userid}}">{{$query->userid}}</a> di <a href="/t/{{$query->threadid}}">{{$query->threadid}}</a></p>
+    <p>posted by <a href="/user/{{$query->userid}}">{{$query->username}}</a> di <a href="/t/{{$query->threadid}}">{{$query->threadname}}</a></p>
   </div>
 </div>
 <hr>

@@ -22,6 +22,8 @@ class CreatePostsTable extends Migration
             $table->string('url');
             $table->string('description');
             $table->integer('votecount')->default(0);
+            $table->integer('commentcount')->default(0);
+            $table->integer('totalcount')->default(0);
             $table->timestamps();
         });
     }
