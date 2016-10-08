@@ -54,7 +54,7 @@
   <div class="media-body">
     <h4 class="media-heading"><a href="{{$query->url}}">{{$query->title}}</a></h4>
     <p>{{$query->description}}</p>
-    <p>posted by <a href="/user/{{$query->userid}}">{{$query->username}}</a> di <a href="/t/{{$query->threadid}}">{{$query->threadname}}</a></p>
+    <p>posted by <a href="/user/{{$query->username}}">{{$query->username}}</a> di <a href="/t/{{$query->threadname}}">{{$query->threadname}}</a></p>
   </div>
 </div>
 <hr>
