@@ -1,6 +1,8 @@
 <!-- topiqu.com -->
 <style>
 .dropdown {padding-top: 11px;}
+.glyphicon.glyphicon-heart {font-size: 25px;}
+.votecount {font-size: 20px; padding-left: 3px; padding-top: 5px;}
 </style>
 @extends('master')
 @section('content')
@@ -32,6 +34,13 @@
 </ul>
 @foreach ($queries as $query)
 <div class="media">
+  <div class="media-left">
+  <center>
+    <span class="glyphicon glyphicon-heart"></span>
+    <br>
+    <p class="votecount">{{$query->voteCount}}</p>
+    </center>
+  </div>
   <div class="media-body">
     <h4 class="media-heading"><a href="{{$query->url}}">{{$query->title}}</a></h4>
     <p>{{$query->description}}</p>

@@ -22,9 +22,8 @@ class BrowseController extends Controller
     public function index(Request $request)
     {
         $queries = DB::table('posts')
-            ->select('title', 'description', 'url', 'threadid', 'userid', 'created_at')
+            ->select('title', 'description', 'url', 'threadid', 'userid', 'created_at', 'id')
             ->get();
-        $result = array();
         foreach($queries as $query)
         {
             $threadname = DB::table('threads')
@@ -39,6 +38,8 @@ class BrowseController extends Controller
 
             $query->threadid = $threadname->name;
             $query->userid = $username->username;
+
+            $query->voteCount = DB::table('votes')->where('postid', $query->id)->count();
         }
         return view('index', ['queries' => $queries]);
     }
