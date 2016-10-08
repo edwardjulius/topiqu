@@ -37,19 +37,26 @@ class BrowseController extends Controller
                 ->where('id', $query->userid)
                 ->first();
 
-            $voted = DB::table('votes')
-                ->select('id')
-                ->where('postid', $query->id)
-                ->where('userid', Auth::user()->id)
-                ->first();
-
-            if($voted == null)
+            if(Auth::user() != null)
             {
-                $query->voted = false;
+                $voted = DB::table('votes')
+                    ->select('id')
+                    ->where('postid', $query->id)
+                    ->where('userid', Auth::user()->id)
+                    ->first();
+
+                if($voted == null)
+                {
+                    $query->voted = false;
+                }
+                else
+                {
+                    $query->voted = true;
+                }
             }
             else
             {
-                $query->voted = true;
+                $query->voted = false;
             }
 
             $query->threadname = $threadname->name;
