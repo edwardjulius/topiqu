@@ -22,7 +22,7 @@ class BrowseController extends Controller
     public function index(Request $request)
     {
         $queries = DB::table('posts')
-            ->select('title', 'description', 'url', 'threadid', 'userid', 'created_at', 'id', 'totalcount', 'votecount')
+            ->select('title', 'description', 'url', 'threadid', 'userid', 'created_at', 'id', 'totalcount', 'votecount', 'commentcount')
             ->orderBy('totalcount', 'desc')
             ->get();
         foreach($queries as $query)
