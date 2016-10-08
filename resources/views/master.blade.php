@@ -81,8 +81,8 @@
     <body>
     <div class="container">
         @yield('content')
+        <hr>
     </div>
-    <hr>
     <center>
             © 2016 topiqu prima multimedia
         <br>
