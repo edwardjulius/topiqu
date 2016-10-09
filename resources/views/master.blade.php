@@ -57,7 +57,7 @@
                 </div>
                 @else
                 <div class="navbar-header pull-right">
-                    <ul class="nav navbar-nav">
+                    <ul class="nav navbar-nav" style="display: inline-block;">
                         <li><a href="/login">Masuk</a></li>
                         <li><a href="/register">Daftar</a></li>
                     </ul>
