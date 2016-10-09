@@ -64,7 +64,7 @@
                 </div>
                 @endif
             </div>
-        </nav>s
+        </nav>
         <!-- Custom Style -->
         <style>
             body {padding-top:70px; font-family: 'Work Sans', sans-serif;}
