@@ -31,41 +31,39 @@
         <nav class="navbar navbar-default navbar-fixed-top">
             <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header pull-left navbar-logo">
-                <ul class="nav navbar-nav">
-                    <li><a href="/" class="navbar-left navbar-brandimage"><img class="topiqulogo" src="{{ asset('/topiqulogo.png') }}" width="30px" height="30px"></a></li>
-                    <li></li>
-                </ul>
-            </div>
+                <div class="navbar-header pull-left navbar-logo">
+                        <a class="navbar-brand" href="/"><img alt="Brand" src="{{ asset('/topiqulogo.png') }}" width="30px" height="30px"></a>
+                </div>
 
-            @if(Auth::check())
-            <div class="navbar-header pull-right">
-                <div class="btn-group navbar-btn navbar-rightbtn navbar-hamburger" role="group">
-                    <button type="button" class="btn btn-default dropdown-toggle btn-hamburger" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                        <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
-                    </button>
-                    <ul class="dropdown-menu pull-right" aria-labelledby="dropdownMenu1">
-                        <li><a href="/post">Post</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a href="#">Messages</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a href="#">Search</a></li>
-                        <li><a href="#">Browse</a></li>
-                        <li><a href="#">Subscription</a></li>
-                        <li><a href="#">Settings</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a href="/logout">Logout</a></li>
+                @if(Auth::check())
+                <div class="collapse navbar-collapse pull-right">
+                    <div class="btn-group navbar-btn navbar-rightbtn navbar-hamburger" role="group">
+                        <button type="button" class="btn btn-default dropdown-toggle btn-hamburger" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
+                        </button>
+                        <ul class="dropdown-menu pull-right" aria-labelledby="dropdownMenu1">
+                            <li><a href="/post">Post</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">Messages</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">Search</a></li>
+                            <li><a href="#">Browse</a></li>
+                            <li><a href="#">Subscription</a></li>
+                            <li><a href="#">Settings</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="/logout">Logout</a></li>
+                        </ul>
+                    </div>
+                </div>
+                @else
+                <div class="collapse navbar-collapse pull-right">
+                    <ul class="nav navbar-nav">
+                        <li><a href="/login">Masuk</a></li>
+                        <li><a href="/register">Daftar</a></li>
                     </ul>
                 </div>
+                @endif
             </div>
-            @else
-            <div class="navbar-header pull-right" style="white-space: nowrap; padding-right: 10px">
-                <ul class="nav navbar-nav" style="white-space: nowrap;">
-                    <li style="display: inline-block;"><a href="/login">Masuk</a></li>
-                    <li style="display: inline-block;"><a href="/register">Daftar</a></li>
-                </ul>
-            </div>
-            @endif
         </nav>
         <!-- Custom Style -->
         <style>

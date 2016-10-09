@@ -12,6 +12,7 @@
 .media-detail{font-size:15px;}
 .media-footer{font-size:15px; color: #696969;}
 .img-toggle{color: #000000;}
+.media{padding: 0px; margin: 0px;}
 </style>
 @extends('master')
 @section('content')
@@ -68,4 +69,11 @@
   <hr>
 </div>
 @endforeach
+
+<nav aria-label="...">
+  <ul class="pager">
+    <li class="previous"><a href="#"><span aria-hidden="true">&larr; sebelumnya</span></a></li>
+    <li class="next"><a href="#"><span aria-hidden="true">berikutnya &rarr;</span></a></li>
+  </ul>
+</nav>
 @endsection
