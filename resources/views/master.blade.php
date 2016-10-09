@@ -36,7 +36,7 @@
                 </div>
 
                 @if(Auth::check())
-                <div class="collapse navbar-collapse pull-right">
+                <div class="navbar-header pull-right">
                     <div class="btn-group navbar-btn navbar-rightbtn navbar-hamburger" role="group">
                         <button type="button" class="btn btn-default dropdown-toggle btn-hamburger" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                             <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
@@ -56,7 +56,7 @@
                     </div>
                 </div>
                 @else
-                <div class="collapse navbar-collapse pull-right">
+                <div class="navbar-header pull-right">
                     <ul class="nav navbar-nav">
                         <li><a href="/login">Masuk</a></li>
                         <li><a href="/register">Daftar</a></li>
@@ -70,7 +70,7 @@
             body {padding-top:70px; font-family: 'Work Sans', sans-serif;}
             .navbar-menubtn{padding-top: 3px; padding-right: 25px; padding-left:3px;}
             .navbar-hamburger{padding-top: 11px; padding-right:16px;}
-            .navbar-credential{padding-top: 3px; padding-left:8px;}
+            .navbar-credential{padding-top: 3px; padding-left:8px;} 
             .navbar{height: 50px; min-width: 100%;}
             .navbar-logo{position: relative; bottom: 6px; padding-left: 8px;}
             .btn-hamburger{padding: 0; border: none; background: none;}
