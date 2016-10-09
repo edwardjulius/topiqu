@@ -73,7 +73,7 @@ class AuthController extends Controller
     protected function create(array $data)
     {
         return User::create([
-            'username' => $data['username'],
+            'username' => strtolower($data['username']),
             'email' => $data['email'],
             'dateofbirth' => date('Y-m-d', strtotime(str_replace('/', '-', $data['dateofbirth']))),
             'gender' => $data['gender'],

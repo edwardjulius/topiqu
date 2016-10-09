@@ -24,7 +24,8 @@ class BrowseController extends Controller
         $queries = DB::table('posts')
             ->select('title', 'description', 'url', 'threadid', 'userid', 'created_at', 'id', 'totalcount', 'votecount', 'commentcount')
             ->orderBy('totalcount', 'desc')
-            ->get();
+            ->orderBy('created_at', 'desc')
+            ->get(10);
         foreach($queries as $query)
         {
             $threadname = DB::table('threads')
