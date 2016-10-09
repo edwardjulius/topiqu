@@ -58,8 +58,8 @@
                 @else
                 <div class="navbar-header pull-right">
                     <ul class="nav navbar-nav" style="display: inline-block;">
-                        <li><a href="/login">Masuk</a></li>
-                        <li><a href="/register">Daftar</a></li>
+                        <li style="display: inline-block;"><a href="/login">Masuk</a></li>
+                        <li style="display: inline-block;"><a href="/register">Daftar</a></li>
                     </ul>
                 </div>
                 @endif
