@@ -60,10 +60,11 @@
   <div class="media-body">
     <p class="media-heading"><h4 class="media-heading"><a href="{{$query->url}}">{{$query->title}}</a></h4></p>
     <p class="media-detail">di posting oleh <a href="/user/{{$query->username}}">{{$query->username}}</a> di <a href="/t/{{$query->threadname}}">{{$query->threadname}}</a></p>
-    <p class="media-footer"><b><a href="/t/{{$query->threadname}}/{{$query->id}}" class="media-footer">{{$query->commentcount}} komentar</a> <a href="/t/{{$query->threadname}}/{{$query->id}}" class="media-footer">share</a> <a href="/t/{{$query->threadname}}/{{$query->id}}" class="media-footer">report</a></b></p>
-  @if(ends_with($query->url, '.jpg') || ends_with($query->url, '.jpeg') || ends_with($query->url, '.png') || ends_with($query->url, '.gif') || ends_with($query->url, '.bmp'))
-    <img src="{{$query->url}}">
-  @endif
+    @if($query->embed != '')
+    <div class="media-embed">
+      {!! $query->embed !!}
+    </div>
+    @endif
   </div>
   <hr>
 </div>

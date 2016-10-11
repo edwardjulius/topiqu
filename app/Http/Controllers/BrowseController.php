@@ -23,7 +23,7 @@ class BrowseController extends Controller
     public function index(Request $request)
     {
         $queries = DB::table('posts')
-            ->select('title', 'description', 'url', 'threadid', 'userid', 'created_at', 'id', 'totalcount', 'votecount', 'commentcount', 'created_at')
+            ->select('title', 'description', 'url', 'threadid', 'userid', 'created_at', 'id', 'totalcount', 'votecount', 'commentcount', 'created_at', 'embed')
             ->where('created_at', '>=', Carbon::now()->subDay())
             ->orderBy('totalcount', 'desc')
             ->orderBy('created_at', 'desc')
@@ -267,7 +267,7 @@ class BrowseController extends Controller
             ->orderBy('votecount', 'desc')
             ->orderBy('created_at', 'desc')
             ->paginate(10);
-            
+
         foreach($queries as $query)
         {
             $threadname = DB::table('threads')

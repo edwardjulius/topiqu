@@ -33,6 +33,7 @@ class PostController extends Controller
         $post->url = $request->url;
         $post->description = $request->description;
         $post->threadid = $thread->id;
+        $post->embed = $request->embed;
         $post->userid = Auth::user()->id;
         $post->save();
         return redirect('/');

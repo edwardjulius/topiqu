@@ -33,6 +33,10 @@
 	  				<input type="text" class="form-control" name="url" id="url" value="{{ old('url') }}">
 				</div>
 				<div class="form-group">
+	  				<label for="description">Embed:</label>
+	  				<textarea class="form-control" name="embed" rows="3" id="embed" value="{{ old('embed') }}"></textarea>
+				</div>
+				<div class="form-group">
 	  				<label for="description">Description:</label>
 	  				<textarea class="form-control" name="description" rows="5" id="description" value="{{ old('description') }}"></textarea>
 				</div>
