@@ -25,7 +25,7 @@
 		<div class="panel-heading"><b>Post</b></div>
 			<div class="panel-body">
 				<div class="form-group">
-	  				<label for="title">Title:</label>
+	  				<label for="title">Judul:</label>
 	  				<input type="text" class="form-control" name="title" id="title" required="true" value="{{ old('title') }}">
 				</div>
 				<div class="form-group">
@@ -37,7 +37,7 @@
 	  				<textarea class="form-control" name="embed" rows="3" id="embed" value="{{ old('embed') }}"></textarea>
 				</div>
 				<div class="form-group">
-	  				<label for="description">Description:</label>
+	  				<label for="description">Deskripsi:</label>
 	  				<textarea class="form-control" name="description" rows="5" id="description" value="{{ old('description') }}"></textarea>
 				</div>
 				<div class="form-group">
@@ -55,9 +55,10 @@
 function validateForm() {
 	var url = document.getElementById("url");
 	var description = document.getElementById("description");
-	if(url.value == "" && description.value == "")
+	var embed = document.getElementById("embed");
+	if(url.value == "" && description.value == "" && embed.value == "")
 	{
-		url.setCustomValidity("Description dan URL tidak boleh di kosongkan semua. Tolong isi salah satu atau dua-duanya.")
+		url.setCustomValidity("Anda tidak bisa meninggalkan semua entri 'URL', 'Embed', dan 'Deskripsi' kosong. Cukup masukkan setidaknya satu entri.");
 	}
 	else
 	{
