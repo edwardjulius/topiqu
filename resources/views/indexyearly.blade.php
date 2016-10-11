@@ -69,11 +69,7 @@
   <hr>
 </div>
 @endforeach
-
-<nav aria-label="...">
-  <ul class="pager">
-    <li class="previous"><a href="#"><span aria-hidden="true">&larr; sebelumnya</span></a></li>
-    <li class="next"><a href="#"><span aria-hidden="true">berikutnya &rarr;</span></a></li>
-  </ul>
-</nav>
+<center>
+<div class="pagination"> {{ $queries->links() }} </div>
+</center>
 @endsection

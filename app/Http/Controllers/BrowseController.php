@@ -27,7 +27,8 @@ class BrowseController extends Controller
             ->where('created_at', '>=', Carbon::now()->subDay())
             ->orderBy('totalcount', 'desc')
             ->orderBy('created_at', 'desc')
-            ->get(10);
+            ->paginate(10);
+            
         foreach($queries as $query)
         {
             $threadname = DB::table('threads')
@@ -75,7 +76,7 @@ class BrowseController extends Controller
             ->where('created_at', '>=', Carbon::now()->subWeek())
             ->orderBy('totalcount', 'desc')
             ->orderBy('created_at', 'desc')
-            ->get(10);
+            ->paginate(10);
         foreach($queries as $query)
         {
             $threadname = DB::table('threads')
@@ -123,7 +124,7 @@ class BrowseController extends Controller
             ->where('created_at', '>=', Carbon::now()->subMonth())
             ->orderBy('totalcount', 'desc')
             ->orderBy('created_at', 'desc')
-            ->get(10);
+            ->paginate(10);
         foreach($queries as $query)
         {
             $threadname = DB::table('threads')
@@ -171,7 +172,7 @@ class BrowseController extends Controller
             ->where('created_at', '>=', Carbon::now()->subYear())
             ->orderBy('totalcount', 'desc')
             ->orderBy('created_at', 'desc')
-            ->get(10);
+            ->paginate(10);
         foreach($queries as $query)
         {
             $threadname = DB::table('threads')
@@ -218,7 +219,7 @@ class BrowseController extends Controller
             ->select('title', 'description', 'url', 'threadid', 'userid', 'created_at', 'id', 'totalcount', 'votecount', 'commentcount', 'created_at')
             ->orderBy('totalcount', 'desc')
             ->orderBy('created_at', 'desc')
-            ->get(10);
+            ->paginate(10);
         foreach($queries as $query)
         {
             $threadname = DB::table('threads')

@@ -77,15 +77,14 @@
         </style>
     </head>
     <body>
-    <div class="container">
-        @yield('content')
-        <hr>
-    </div>
-    <center>
-            © 2016 topiqu prima multimedia
-        <br>
-        <a href="/about">tentang kami</a> &middot; <a href="/contact">hubungi kami</a>
-    </center>
+        <div class="container">
+            @yield('content')
+            <center>
+                <hr>
+                <p><a href="/about">tentang topiqu</a> &middot; <a href="/contact">hubungi kami</a> &middot; <a href="/karir">karir</a></p>
+                <p>© 2016 topiqu prima multimedia</p>
+            </center>
+        </div>
     </body>
 </html>
 
