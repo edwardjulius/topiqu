@@ -33,24 +33,16 @@ Route::get('sendemail', function () {
 Route::get('/', 'BrowseController@index');
 
 // topiqu.com/weekly
-Route::get('/weekly', function () {
-    return view('indexweekly');
-});
+Route::get('/weekly', 'BrowseController@indexWeekly');
 
 // topiqu.com/monthly
-Route::get('/monthly', function () {
-    return view('indexmonthly');
-});
+Route::get('/monthly', 'BrowseController@indexMonthly');
 
 // topiqu.com/yearly
-Route::get('/yearly', function () {
-    return view('indexyearly');
-});
+Route::get('/yearly', 'BrowseController@indexYearly');
 
 // topiqu.com/alltime
-Route::get('/alltime', function () {
-    return view('indexalltime');
-});
+Route::get('/alltime', 'BrowseController@indexAllTime');
 
 // topiqu.com/top
 Route::get('/top', function () {

@@ -10,6 +10,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
 use Auth;
 use Response;
+use Carbon\Carbon;
 
 class BrowseController extends Controller
 {
@@ -22,7 +23,8 @@ class BrowseController extends Controller
     public function index(Request $request)
     {
         $queries = DB::table('posts')
-            ->select('title', 'description', 'url', 'threadid', 'userid', 'created_at', 'id', 'totalcount', 'votecount', 'commentcount')
+            ->select('title', 'description', 'url', 'threadid', 'userid', 'created_at', 'id', 'totalcount', 'votecount', 'commentcount', 'created_at')
+            ->where('created_at', '>=', Carbon::now()->subDay())
             ->orderBy('totalcount', 'desc')
             ->orderBy('created_at', 'desc')
             ->get(10);
@@ -64,5 +66,196 @@ class BrowseController extends Controller
             $query->username = $username->username;
         }
         return view('index', ['queries' => $queries]);
+    }
+
+    public function indexWeekly(Request $request)
+    {
+        $queries = DB::table('posts')
+            ->select('title', 'description', 'url', 'threadid', 'userid', 'created_at', 'id', 'totalcount', 'votecount', 'commentcount', 'created_at')
+            ->where('created_at', '>=', Carbon::now()->subWeek())
+            ->orderBy('totalcount', 'desc')
+            ->orderBy('created_at', 'desc')
+            ->get(10);
+        foreach($queries as $query)
+        {
+            $threadname = DB::table('threads')
+                ->select('name')
+                ->where('id', $query->threadid)
+                ->first();
+
+            $username = DB::table('users')
+                ->select('username')
+                ->where('id', $query->userid)
+                ->first();
+
+            if(Auth::user() != null)
+            {
+                $voted = DB::table('votes')
+                    ->select('id')
+                    ->where('postid', $query->id)
+                    ->where('userid', Auth::user()->id)
+                    ->first();
+
+                if($voted == null)
+                {
+                    $query->voted = false;
+                }
+                else
+                {
+                    $query->voted = true;
+                }
+            }
+            else
+            {
+                $query->voted = false;
+            }
+
+            $query->threadname = $threadname->name;
+            $query->username = $username->username;
+        }
+        return view('indexweekly', ['queries' => $queries]);
+    }
+
+    public function indexMonthly(Request $request)
+    {
+        $queries = DB::table('posts')
+            ->select('title', 'description', 'url', 'threadid', 'userid', 'created_at', 'id', 'totalcount', 'votecount', 'commentcount', 'created_at')
+            ->where('created_at', '>=', Carbon::now()->subMonth())
+            ->orderBy('totalcount', 'desc')
+            ->orderBy('created_at', 'desc')
+            ->get(10);
+        foreach($queries as $query)
+        {
+            $threadname = DB::table('threads')
+                ->select('name')
+                ->where('id', $query->threadid)
+                ->first();
+
+            $username = DB::table('users')
+                ->select('username')
+                ->where('id', $query->userid)
+                ->first();
+
+            if(Auth::user() != null)
+            {
+                $voted = DB::table('votes')
+                    ->select('id')
+                    ->where('postid', $query->id)
+                    ->where('userid', Auth::user()->id)
+                    ->first();
+
+                if($voted == null)
+                {
+                    $query->voted = false;
+                }
+                else
+                {
+                    $query->voted = true;
+                }
+            }
+            else
+            {
+                $query->voted = false;
+            }
+
+            $query->threadname = $threadname->name;
+            $query->username = $username->username;
+        }
+        return view('indexmonthly', ['queries' => $queries]);
+    }
+
+    public function indexYearly(Request $request)
+    {
+        $queries = DB::table('posts')
+            ->select('title', 'description', 'url', 'threadid', 'userid', 'created_at', 'id', 'totalcount', 'votecount', 'commentcount', 'created_at')
+            ->where('created_at', '>=', Carbon::now()->subYear())
+            ->orderBy('totalcount', 'desc')
+            ->orderBy('created_at', 'desc')
+            ->get(10);
+        foreach($queries as $query)
+        {
+            $threadname = DB::table('threads')
+                ->select('name')
+                ->where('id', $query->threadid)
+                ->first();
+
+            $username = DB::table('users')
+                ->select('username')
+                ->where('id', $query->userid)
+                ->first();
+
+            if(Auth::user() != null)
+            {
+                $voted = DB::table('votes')
+                    ->select('id')
+                    ->where('postid', $query->id)
+                    ->where('userid', Auth::user()->id)
+                    ->first();
+
+                if($voted == null)
+                {
+                    $query->voted = false;
+                }
+                else
+                {
+                    $query->voted = true;
+                }
+            }
+            else
+            {
+                $query->voted = false;
+            }
+
+            $query->threadname = $threadname->name;
+            $query->username = $username->username;
+        }
+        return view('indexyearly', ['queries' => $queries]);
+    }
+
+    public function indexAllTime(Request $request)
+    {
+        $queries = DB::table('posts')
+            ->select('title', 'description', 'url', 'threadid', 'userid', 'created_at', 'id', 'totalcount', 'votecount', 'commentcount', 'created_at')
+            ->orderBy('totalcount', 'desc')
+            ->orderBy('created_at', 'desc')
+            ->get(10);
+        foreach($queries as $query)
+        {
+            $threadname = DB::table('threads')
+                ->select('name')
+                ->where('id', $query->threadid)
+                ->first();
+
+            $username = DB::table('users')
+                ->select('username')
+                ->where('id', $query->userid)
+                ->first();
+
+            if(Auth::user() != null)
+            {
+                $voted = DB::table('votes')
+                    ->select('id')
+                    ->where('postid', $query->id)
+                    ->where('userid', Auth::user()->id)
+                    ->first();
+
+                if($voted == null)
+                {
+                    $query->voted = false;
+                }
+                else
+                {
+                    $query->voted = true;
+                }
+            }
+            else
+            {
+                $query->voted = false;
+            }
+
+            $query->threadname = $threadname->name;
+            $query->username = $username->username;
+        }
+        return view('indexalltime', ['queries' => $queries]);
     }
 }
