@@ -20,7 +20,7 @@ class CreatePostsTable extends Migration
             $table->foreign('threadid')->references('id')->on('threads');
             $table->string('title');
             $table->string('url');
-            $table->string('embed');
+            $table->string('embed', '1000');
             $table->string('description');
             $table->integer('votecount')->default(0);
             $table->integer('commentcount')->default(0);
