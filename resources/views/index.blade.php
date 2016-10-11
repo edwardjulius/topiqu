@@ -42,7 +42,6 @@
   </div>
 
 </ul>
-
 @foreach ($queries as $query)
 <div class="media">
   <div class="media-left">

@@ -28,7 +28,7 @@ class BrowseController extends Controller
             ->orderBy('totalcount', 'desc')
             ->orderBy('created_at', 'desc')
             ->paginate(10);
-            
+
         foreach($queries as $query)
         {
             $threadname = DB::table('threads')
@@ -220,6 +220,54 @@ class BrowseController extends Controller
             ->orderBy('totalcount', 'desc')
             ->orderBy('created_at', 'desc')
             ->paginate(10);
+        foreach($queries as $query)
+        {
+            $threadname = DB::table('threads')
+                ->select('name')
+                ->where('id', $query->threadid)
+                ->first();
+
+            $username = DB::table('users')
+                ->select('username')
+                ->where('id', $query->userid)
+                ->first();
+
+            if(Auth::user() != null)
+            {
+                $voted = DB::table('votes')
+                    ->select('id')
+                    ->where('postid', $query->id)
+                    ->where('userid', Auth::user()->id)
+                    ->first();
+
+                if($voted == null)
+                {
+                    $query->voted = false;
+                }
+                else
+                {
+                    $query->voted = true;
+                }
+            }
+            else
+            {
+                $query->voted = false;
+            }
+
+            $query->threadname = $threadname->name;
+            $query->username = $username->username;
+        }
+        return view('indexalltime', ['queries' => $queries]);
+    }
+
+    public function top(Request $request)
+    {
+        $queries = DB::table('posts')
+            ->select('title', 'description', 'url', 'threadid', 'userid', 'created_at', 'id', 'votecount', 'commentcount', 'created_at')
+            ->orderBy('votecount', 'desc')
+            ->orderBy('created_at', 'desc')
+            ->paginate(10);
+            
         foreach($queries as $query)
         {
             $threadname = DB::table('threads')

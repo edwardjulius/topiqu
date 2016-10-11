@@ -45,9 +45,7 @@ Route::get('/yearly', 'BrowseController@indexYearly');
 Route::get('/alltime', 'BrowseController@indexAllTime');
 
 // topiqu.com/top
-Route::get('/top', function () {
-    return view('top');
-});
+Route::get('/top', 'BrowseController@top');
 
 // topiqu.com/top/weekly
 Route::get('/top/weekly', function () {
