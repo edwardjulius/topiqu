@@ -18,7 +18,6 @@ class CreateThreadsTable extends Migration
             $table->text('description');
             $table->integer('parent')->unsigned()->nullable();
             $table->foreign('parent')->references('id')->on('threads');
-            $table->timestamps();
         });
     }
 
