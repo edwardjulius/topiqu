@@ -61,9 +61,11 @@
     <p class="media-heading"><h4 class="media-heading"><a href="{{$query->url}}">{{$query->title}}</a></h4></p>
     <p class="media-detail">di posting oleh <a href="/user/{{$query->username}}">{{$query->username}}</a> di <a href="/t/{{$query->threadname}}">{{$query->threadname}}</a></p>
     @if($query->embed != '')
+    <center>
     <div class="media-embed">
       {!! $query->embed !!}
     </div>
+    </center>
     @endif
   </div>
   <hr>

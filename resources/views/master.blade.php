@@ -81,8 +81,9 @@
             @yield('content')
             <center>
                 <hr>
-                <p><a href="/about">tentang topiqu</a> &middot; <a href="/contact">hubungi kami</a> &middot; <a href="/karir">karir</a></p>
-                <p>© 2016 topiqu prima multimedia</p>
+                <a href="/about">tentang topiqu</a> &middot; <a href="/contact">hubungi kami</a> &middot; <a href="/karir">karir</a><br>
+                © 2016 topiqu prima multimedia<br>
+                <a class="icons-sm fb-ic"><i class="fa fa-facebook"></i></a>
             </center>
         </div>
     </body>
