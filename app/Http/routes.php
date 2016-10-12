@@ -11,27 +11,13 @@
 |
 */
 
-Route::get('sendemail', function () {
-
-    $data = array(
-        'name' => "Learning Laravel 2222",
-    );
-
-    Mail::send('emails.welcome', $data, function ($message) {
-
-        $message->from('admin@topiqu.com', 'Topiqu Administrator');
-
-        $message->to('edwardjulius@gmail.com')->subject('Welcome to Topiqu.com!');
-
-    });
-
-    return "Your email has been sent successfully";
-
+// topiqu.com
+//Route::get('/', 'BrowseController@index');
+Route::get('/', function () {
+    return "topiqu.com will launch in December. Please come back again soon. topiqu.com akan hadir di bulan Desember. Silahkan datang kembali lagi!";
 });
 
-// topiqu.com
-Route::get('/', 'BrowseController@index');
-
+/*
 // topiqu.com/weekly
 Route::get('/weekly', 'BrowseController@indexWeekly');
 
@@ -97,7 +83,8 @@ Route::get('/about', function () {
     return view('about');
 });
 
-Route::get('/getThreadName',  'ThreadController@getThreadName');
+// Autocomplete for /post
+Route::get('/getThreadList',  'ThreadController@getThreadList');
 
 // topiqu.com/t/{topiq}
 Route::get('thread/{topiq}', 'ThreadController@showThread($topiq)');
@@ -125,3 +112,4 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('api/vote/{postid}', 'VoteController@vote');
     Route::get('api/devote/{postid}', 'VoteController@devote');
 });
+*/

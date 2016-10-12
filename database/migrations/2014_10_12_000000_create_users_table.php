@@ -21,6 +21,7 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->date('dateofbirth');
             $table->boolean('confirmed')->default(0);
+            $table->integer('followercount')->default(0);
             $table->char('gender', 1);
             $table->rememberToken();
         });

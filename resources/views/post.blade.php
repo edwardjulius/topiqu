@@ -69,7 +69,7 @@ function validateForm() {
 $(function()
 {
 	 $( "#topiq" ).autocomplete({
-	  source: "/getThreadName",
+	  source: "/getThreadList",
 	  minLength: 1
 	});
 });

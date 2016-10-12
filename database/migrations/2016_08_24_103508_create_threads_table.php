@@ -18,6 +18,8 @@ class CreateThreadsTable extends Migration
             $table->text('description');
             $table->integer('parent')->unsigned()->nullable();
             $table->foreign('parent')->references('id')->on('threads');
+            $table->integer('subscribercount')->default(0);
+            $table->integer('moderatorcount')->default(0);
         });
     }
 

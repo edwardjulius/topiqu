@@ -11,7 +11,7 @@ use Response;
 
 class ThreadController extends Controller
 {
-    public function getThreadName()
+    public function getThreadList()
     {
     	$term = Input::get('term');
 
