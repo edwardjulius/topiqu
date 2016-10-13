@@ -27,24 +27,29 @@
                 <header class="mdl-layout__header">
                     <div class="mdl-layout__header-row">
                         <!-- Title -->
-                        <span class="mdl-layout-title"><a href="/"><img alt="Brand" src="{{ asset('/topiqulogo.png') }}" width="35px" height="35px"></a></span>
+                        <span class="mdl-layout-title">
+                            <a href="/"><img alt="Brand" src="{{ asset('/topiqulogo.png') }}" width="35px" height="35px"></a>
+                        </span>
                         <!-- Add spacer, to align navigation to the right -->
                         <div class="mdl-layout-spacer"></div>
-                            <!-- Navigation. We hide it in small screens. -->
+                            <!-- Navigation -->
                             <nav class="mdl-navigation">
                                 <a class="mdl-navigation__link" href="/login">Masuk</a>
                                 <a class="mdl-navigation__link" href="/register">Daftar</a>
+                                <!-- Right aligned menu below button -->
+                                <button id="demo-menu-lower-right" class="mdl-button mdl-js-button mdl-button--icon">
+                                    <i class="material-icons">more_vert</i>
+                                </button>
+
+                                <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="demo-menu-lower-right">
+                                    <li class="mdl-menu__item">Some Action</li>
+                                    <li class="mdl-menu__item">Another Action</li>
+                                    <li disabled class="mdl-menu__item">Disabled Action</li>
+                                    <li class="mdl-menu__item">Yet Another Action</li>
+                                </ul>
                             </nav>
                     </div>
                 </header>
-                <div class="mdl-layout__drawer">
-                    <nav class="mdl-navigation">
-                        <a class="mdl-navigation__link" href="">Link</a>
-                        <a class="mdl-navigation__link" href="">Link</a>
-                        <a class="mdl-navigation__link" href="">Link</a>
-                        <a class="mdl-navigation__link" href="">Link</a>
-                    </nav>
-                </div>
                 <main class="mdl-layout__content">
                     <div class="page-content">
                         @yield('content')
