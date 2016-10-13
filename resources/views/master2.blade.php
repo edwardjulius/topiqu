@@ -48,21 +48,25 @@
                     <div class="mdl-layout-spacer"></div>
                         <!-- Navigation -->
                         <nav class="mdl-navigation">
-                            <a class="mdl-navigation__link" href="/login">Masuk</a>
-                            <a class="mdl-navigation__link" href="/register">Daftar</a>
+                            @if(Auth::check())
                             <!-- Right aligned menu below button -->
-                            <button id="demo-menu-lower-right" class="mdl-button mdl-js-button mdl-button--icon">
-                                <i class="material-icons">more_vert</i>
-                            </button>
-
-                            <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="demo-menu-lower-right">
+                            <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="dropdown-menu">
                                 <li class="mdl-menu__item">Post</li>
                                 <li class="mdl-menu__item">Browse</li>
                                 <li class="mdl-menu__item">Messages</li>
+                                <li class="mdl-menu__item">Subscription</li>
                                 <li class="mdl-menu__item">Profile</li>
                                 <li class="mdl-menu__item">Settings</li>
                                 <li class="mdl-menu__item">Logout</li>
                             </ul>
+                            <button id="dropdown-menu" class="mdl-button mdl-js-button mdl-button--icon">
+                                <i class="material-icons">more_vert</i>
+                            </button>
+                            @else
+                            <!-- User Login and Registration -->
+                            <a class="mdl-navigation__link" href="/login">Masuk</a>
+                            <a class="mdl-navigation__link" href="/register">Daftar</a>
+                            @endif
                         </nav>
                     </div>
             </header>
@@ -73,12 +77,12 @@
                     </body>
                     <footer class="mdl-mini-footer">
                         <div class="mdl-mini-footer__center-section">
-                            <div class="mdl-logo">© 2016 topiqu prima multimedia</div>
+                            <div class="mdl-logo">© 2016 TOPIQU PRIMA MULTIMEDIA</div>
                             <ul class="mdl-mini-footer__link-list">
-                                <li><a href="/about">tentang topiqu</a></li>
-                                <li><a href="/contact">hubungi kami</a></li>
-                                <li><a href="/karir">karir</a></li>
-                                <li><a href="/wiki">wiki</a></li>
+                                <li><a href="/about">Tentang Topiqu</a></li>
+                                <li><a href="/contact">Hubungi Kami</a></li>
+                                <li><a href="/karir">Karir</a></li>
+                                <li><a href="/wiki">Wiki</a></li>
                             </ul>
                         </div>
                     </footer>
