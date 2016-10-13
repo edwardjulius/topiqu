@@ -50,16 +50,22 @@
                         <nav class="mdl-navigation">
                             @if(Auth::check())
                             <!-- Right aligned menu below button -->
-                            <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="dropdown-menu">
+                            <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="notification">
+                                <li class="mdl-menu__item">Messages</li>
+                                <li class="mdl-menu__item">Notifications</li>
+                            </ul>
+                            <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="menu">
                                 <li class="mdl-menu__item">Post</li>
                                 <li class="mdl-menu__item">Browse</li>
-                                <li class="mdl-menu__item">Messages</li>
                                 <li class="mdl-menu__item">Subscription</li>
                                 <li class="mdl-menu__item">Profile</li>
                                 <li class="mdl-menu__item">Settings</li>
                                 <li class="mdl-menu__item">Logout</li>
                             </ul>
-                            <button id="dropdown-menu" class="mdl-button mdl-js-button mdl-button--icon">
+                            <button id="notification" class="mdl-button mdl-js-button mdl-button--icon">
+                                <i class="material-icons">notifications</i>
+                            </button> &nbsp; &nbsp;
+                            <button id="menu" class="mdl-button mdl-js-button mdl-button--icon">
                                 <i class="material-icons">more_vert</i>
                             </button>
                             @else
