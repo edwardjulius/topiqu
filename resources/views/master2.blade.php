@@ -21,7 +21,19 @@
 
         <!-- Work Sans -->
         <link href='https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,700' rel='stylesheet' type='text/css'>
-        <style>body {font-family: 'Work Sans', sans-serif;}</style>
+
+        <!-- Custom Style -->
+        <style>
+            body {font-family: 'Work Sans', sans-serif;}
+            .mdl-mini-footer__center-section
+            {
+                display: table;
+                text-align: center;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        </style>
+
         <body>
             <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
                 <header class="mdl-layout__header">
@@ -55,10 +67,17 @@
                         @yield('content')
                         <hr>
                         <center>
-                            <a href="/about">tentang topiqu</a> &middot; <a href="/contact">hubungi kami</a> &middot; <a href="/karir">karir</a>
-                            <br>
-                            © 2016 topiqu prima multimedia
-                        </center>
+                            <footer class="mdl-mini-footer">
+                                <div class="mdl-mini-footer__center-section">
+                                    <div class="mdl-logo">© 2016 topiqu prima multimedia</div>
+                                    <ul class="mdl-mini-footer__link-list">
+                                        <li><a href="/about">tentang topiqu</a></li>
+                                        <li><a href="/contact">hubungi kami</a></li>
+                                        <li><a href="/karir">karir</a></li>
+                                        <li><a href="/wiki">wiki</a></li>
+                                    </ul>
+                                </div>
+                            </footer>
                     </div>
                 </main>
             </div>
