@@ -19,6 +19,7 @@ class CreateMessagesTable extends Migration
             $table->integer('destination')->unsigned();
             $table->foreign('destination')->references('id')->on('users');
             $table->string('message');
+            $table->boolean('open')->default(0);
             $table->timestamps();
         });
     }

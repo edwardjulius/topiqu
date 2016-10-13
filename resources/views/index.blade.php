@@ -1,20 +1,5 @@
 <!-- topiqu.com -->
-<style>
-.dropdown {padding-top: 11px;}
-.glyphicon.glyphicon-heart {font-size: 25px;}
-.glyphicon.glyphicon-heart-empty {font-size:25px;}
-.votecount {font-size: 20px; padding-left: 3px;}
-.media-body{padding-left: 10px; line-height: 90%;}
-.media-left{padding-left: 5px; padding-top: 5px;}
-.heart-empty{color: #FFB6C1;}
-.heart{color: #FFB6C1;}
-.media-heading{font-size: 18px;}
-.media-detail{font-size:15px;}
-.media-footer{font-size:15px; color: #696969;}
-.img-toggle{color: #000000;}
-.media{padding: 0px; margin: 0px;}
-</style>
-@extends('master')
+@extends('master2')
 @section('content')
 @if(Auth::check())
   @if(Auth::user()->confirmed==0)

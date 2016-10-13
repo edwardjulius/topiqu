@@ -12,12 +12,8 @@
 */
 
 // topiqu.com
-//Route::get('/', 'BrowseController@index');
-Route::get('/', function () {
-    return "topiqu.com will launch in December. Please come back again soon. topiqu.com akan hadir di bulan Desember. Silahkan datang kembali lagi!";
-});
+Route::get('/', 'BrowseController@index');
 
-/*
 // topiqu.com/weekly
 Route::get('/weekly', 'BrowseController@indexWeekly');
 
@@ -112,4 +108,3 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('api/vote/{postid}', 'VoteController@vote');
     Route::get('api/devote/{postid}', 'VoteController@devote');
 });
-*/
