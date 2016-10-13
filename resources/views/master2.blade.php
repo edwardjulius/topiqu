@@ -32,6 +32,7 @@
                 margin-left: auto;
                 margin-right: auto;
             }
+            .mdl-layout__header-row {padding-left: 24px !important;}
         </style>
 
         <body>
