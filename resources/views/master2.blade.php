@@ -35,10 +35,10 @@
             margin-right: auto;
         }
         .search-form {padding-left: 15px; padding-top: 6px;}
-        .mdl-layout__header-row {padding-left: 16px !important;}
+        .mdl-layout__header-row {padding-left: 0px;}
     </style>
 
-    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header container">
         <header class="mdl-layout__header">
             <div class="mdl-layout__header-row">
                 <!-- Title -->
@@ -79,7 +79,7 @@
             </ul>
             <button id="notification" class="mdl-button mdl-js-button mdl-button--icon">
                 <i class="material-icons">notifications</i>
-            </button> &nbsp; &nbsp;
+            </button>
             <button id="menu" class="mdl-button mdl-js-button mdl-button--icon">
                 <i class="material-icons">more_vert</i>
             </button>
