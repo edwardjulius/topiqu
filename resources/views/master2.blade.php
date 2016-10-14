@@ -34,7 +34,7 @@
             margin-left: auto;
             margin-right: auto;
         }
-        .search-form {padding-left: 15px; padding-top: 4px;}
+        .search-form {padding-left: 15px; padding-top: 5px;}
         .mdl-layout__header-row {padding-left: 24px !important;}
     </style>
 
@@ -54,7 +54,6 @@
                       </label>
                       <div class="mdl-textfield__expandable-holder">
                           <input class="mdl-textfield__input" type="text" id="text8">
-                          <label class="mdl-textfield__label" for="sample-expandable">Expandable Input</label>
                       </div>
                   </div>
               </form>
