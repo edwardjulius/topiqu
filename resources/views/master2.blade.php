@@ -45,69 +45,71 @@
                 <span class="mdl-layout-title">
                     <a href="/"><img alt="Brand" src="{{ asset('/topiqulogo.png') }}" width="35px" height="35px"></a>
                 </span>
-                <span class="mdl-layout-title search-form">
+                <div class="mdl-layout-title search-form">
                     <!-- start search form -->
-                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
-                        <label class="mdl-button mdl-js-button mdl-button--icon" for="search-expandable">
-                            <i class="material-icons">search</i>
-                        </label>
-                        <div class="mdl-textfield__expandable-holder">
-                            <input class="mdl-textfield__input" type="text" id="search-expandable" />
-                            <label class="mdl-textfield__label" for="search-expandable">Search text</label>
-                        </div>
-                    </div>
-                    <!-- end search form -->
-                </span>
-                <!-- Add spacer, to align navigation to the right -->
-                <div class="mdl-layout-spacer"></div>
-                <!-- Navigation -->
-                <nav class="mdl-navigation">
-                    @if(Auth::check())
-                    <!-- Right aligned menu below button -->
-                    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="notification">
-                        <li class="mdl-menu__item">Messages</li>
-                        <li class="mdl-menu__item">Notifications</li>
-                    </ul>
-                    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="menu">
-                        <li class="mdl-menu__item">Post</li>
-                        <li class="mdl-menu__item">Browse</li>
-                        <li class="mdl-menu__item">Subscription</li>
-                        <li class="mdl-menu__item">Profile</li>
-                        <li class="mdl-menu__item mdl-menu__item--full-bleed-divider">Settings</li>
-                        <li class="mdl-menu__item">Logout</li>
-                    </ul>
-                    <button id="notification" class="mdl-button mdl-js-button mdl-button--icon">
-                        <i class="material-icons">notifications</i>
-                    </button> &nbsp; &nbsp;
-                    <button id="menu" class="mdl-button mdl-js-button mdl-button--icon">
-                        <i class="material-icons">more_vert</i>
-                    </button>
-                    @else
-                    <!-- User Login and Registration -->
-                    <a class="mdl-navigation__link" href="/login">Masuk</a>
-                    <a class="mdl-navigation__link" href="/register">Daftar</a>
-                    @endif
-                </nav>
-            </div>
-        </header>
-        <body>
-            <main class="mdl-layout__content">
-                <div class="page-content">
-                    @yield('content')
-                    <footer class="mdl-mini-footer">
-                        <div class="mdl-mini-footer__center-section">
-                            <div class="mdl-logo">© 2016 TOPIQU PRIMA MULTIMEDIA</div>
-                            <ul class="mdl-mini-footer__link-list">
-                                <li><a href="/about">Tentang Topiqu</a></li>
-                                <li><a href="/contact">Hubungi Kami</a></li>
-                                <li><a href="/karir">Karir</a></li>
-                                <li><a href="/wiki">Wiki</a></li>
-                            </ul>
-                        </div>
-                    </footer>
-                </div>
-            </main>
-        </body>
+                    <form action="#">
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
+                         <label class="mdl-button mdl-js-button mdl-button--icon" for="text8">
+                          <i class="material-icons">search</i>
+                      </label>
+                      <div class="mdl-textfield__expandable-holder">
+                          <input class="mdl-textfield__input" type="text" id="text8">
+                          <label class="mdl-textfield__label" for="sample-expandable">Expandable Input</label>
+                      </div>
+                  </div>
+              </form>
+              <!-- end search form -->
+          </div>
+          <!-- Add spacer, to align navigation to the right -->
+          <div class="mdl-layout-spacer"></div>
+          <!-- Navigation -->
+          <nav class="mdl-navigation">
+            @if(Auth::check())
+            <!-- Right aligned menu below button -->
+            <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="notification">
+                <li class="mdl-menu__item">Messages</li>
+                <li class="mdl-menu__item">Notifications</li>
+            </ul>
+            <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="menu">
+                <li class="mdl-menu__item">Post</li>
+                <li class="mdl-menu__item">Browse</li>
+                <li class="mdl-menu__item">Subscription</li>
+                <li class="mdl-menu__item">Profile</li>
+                <li class="mdl-menu__item mdl-menu__item--full-bleed-divider">Settings</li>
+                <li class="mdl-menu__item">Logout</li>
+            </ul>
+            <button id="notification" class="mdl-button mdl-js-button mdl-button--icon">
+                <i class="material-icons">notifications</i>
+            </button> &nbsp; &nbsp;
+            <button id="menu" class="mdl-button mdl-js-button mdl-button--icon">
+                <i class="material-icons">more_vert</i>
+            </button>
+            @else
+            <!-- User Login and Registration -->
+            <a class="mdl-navigation__link" href="/login">Masuk</a>
+            <a class="mdl-navigation__link" href="/register">Daftar</a>
+            @endif
+        </nav>
     </div>
-    </html>
+</header>
+<body>
+    <main class="mdl-layout__content">
+        <div class="page-content">
+            @yield('content')
+            <footer class="mdl-mini-footer">
+                <div class="mdl-mini-footer__center-section">
+                    <div class="mdl-logo">© 2016 TOPIQU PRIMA MULTIMEDIA</div>
+                    <ul class="mdl-mini-footer__link-list">
+                        <li><a href="/about">Tentang Topiqu</a></li>
+                        <li><a href="/contact">Hubungi Kami</a></li>
+                        <li><a href="/karir">Karir</a></li>
+                        <li><a href="/wiki">Wiki</a></li>
+                    </ul>
+                </div>
+            </footer>
+        </div>
+    </main>
+</body>
+</div>
+</html>
 
