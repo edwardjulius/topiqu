@@ -38,27 +38,23 @@
         .mdl-layout__header-row {padding-left: 0px;}
     </style>
 
-    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header container">
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
         <header class="mdl-layout__header">
             <div class="mdl-layout__header-row">
                 <!-- Title -->
-                <span class="mdl-layout-title">
-                    <a href="/"><img alt="Brand" src="{{ asset('/topiqulogo.png') }}" width="35px" height="35px"></a>
-                </span>
                 <div class="mdl-layout-title search-form">
                     <!-- start search form -->
                     <form action="#">
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
-                         <label class="mdl-button mdl-js-button mdl-button--icon" for="text8">
+                            <label class="mdl-button mdl-js-button mdl-button--icon" for="text8">
                           <i class="material-icons">search</i>
-                      </label>
+                            </label>
                       <div class="mdl-textfield__expandable-holder">
                           <input class="mdl-textfield__input" type="text" id="text8">
                       </div>
-                  </div>
-              </form>
-              <!-- end search form -->
-          </div>
+                        </div>
+                    </form>
+                </div>
           <!-- Add spacer, to align navigation to the right -->
           <div class="mdl-layout-spacer"></div>
           <!-- Navigation -->

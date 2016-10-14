@@ -66,7 +66,7 @@ class BrowseController extends Controller
             $query->threadname = $threadname->name;
             $query->username = $username->username;
         }
-        return view('index', ['queries' => $queries]);
+        return view('index2', ['queries' => $queries]);
     }
 
     public function indexWeekly(Request $request)
