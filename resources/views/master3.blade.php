@@ -3,6 +3,8 @@
   <head>
   	<!--Import Google Icon Font-->
   	<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  	<!-- Font Work Sans -->
+        <link href='https://fonts.googleapis.com/css?family=Work+Sans' rel='stylesheet' type='text/css'>
   	<!--Import materialize.css-->
   	<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
   	<!-- Compiled and minified CSS -->
@@ -15,7 +17,7 @@
   	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   </head>
 
-  <body>
+  <body style="font-family: 'Work Sans', sans-serif;">
   	<nav>
   		<div class="nav-wrapper blue lighten-2">
   			<a href="#" class="brand-logo center" style="padding-top: 6px;"><img src="{{ asset('/topiqulogo.png') }}"></a>
