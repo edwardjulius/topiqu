@@ -59,7 +59,6 @@
   	<div class="footer-copyright grey darken-4">
   		<div class="container">
   			© 2016 Topiqu Prima Multimedia
-  			<a target="_blank" title="follow me on instagram" href="http://www.instagram.com/PLACEHOLDER" class="right" style="padding-top: 10px;">&nbsp;<img alt="follow me on instagram" src="https://c866088.ssl.cf3.rackcdn.com/assets/instagram30x30.png" border=0>&nbsp;</a>
   			<a target="_blank" title="follow me on Twitter" href="http://www.twitter.com/PLACEHOLDER" class="right" style="padding-top: 10px;">&nbsp;<img alt="follow me on twitter" src="https://c866088.ssl.cf3.rackcdn.com/assets/twitter30x30.png" border=0>&nbsp;</a>
   			<a target="_blank" title="follow me on facebook" href="http://www.facebook.com/PLACEHOLDER" class="right" style="padding-top: 10px;">&nbsp;<img alt="follow me on facebook" src="https://c866088.ssl.cf3.rackcdn.com/assets/facebook30x30.png" border=0>&nbsp;</a>
   			<a target="_blank" title="follow me on youtube" href="http://www.youtube.com/PLACEHOLDER" class="right" style="padding-top: 10px;">&nbsp;<img alt="follow me on youtube" src="https://c866088.ssl.cf3.rackcdn.com/assets/youtube30x30.png" border=0>&nbsp;</a>
