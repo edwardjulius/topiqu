@@ -34,7 +34,7 @@
             margin-left: auto;
             margin-right: auto;
         }
-        .search-form {padding-left: 10px;}
+        .search-form {padding-left: 15px; padding-top: 3px;}
         .mdl-layout__header-row {padding-left: 24px !important;}
     </style>
 
