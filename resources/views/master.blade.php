@@ -34,7 +34,6 @@
                 <div class="navbar-header pull-left navbar-logo">
                         <a class="navbar-brand" href="/"><img alt="Brand" src="{{ asset('/topiqulogo.png') }}" width="30px" height="30px"></a>
                 </div>
-
                 @if(Auth::check())
                 <div class="navbar-header pull-right">
                     <div class="btn-group navbar-btn navbar-rightbtn navbar-hamburger" role="group">
