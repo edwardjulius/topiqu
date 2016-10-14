@@ -35,7 +35,7 @@
             margin-right: auto;
         }
         .search-form {padding-left: 15px; padding-top: 6px;}
-        .mdl-layout__header-row {padding-left: 18px !important;}
+        .mdl-layout__header-row {padding-left: 16px !important;}
     </style>
 
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
