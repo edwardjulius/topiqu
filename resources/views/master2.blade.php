@@ -82,18 +82,18 @@
                         @yield('content')
                     </div>
                 </main>
-                <footer class="mdl-mini-footer">
-                    <div class="mdl-mini-footer__center-section">
-                        <div class="mdl-logo">© 2016 TOPIQU PRIMA MULTIMEDIA</div>
-                        <ul class="mdl-mini-footer__link-list">
-                            <li><a href="/about">Tentang Topiqu</a></li>
-                            <li><a href="/contact">Hubungi Kami</a></li>
-                            <li><a href="/karir">Karir</a></li>
-                            <li><a href="/wiki">Wiki</a></li>
-                        </ul>
-                    </div>
-                 </footer>
             </body>
+            <footer class="mdl-mini-footer">
+                <div class="mdl-mini-footer__center-section">
+                    <div class="mdl-logo">© 2016 TOPIQU PRIMA MULTIMEDIA</div>
+                    <ul class="mdl-mini-footer__link-list">
+                        <li><a href="/about">Tentang Topiqu</a></li>
+                        <li><a href="/contact">Hubungi Kami</a></li>
+                        <li><a href="/karir">Karir</a></li>
+                        <li><a href="/wiki">Wiki</a></li>
+                    </ul>
+                </div>
+            </footer>
         </div>
 </html>
 
