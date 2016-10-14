@@ -59,7 +59,7 @@
                                 <li class="mdl-menu__item">Browse</li>
                                 <li class="mdl-menu__item">Subscription</li>
                                 <li class="mdl-menu__item">Profile</li>
-                                <li class="mdl-menu__item">Settings</li>
+                                <li class="mdl-menu__item mdl-menu__item--full-bleed-divider">Settings</li>
                                 <li class="mdl-menu__item">Logout</li>
                             </ul>
                             <button id="notification" class="mdl-button mdl-js-button mdl-button--icon">
