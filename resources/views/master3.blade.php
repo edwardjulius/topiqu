@@ -20,20 +20,16 @@
   </style>
   	<nav>
   		<div class="nav-wrapper blue darken-2"><div class="container">
-  			<a href="#" class="brand-logo" style="padding-top: 5px;"><img src="{{ asset('/topiqulogo.png') }}"></a>
-
-  			<ul id="nav-mobile" class="right">
-  				<li><a href="/login" style="font-size: 120%;">Masuk</a></li>
-  				<li><a href="/register" style="font-size: 120%;">Daftar</a></li>
-  			</ul>
-
-        <form class="brand-logo" style="padding-left: 60px;">
+      <form class="brand-logo">
         <div class="input-field right">
           <input id="search" type="search" class="right blue darken-2 white-text" required>
           <label for="search" class="right"><i class="material-icons">search</i></label>
         </div>
       </form>
-
+  			<ul id="nav-mobile" class="right">
+  				<li><a href="/login">Masuk</a></li>
+  				<li><a href="/register">Daftar</a></li>
+  			</ul>
   		</div></div>
   	</nav>
   	<div class="container">
