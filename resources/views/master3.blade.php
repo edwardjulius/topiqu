@@ -29,16 +29,16 @@
         <ul id="nav-mobile" class="right">
         @if(Auth::check())
           <li><a href="#" data-activates="dropdown-notification" class="button-collapse"><i class="material-icons">notifications</i></a></li>
-          <li><a href="#" data-activates="dropdown-messages" class="dropdown-button"><i class="material-icons">chat_bubble_outline</i></a></li>
+          <li><a href="#" data-activates="dropdown-messages" class="dropdown-button"><i class="material-icons">local_post_office</i></a></li>
           <li><a href="#" data-activates="dropdown-menu-small" class="dropdown-button"><i class="material-icons">menu</i></a>
-            <ul id='dropdown-menu-small' class='dropdown-content'>
-              <li><a href="#!" class="blue-text text-darken-1">Post</a></li>
+            <ul id='dropdown-menu-small' class='dropdown-content' style="min-width: 136px;">
+              <li><a href="#!" class="blue-text text-darken-1"><i class="material-icons left">chat_bubble_outline</i>Post</a></li>
               <li><a href="#!" class="blue-text text-darken-1"><i class="material-icons left">search</i>Search</a></li>
               <li><a href="#!" class="blue-text text-darken-1"><i class="material-icons left">visibility</i>Browse</a></li>
-              <li><a href="#!" class="blue-text text-darken-1">Profile</a></li>
+              <li><a href="#!" class="blue-text text-darken-1"><i class="material-icons left">perm_identity</i>Profile</a></li>
               <li><a href="#!" class="blue-text text-darken-1"><i class="material-icons left">settings</i>Settings</a></li>
               <li class="divider"></li>
-              <li><a href="/logout" class="blue-text text-darken-1">Logout</a></li>
+              <li><a href="#!" class="blue-text text-darken-1"><i class="material-icons left">lock_open</i>Logout</a></li>
             </ul>
           </li>
         @else
@@ -62,23 +62,23 @@
         <ul id="nav-mobile" class="right">
         @if(Auth::check())
           <li><a href="/" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">notifications</i></a></li>
-          <li><a href="#" data-activates="dropdown-messages" class="dropdown-button"><i class="material-icons">chat_bubble_outline</i></a></li>
+          <li><a href="#" data-activates="dropdown-messages" class="dropdown-button"><i class="material-icons">local_post_office</i></a></li>
           <li><a href="#" data-activates="dropdown-menu-medium" class="dropdown-button"><i class="material-icons">menu</i></a>
-            <ul id='dropdown-menu-medium' class='dropdown-content'>
-              <li><a href="#!" class="blue-text text-darken-1">Post</a></li>
+            <ul id='dropdown-menu-medium' class='dropdown-content' style="min-width: 136px;">
+              <li><a href="#!" class="blue-text text-darken-1"><i class="material-icons left">chat_bubble_outline</i>Post</a></li>
               <li><a href="#!" class="blue-text text-darken-1"><i class="material-icons left">search</i>Search</a></li>
               <li><a href="#!" class="blue-text text-darken-1"><i class="material-icons left">visibility</i>Browse</a></li>
-              <li><a href="#!" class="blue-text text-darken-1">Profile</a></li>
+              <li><a href="#!" class="blue-text text-darken-1"><i class="material-icons left">perm_identity</i>Profile</a></li>
               <li><a href="#!" class="blue-text text-darken-1"><i class="material-icons left">settings</i>Settings</a></li>
               <li class="divider"></li>
-              <li><a href="/logout" class="blue-text text-darken-1">Logout</a></li>
+              <li><a href="#!" class="blue-text text-darken-1"><i class="material-icons left">lock_open</i>Logout</a></li>
             </ul>
           </li>
         @else
           <li><a href="/login" style="font-size:120%;"><i class="material-icons left">input</i>Masuk</a></li>
           <li><a href="/register" style="font-size:120%;"><i class="material-icons left">mode_edit</i>Daftar</a></li>
           <li><a href="#" data-activates="dropdown-menu-medium" class="dropdown-button"><i class="material-icons">menu</i></a>
-            <ul id='dropdown-menu-medium' class='dropdown-content'>
+            <ul id='dropdown-menu-medium' class='dropdown-content' style="min-width: 129px;">
               <li><a href="#!" class="blue-text text-darken-1"><i class="material-icons left">search</i>Search</a></li>
               <li><a href="#!" class="blue-text text-darken-1"><i class="material-icons left">visibility</i>Browse</a></li>
             </ul>
@@ -100,23 +100,23 @@
         <ul id="nav-mobile" class="right">
         @if(Auth::check())
           <li><a href="#" data-activates="mobile-demo"><i class="material-icons">notifications</i></a></li>
-          <li><a href="#" data-activates="dropdown-messages" class="dropdown-button"><i class="material-icons">chat_bubble_outline</i></a></li>
+          <li><a href="#" data-activates="dropdown-messages" class="dropdown-button"><i class="material-icons">local_post_office</i></a></li>
           <li><a href="#" data-activates="dropdown-menu-large" class="dropdown-button"><i class="material-icons">menu</i></a>
-            <ul id='dropdown-menu-large' class='dropdown-content'>
-              <li><a href="#!" class="blue-text text-darken-1">Post</a></li>
+            <ul id='dropdown-menu-large' class='dropdown-content' style="min-width: 136px;">
+              <li><a href="#!" class="blue-text text-darken-1"><i class="material-icons left">chat_bubble_outline</i>Post</a></li>
               <li><a href="#!" class="blue-text text-darken-1"><i class="material-icons left">search</i>Search</a></li>
               <li><a href="#!" class="blue-text text-darken-1"><i class="material-icons left">visibility</i>Browse</a></li>
-              <li><a href="#!" class="blue-text text-darken-1">Profile</a></li>
+              <li><a href="#!" class="blue-text text-darken-1"><i class="material-icons left">perm_identity</i>Profile</a></li>
               <li><a href="#!" class="blue-text text-darken-1"><i class="material-icons left">settings</i>Settings</a></li>
               <li class="divider"></li>
-              <li><a href="/logout" class="blue-text text-darken-1">Logout</a></li>
+              <li><a href="#!" class="blue-text text-darken-1"><i class="material-icons left">lock_open</i>Logout</a></li>
             </ul>
           </li>
         @else
           <li><a href="/login" style="font-size:130%;"><i class="material-icons left">input</i>Masuk</a></li>
           <li><a href="/register" style="font-size:130%;"><i class="material-icons left">mode_edit</i>Daftar</a></li>
           <li><a href="#" data-activates="dropdown-menu-large" class="dropdown-button"><i class="material-icons">menu</i></a>
-            <ul id='dropdown-menu-large' class='dropdown-content' style="min-width: 140px;">
+            <ul id='dropdown-menu-large' class='dropdown-content' style="min-width: 131px;">
               <li><a href="#!" class="blue-text text-darken-1"><i class="material-icons left">search</i>Search</a></li>
               <li><a href="#!" class="blue-text text-darken-1"><i class="material-icons left">visibility</i>Browse</a></li>
             </ul>
