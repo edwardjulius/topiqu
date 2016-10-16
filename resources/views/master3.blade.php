@@ -21,9 +21,9 @@
   	<nav>
   		<div class="nav-wrapper blue darken-2">
       <form class="brand-logo">
-        <div class="input-field right">
+        <div class="input-field">
           <input id="search" type="search" class="right blue darken-2 white-text" required>
-          <label for="search" class="right"><i class="material-icons">search</i></label>
+          <label for="search"><i class="material-icons">search</i></label>
         </div>
       </form>
   			<ul id="nav-mobile" class="right">
