@@ -13,6 +13,10 @@
   	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
   	<!--Let browser know website is optimized for mobile-->
   	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <!-- Master Title and Favicon -->
+    <title>topiqu &middot; topik pilihanqu</title>
+    <link rel="shortcut icon" href="{{ asset('/favicon.ico') }}">
   </head>
   <body class="indigo lighten-5">
     <style>
@@ -29,22 +33,22 @@
           <li><a href="#" data-activates="dropdown-menu-small" class="dropdown-button"><i class="material-icons">menu</i></a>
             <ul id='dropdown-menu-small' class='dropdown-content'>
               <li><a href="#!" class="blue-text text-darken-1">Post</a></li>
-              <li><a href="#!" class="blue-text text-darken-1">Search</a></li>
-              <li><a href="#!" class="blue-text text-darken-1">Browse</a></li>
+              <li><a href="#!" class="blue-text text-darken-1"><i class="material-icons left">search</i>Search</a></li>
+              <li><a href="#!" class="blue-text text-darken-1"><i class="material-icons left">visibility</i>Browse</a></li>
               <li><a href="#!" class="blue-text text-darken-1">Profile</a></li>
-              <li><a href="#!" class="blue-text text-darken-1">Settings</a></li>
+              <li><a href="#!" class="blue-text text-darken-1"><i class="material-icons left">settings</i>Settings</a></li>
               <li class="divider"></li>
               <li><a href="/logout" class="blue-text text-darken-1">Logout</a></li>
             </ul>
           </li>
         @else
           <li><a href="#" data-activates="dropdown-menu-small" class="dropdown-button"><i class="material-icons">menu</i></a>
-            <ul id='dropdown-menu-small' class='dropdown-content'>
-              <li><a href="/login" class="blue-text text-darken-1">Masuk</a></li>
-              <li><a href="/register" class="blue-text text-darken-1">Daftar</a></li>
+            <ul id='dropdown-menu-small' class='dropdown-content' style="min-width: 129px;">
+              <li><a href="/login" class="blue-text text-darken-1"><i class="material-icons left">input</i>Masuk</a></li>
+              <li><a href="/register" class="blue-text text-darken-1"><i class="material-icons left">mode_edit</i>Daftar</a></li>
               <li class="divider"></li>
-              <li><a href="#!" class="blue-text text-darken-1">Search</a></li>
-              <li><a href="#!" class="blue-text text-darken-1">Browse</a></li>
+              <li><a href="#!" class="blue-text text-darken-1"><i class="material-icons left">search</i>Search</a></li>
+              <li><a href="#!" class="blue-text text-darken-1"><i class="material-icons left">visibility</i>Browse</a></li>
             </ul>
           </li>
         @endif
@@ -62,10 +66,10 @@
           <li><a href="#" data-activates="dropdown-menu-medium" class="dropdown-button"><i class="material-icons">menu</i></a>
             <ul id='dropdown-menu-medium' class='dropdown-content'>
               <li><a href="#!" class="blue-text text-darken-1">Post</a></li>
-              <li><a href="#!" class="blue-text text-darken-1">Search</a></li>
-              <li><a href="#!" class="blue-text text-darken-1">Browse</a></li>
+              <li><a href="#!" class="blue-text text-darken-1"><i class="material-icons left">search</i>Search</a></li>
+              <li><a href="#!" class="blue-text text-darken-1"><i class="material-icons left">visibility</i>Browse</a></li>
               <li><a href="#!" class="blue-text text-darken-1">Profile</a></li>
-              <li><a href="#!" class="blue-text text-darken-1">Settings</a></li>
+              <li><a href="#!" class="blue-text text-darken-1"><i class="material-icons left">settings</i>Settings</a></li>
               <li class="divider"></li>
               <li><a href="/logout" class="blue-text text-darken-1">Logout</a></li>
             </ul>
@@ -75,8 +79,8 @@
           <li><a href="/register" style="font-size:120%;"><i class="material-icons left">mode_edit</i>Daftar</a></li>
           <li><a href="#" data-activates="dropdown-menu-medium" class="dropdown-button"><i class="material-icons">menu</i></a>
             <ul id='dropdown-menu-medium' class='dropdown-content'>
-              <li><a href="#!" class="blue-text text-darken-1">Search</a></li>
-              <li><a href="#!" class="blue-text text-darken-1">Browse</a></li>
+              <li><a href="#!" class="blue-text text-darken-1"><i class="material-icons left">search</i>Search</a></li>
+              <li><a href="#!" class="blue-text text-darken-1"><i class="material-icons left">visibility</i>Browse</a></li>
             </ul>
           </li>
         @endif
@@ -100,10 +104,10 @@
           <li><a href="#" data-activates="dropdown-menu-large" class="dropdown-button"><i class="material-icons">menu</i></a>
             <ul id='dropdown-menu-large' class='dropdown-content'>
               <li><a href="#!" class="blue-text text-darken-1">Post</a></li>
-              <li><a href="#!" class="blue-text text-darken-1">Search</a></li>
-              <li><a href="#!" class="blue-text text-darken-1">Browse</a></li>
+              <li><a href="#!" class="blue-text text-darken-1"><i class="material-icons left">search</i>Search</a></li>
+              <li><a href="#!" class="blue-text text-darken-1"><i class="material-icons left">visibility</i>Browse</a></li>
               <li><a href="#!" class="blue-text text-darken-1">Profile</a></li>
-              <li><a href="#!" class="blue-text text-darken-1">Settings</a></li>
+              <li><a href="#!" class="blue-text text-darken-1"><i class="material-icons left">settings</i>Settings</a></li>
               <li class="divider"></li>
               <li><a href="/logout" class="blue-text text-darken-1">Logout</a></li>
             </ul>
@@ -112,9 +116,9 @@
           <li><a href="/login" style="font-size:130%;"><i class="material-icons left">input</i>Masuk</a></li>
           <li><a href="/register" style="font-size:130%;"><i class="material-icons left">mode_edit</i>Daftar</a></li>
           <li><a href="#" data-activates="dropdown-menu-large" class="dropdown-button"><i class="material-icons">menu</i></a>
-            <ul id='dropdown-menu-large' class='dropdown-content'>
-              <li><a href="#!" class="blue-text text-darken-1">Search</a></li>
-              <li><a href="#!" class="blue-text text-darken-1">Browse</a></li>
+            <ul id='dropdown-menu-large' class='dropdown-content' style="min-width: 140px;">
+              <li><a href="#!" class="blue-text text-darken-1"><i class="material-icons left">search</i>Search</a></li>
+              <li><a href="#!" class="blue-text text-darken-1"><i class="material-icons left">visibility</i>Browse</a></li>
             </ul>
           </li>
         @endif
