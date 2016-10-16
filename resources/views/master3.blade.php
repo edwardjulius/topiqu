@@ -19,7 +19,7 @@
     input[type="search"] {height: 100% !important;}
   </style>
   	<nav class="blue darken-2">
-  		<div class="nav-wrapper container">
+  		<div class="nav-wrapper">
        <a href="#" class="brand-logo" style="padding-top: 6px;"><img alt="Brand" src="{{ asset('/topiqulogo.png') }}"></a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
         <li><a href="sass.html" style="font-size:120%;">Masuk</a></li>
