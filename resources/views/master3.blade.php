@@ -19,7 +19,7 @@
   <body style="font-family: 'Work Sans', sans-serif;">
   <style>
   input[type="search"] {
-height: 64px !important; /* or height of nav */
+height: 100% !important; /* or height of nav */
 }
   </style>
   	<nav>
