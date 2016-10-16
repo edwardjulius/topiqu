@@ -1,4 +1,4 @@
-@extends('master')
+@extends('master3')
 @section('content')
 <style>
 	.form-login {max-width: 400px; margin: auto; padding-top:30px;}
