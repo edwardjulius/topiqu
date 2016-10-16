@@ -14,27 +14,43 @@
   	<!--Let browser know website is optimized for mobile-->
   	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   </head>
-  <body>
+  <body class="indigo lighten-5">
   <style>
     input[type="search"] {height: 100% !important;}
   </style>
-  <!-- Nav for desktop sized devices -->
-  	<nav class="blue darken-2 hide-on-large-only">
+  <!-- Nav for small sized devices -->
+  	<nav class="blue darken-1 hide-on-med-and-up">
   		<div class="nav-wrapper container">
        <a href="#" class="brand-logo left" style="padding-top: 3px;"><img src="{{ asset('/topiqulogo.png') }}"/></a>
-      <ul id="nav-mobile" class="right">
-        <li><a href="sass.html" style="font-size:120%;">Masuk</a></li>
-        <li><a href="badges.html" style="font-size:120%;">Daftar</a></li>
-      </ul>
+       <ul id="nav-mobile" class="right">
+        <li><a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a></li>
+        </ul>
   		</div>
   	</nav>
-    <!-- Nav for medium and small devices -->
-    <nav class="blue darken-2 hide-on-med-and-down">
+    <!-- Nav for medium sized devices -->
+    <nav class="blue darken-1 hide-on-small-only hide-on-large-only">
+      <div class="nav-wrapper container">
+       <a href="#" class="brand-logo left" style="padding-top: 6px;"><img src="{{ asset('/topiqulogo.png') }}" height="50px" width="50px" /></a>
+      <ul id="nav-mobile" class="right">
+        <li><a href="/login" style="font-size:120%;"><i class="material-icons left">input</i>Masuk</a></li>
+        <li><a href="/register" style="font-size:120%;"><i class="material-icons left">mode_edit</i>Daftar</a></li>
+        <li><a href="#" data-activates="mobile-demo" class="button-collapse right"><i class="material-icons">more_vert</i></a></li>
+      </ul>
+      </div>
+    </nav>
+    <!-- Nav for large sized devices -->
+    <nav class="blue darken-1 hide-on-med-and-down">
       <div class="nav-wrapper container">
        <a href="#" class="brand-logo left" style="padding-top: 6px;"><img src="{{ asset('/topiqulogo.png') }}"/></a>
+       <form class="brand-logo left" style="padding-left:54px;">
+        <div class="input-field">
+          <input id="search" type="search" class="blue darken-1 white-text" required>
+          <label for="search"><i class="material-icons">search</i></label>
+        </div>
+      </form>
       <ul id="nav-mobile" class="right">
-        <li><a href="sass.html" style="font-size:120%;">Masuk</a></li>
-        <li><a href="badges.html" style="font-size:120%;">Daftar</a></li>
+        <li><a href="/login" style="font-size:130%;"><i class="material-icons left">input</i>Masuk</a></li>
+        <li><a href="/register" style="font-size:130%;"><i class="material-icons left">mode_edit</i>Daftar</a></li>
       </ul>
       </div>
     </nav>
@@ -45,8 +61,8 @@
   	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   	<script type="text/javascript" src="js/materialize.min.js"></script>
   </body>
-  <footer class="page-footer grey darken-3">
-  	<div class="container grey darken-3">
+  <footer class="page-footer grey darken-1">
+  	<div class="container grey darken-1">
   		<div class="row">
   			<div class="col l6 s12">
   				<h5 class="white-text">Topiqu</h5>
@@ -71,9 +87,10 @@
   	<div class="footer-copyright grey darken-4">
   		<div class="container">
   			© 2016 topiqudotcom
-  			<a target="_blank" title="follow me on Twitter" href="http://www.twitter.com/PLACEHOLDER" class="right" style="padding-top: 10px;">&nbsp;<img alt="follow me on twitter" src="https://c866088.ssl.cf3.rackcdn.com/assets/twitter30x30.png" border=0>&nbsp;</a>
-  			<a target="_blank" title="follow me on facebook" href="http://www.facebook.com/PLACEHOLDER" class="right" style="padding-top: 10px;">&nbsp;<img alt="follow me on facebook" src="https://c866088.ssl.cf3.rackcdn.com/assets/facebook30x30.png" border=0>&nbsp;</a>
-  			<a target="_blank" title="follow me on youtube" href="http://www.youtube.com/PLACEHOLDER" class="right" style="padding-top: 10px;">&nbsp;<img alt="follow me on youtube" src="https://c866088.ssl.cf3.rackcdn.com/assets/youtube30x30.png" border=0>&nbsp;</a>
+  			<a title="Follow topiqudotcom on Twitter" href="http://www.twitter.com/topiqudotcom" class="right" style="padding-top: 10px;">&nbsp;<img alt="Follow topiqudotcom on Twitter" height="30px" width="30px" src="{{ asset('/svg_icons/twitter.svg') }}" border=0>&nbsp;</a>
+  			<a title="Follow topiqudotcom on Twitter" href="http://www.twitter.com/topiqudotcom" class="right" style="padding-top: 10px;">&nbsp;<img alt="Follow topiqudotcom on Twitter" height="30px" width="30px" src="{{ asset('/svg_icons/instagram.svg') }}" border=0>&nbsp;</a>
+  			<a title="Follow topiqudotcom on Twitter" href="http://www.twitter.com/topiqudotcom" class="right" style="padding-top: 10px;">&nbsp;<img alt="Follow topiqudotcom on Twitter" height="30px" width="30px" src="{{ asset('/svg_icons/facebook.svg') }}" border=0>&nbsp;</a>
+        <a title="Follow topiqudotcom on Twitter" href="http://www.twitter.com/topiqudotcom" class="right" style="padding-top: 10px;">&nbsp;<img alt="Follow topiqudotcom on Twitter" height="30px" width="30px" src="{{ asset('/svg_icons/youtube.svg') }}" border=0>&nbsp;</a>
   		</div>
   	</div>
   </footer>
