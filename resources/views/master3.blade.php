@@ -19,8 +19,8 @@
     input[type="search"] {height: 100% !important;}
   </style>
   	<nav class="blue darken-2">
-  		<div class="nav-wrapper">
-       <a href="#" class="brand-logo" style="padding-top: 6px;"><img alt="Brand" src="{{ asset('/topiqulogo.png') }}"></a>
+  		<div class="nav-wrapper container">
+       <a href="#" class="brand-logo" style="padding-top: 5px;"><img alt="Brand" src="{{ asset('/topiqulogo.png') }}"/></a>
       <ul id="nav-mobile" class="right">
         <li><a href="sass.html" style="font-size:120%;">Masuk</a></li>
         <li><a href="badges.html" style="font-size:120%;">Daftar</a></li>
