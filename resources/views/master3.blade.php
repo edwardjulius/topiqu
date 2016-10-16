@@ -20,7 +20,7 @@
   </style>
   	<nav>
   		<div class="nav-wrapper blue darken-2">
-      <form class="brand-logo">
+      <form>
         <div class="input-field">
           <input id="search" type="search" class="right blue darken-2 white-text" required>
           <label for="search"><i class="material-icons">search</i></label>
