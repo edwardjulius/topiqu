@@ -19,7 +19,7 @@
     input[type="search"] {height: 100% !important;}
   </style>
   	<nav>
-  		<div class="nav-wrapper blue darken-2"><div class="container">
+  		<div class="nav-wrapper blue darken-2">
       <form class="brand-logo">
         <div class="input-field right">
           <input id="search" type="search" class="right blue darken-2 white-text" required>
@@ -30,7 +30,7 @@
   				<li><a href="/login">Masuk</a></li>
   				<li><a href="/register">Daftar</a></li>
   			</ul>
-  		</div></div>
+  		</div>
   	</nav>
   	<div class="container">
   	@yield('content')
