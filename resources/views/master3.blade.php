@@ -18,15 +18,26 @@
   <style>
     input[type="search"] {height: 100% !important;}
   </style>
-  	<nav class="blue darken-2">
+  <!-- Nav for desktop sized devices -->
+  	<nav class="blue darken-2 hide-on-large-only">
   		<div class="nav-wrapper container">
-       <a href="#" class="brand-logo" style="padding-top: 5px;"><img alt="Brand" src="{{ asset('/topiqulogo.png') }}"/></a>
+       <a href="#" class="brand-logo left" style="padding-top: 3px;"><img src="{{ asset('/topiqulogo.png') }}"/></a>
       <ul id="nav-mobile" class="right">
         <li><a href="sass.html" style="font-size:120%;">Masuk</a></li>
         <li><a href="badges.html" style="font-size:120%;">Daftar</a></li>
       </ul>
   		</div>
   	</nav>
+    <!-- Nav for medium and small devices -->
+    <nav class="blue darken-2 hide-on-med-and-down">
+      <div class="nav-wrapper container">
+       <a href="#" class="brand-logo left" style="padding-top: 6px;"><img src="{{ asset('/topiqulogo.png') }}"/></a>
+      <ul id="nav-mobile" class="right">
+        <li><a href="sass.html" style="font-size:120%;">Masuk</a></li>
+        <li><a href="badges.html" style="font-size:120%;">Daftar</a></li>
+      </ul>
+      </div>
+    </nav>
   	<div class="container">
   	@yield('content')
   	</div>
