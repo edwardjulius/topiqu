@@ -16,17 +16,29 @@
   	<!--Let browser know website is optimized for mobile-->
   	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   </head>
-
   <body style="font-family: 'Work Sans', sans-serif;">
+  <style>
+  input[type="search"] {
+height: 64px !important; /* or height of nav */
+}
+  </style>
   	<nav>
-  		<div class="nav-wrapper blue lighten-2">
-  			<a href="#" class="brand-logo center" style="padding-top: 6px;"><img src="{{ asset('/topiqulogo.png') }}"></a>
-  			<ul id="nav-mobile" class="left hide-on-med-and-down">
-  				<li><a href="sass.html"></a></li>
-  				<li><a href="badges.html"></a></li>
-  				<li><a href="collapsible.html"></a></li>
+  		<div class="nav-wrapper blue darken-2"><div class="container">
+  			<a href="#" class="brand-logo" style="padding-top: 5px;"><img src="{{ asset('/topiqulogo.png') }}"></a>
+
+  			<ul id="nav-mobile" class="right hide-on-med-and-down">
+  				<li><a href="/login" style="font-size: 120%;">Masuk</a></li>
+  				<li><a href="/register" style="font-size: 120%;">Daftar</a></li>
   			</ul>
-  		</div>
+
+        <form class="brand-logo" style="padding-left: 60px;">
+        <div class="input-field right">
+          <input id="search" type="search" class="right blue darken-2 white-text" required>
+          <label for="search" class="right"><i class="material-icons">search</i></label>
+        </div>
+      </form>
+
+  		</div></div>
   	</nav>
   	<div class="container">
   	@yield('content')
