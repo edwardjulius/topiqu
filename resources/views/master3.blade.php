@@ -3,8 +3,6 @@
   <head>
   	<!--Import Google Icon Font-->
   	<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  	<!-- Font Work Sans -->
-        <link href='https://fonts.googleapis.com/css?family=Work+Sans' rel='stylesheet' type='text/css'>
   	<!--Import materialize.css-->
   	<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
   	<!-- Compiled and minified CSS -->
@@ -16,17 +14,15 @@
   	<!--Let browser know website is optimized for mobile-->
   	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   </head>
-  <body style="font-family: 'Work Sans', sans-serif;">
+  <body>
   <style>
-  input[type="search"] {
-height: 100% !important; /* or height of nav */
-}
+    input[type="search"] {height: 100% !important;}
   </style>
   	<nav>
   		<div class="nav-wrapper blue darken-2"><div class="container">
   			<a href="#" class="brand-logo" style="padding-top: 5px;"><img src="{{ asset('/topiqulogo.png') }}"></a>
 
-  			<ul id="nav-mobile" class="right hide-on-med-and-down">
+  			<ul id="nav-mobile" class="right">
   				<li><a href="/login" style="font-size: 120%;">Masuk</a></li>
   				<li><a href="/register" style="font-size: 120%;">Daftar</a></li>
   			</ul>
