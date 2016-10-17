@@ -18,7 +18,7 @@
     <title>topiqu &middot; topik pilihanqu</title>
     <link rel="shortcut icon" href="{{ asset('/favicon.ico') }}">
   </head>
-  <body class="indigo lighten-5">
+  <body class="grey lighten-4">
     <style>
       input[type="search"] {height: 100% !important;}
     </style>
@@ -38,7 +38,7 @@
               <li><a href="#!" class="blue-text text-darken-1"><i class="material-icons left">perm_identity</i>Profile</a></li>
               <li><a href="#!" class="blue-text text-darken-1"><i class="material-icons left">settings</i>Settings</a></li>
               <li class="divider"></li>
-              <li><a href="#!" class="blue-text text-darken-1"><i class="material-icons left">lock_open</i>Logout</a></li>
+              <li><a href="/logout" class="blue-text text-darken-1"><i class="material-icons left">lock_open</i>Logout</a></li>
             </ul>
           </li>
         @else
@@ -71,7 +71,7 @@
               <li><a href="#!" class="blue-text text-darken-1"><i class="material-icons left">perm_identity</i>Profile</a></li>
               <li><a href="#!" class="blue-text text-darken-1"><i class="material-icons left">settings</i>Settings</a></li>
               <li class="divider"></li>
-              <li><a href="#!" class="blue-text text-darken-1"><i class="material-icons left">lock_open</i>Logout</a></li>
+              <li><a href="/logout" class="blue-text text-darken-1"><i class="material-icons left">lock_open</i>Logout</a></li>
             </ul>
           </li>
         @else
@@ -109,7 +109,7 @@
               <li><a href="#!" class="blue-text text-darken-1"><i class="material-icons left">perm_identity</i>Profile</a></li>
               <li><a href="#!" class="blue-text text-darken-1"><i class="material-icons left">settings</i>Settings</a></li>
               <li class="divider"></li>
-              <li><a href="#!" class="blue-text text-darken-1"><i class="material-icons left">lock_open</i>Logout</a></li>
+              <li><a href="/logout" class="blue-text text-darken-1"><i class="material-icons left">lock_open</i>Logout</a></li>
             </ul>
           </li>
         @else
