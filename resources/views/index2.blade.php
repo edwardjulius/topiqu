@@ -2,30 +2,29 @@
 @section('content')
 <div class="container">
   <div class="row">
-    <div class="section">
-      <div class="col s10">
+    <center class="section">
+      <div class="col s12">
         <ul class="tabs">
-          <li class="tab"><a class="blue-text active" target="_self" href="/">Trending</a></li>
-          <li class="tab"><a class="blue-text" target="_self" href="/top">Top</a></li>
-          <li class="tab"><a class="blue-text" target="_self" href="/new">New</a></li>
+          <li class="tab"><a class="blue-text text-darken-1 active" target="_self" href="/">Trending</a></li>
+          <li class="tab"><a class="blue-text text-darken-1" target="_self" href="/top">Top</a></li>
+          <li class="tab"><a class="blue-text text-darken-1" target="_self" href="/new">New</a></li>
           @if(Auth::check())
           <li class="tab"><a class="blue-text" href="#sub">Sub</a></li>
           @endif
           <div class="indicator blue" style="z-index:1"></div>
         </ul>
-      </div>
-      <div class="col s2">
         <!-- Dropdown Trigger -->
         <a class='dropdown-button btn-floating btn-small waves-effect waves-light pink accent-3' href='#' data-activates='timeline-trending'><i class="material-icons left">query_builder</i></a>
         <!-- Dropdown Structure -->
         <ul id='timeline-trending' class='dropdown-content'>
-          <li><a href="#!">Minggu</a></li>
-          <li><a href="#!">Bulan</a></li>
-          <li><a href="#!">Tahun</a></li>
-          <li><a href="#!">Semua</a></li>
+          <li><a href="#!" class="blue-text text-darken-1">24 Jam</a></li>
+          <li><a href="#!" class="blue-text text-darken-1">Minggu</a></li>
+          <li><a href="#!" class="blue-text text-darken-1">Bulan</a></li>
+          <li><a href="#!" class="blue-text text-darken-1">Tahun</a></li>
+          <li><a href="#!" class="blue-text text-darken-1">Semua</a></li>
         </ul>
       </div>
-    </div>
+    </center>
   </div>
   <div id="trending">
   fdas
