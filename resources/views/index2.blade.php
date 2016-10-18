@@ -1,5 +1,7 @@
 @extends('master3')
 @section('content')
+
+    <!--
   <div class="row">
     <ul class="tabs">
       <li class="tab"><a class="blue-text active" href="#trending">Trending</a></li>
@@ -13,6 +15,7 @@
   </div>
   <CENTER>
   <div id="trending">
+    <div class="col s6">
     @foreach ($queries as $query)
     <div class="card" style="display:block; overflow:auto;" id="postid-{{$query->id}}">
       <div class="card-image waves-effect waves-block waves-light">
@@ -41,6 +44,7 @@
       </div>
     </div>
     @endforeach
+    </div>
   </div>
 
   <div id="top">
@@ -63,4 +67,5 @@
   }
 };
   </script>
+  -->
 @endsection

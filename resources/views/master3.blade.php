@@ -24,9 +24,9 @@
     </style>
     <!-- Nav for small sized devices -->
     <div class="navbar-fixed hide-on-med-and-up">
-      <nav class="blue darken-1">
+      <nav class="light-blue darken-1" style="overflow: hidden;">
         <div class="nav-wrapper container">
-          <a href="/" class="brand-logo left" style="padding-top: 3px;"><img src="{{ asset('/icon.svg') }}" height="50px" width="50px" /></a>
+          <a href="/" class="brand-logo left"><img src="{{ asset('/icon.svg') }}" style="max-width: 60px; height: auto;" /></a>
           <ul id="nav-mobile" class="right">
           @if(Auth::check())
             <li><a href="#" data-activates="dropdown-notification" class="button-collapse"><i class="material-icons">notifications</i></a></li>
@@ -58,10 +58,10 @@
       </nav>
     </div>
     <!-- Nav for medium sized devices -->
-    <div class="navbar-fixed hide-on-small-only hide-on-large-only">
-      <nav class="blue darken-1">
+    <div class="navbar-fixed hide-on-small-only hide-on-large-only col s12 m6">
+      <nav class="light-blue darken-1" style="overflow: hidden;">
         <div class="nav-wrapper container">
-          <a href="/" class="brand-logo left" style="padding-top: 6px;"><img src="{{ asset('/topiqulogo.png') }}" height="50px" width="50px" /></a>
+          <a href="/" class="brand-logo left" style="padding-top: 2px;"><img src="{{ asset('/icon.svg') }}" style="max-width: 60px; height: auto;" /></a>
           <ul id="nav-mobile" class="right">
           @if(Auth::check())
             <li><a href="/" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">notifications</i></a></li>
@@ -93,12 +93,12 @@
     </div>
     <!-- Nav for large sized devices -->
     <div class="navbar-fixed hide-on-med-and-down">
-      <nav class="blue darken-1">
+      <nav class="light-blue darken-1" style="overflow: hidden;">
         <div class="nav-wrapper container">
-          <a href="/" class="brand-logo left" style="padding-top: 6px;"><img src="{{ asset('/topiqulogo.png') }}"/></a>
+          <a href="/" class="brand-logo left" style="padding-top: 3px;"><img style="max-width: 60px; height: auto;" src="{{ asset('/icon.svg') }}"/></a>
           <form class="left" style="padding-left:54px;">
             <div class="input-field">
-              <input id="search" type="search" class="blue darken-1 white-text" required>
+              <input id="search" type="search" class="light-blue darken-1 white-text" required>
               <label for="search"><i class="material-icons">search</i></label>
             </div>
           </form>
@@ -131,9 +131,7 @@
         </div>
       </nav>
     </div>
-    <div class="container">
-      @yield('content')
-    </div>
+    @yield('content')
     <!--Import jQuery before materialize.js-->
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>           
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
