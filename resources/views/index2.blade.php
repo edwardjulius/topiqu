@@ -2,7 +2,30 @@
 @section('content')
 <div class="container">
   <div class="row">
-    <div class="col s8 offset-s2" style="overflow: hidden;">asdfasdfasdfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffasdfasdfasddfasdfasddfasdfasddfasdfasddfasdfasddfasdfasddfasdfasddfasdfasddfasdfasddfasdfasddfasdfasddfasdfasddfasdfasddfasdfasddfasdfasddfasdfasddfasdfasddfasdfasddfasdfasddfasdfasddfasdfasddfasdfasddfasdfasddfasdfasddfasdfasddfasdfasddfasdfasddfasdfasddfasdfasddfasdfasddfasdfasddfasdfasddfasdfasddfasdfasddfasdfasddfasdfasddfasdfasddfasdfasddfasdfasddfasdfasddfasdfasddfasdfasddfasdfasddfasdfasddfasdfasddfasdfasddfasdfasddfasdfasddfasdfasddfasdfasddfasdfasddfasdfasddfasdfasd</div>
+    <center>
+      <div class="col s12">
+        <ul class="tabs">
+          <li class="tab"><a class="blue-text active" href="#trending">Trending</a></li>
+          <li class="tab"><a class="blue-text" href="#top">Top</a></li>
+          <li class="tab"><a class="blue-text" href="#new">New</a></li>
+          @if(Auth::check())
+          <li class="tab"><a class="blue-text" href="#sub">Sub</a></li>
+          @endif
+          <div class="indicator blue" style="z-index:1"></div>
+        </ul>
+      </div>
+    </center>
+  </div>
+  <div id="trending">
+  </div>
+  <div id="top">
+  </div>
+  <div id="new">
+  </div>
+  @if(Auth::check())
+  <div id="sub">
+  </div>
+  @endif
 </div>
     <!--
   <div class="row">
