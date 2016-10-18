@@ -56,7 +56,7 @@
             @else
               <li><a href="#" data-activates="dropdown-menu-small" class="dropdown-button"><i class="material-icons">menu</i></a>
                 <ul id='dropdown-menu-small' class='dropdown-content' style="min-width: 129px;">
-                  <li><a href="#modal-login" class="modal-trigger"><i class="material-icons left">input</i>Masuk</a></li>
+                  <li><a href="/login" class="blue-text text-darken-1"><i class="material-icons left">input</i>Masuk</a></li>
                   <li><a href="/register" class="blue-text text-darken-1"><i class="material-icons left">mode_edit</i>Daftar</a></li>
                   <li class="divider"></li>
                   <li><a href="#!" class="blue-text text-darken-1"><i class="material-icons left">search</i>Search</a></li>
