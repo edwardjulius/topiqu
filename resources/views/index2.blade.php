@@ -2,12 +2,12 @@
 @section('content')
 <div class="container">
   <div class="row">
-    <center>
+    <center class="section">
       <div class="col s11">
         <ul class="tabs">
-          <li class="tab"><a class="blue-text active" href="#trending">Trending</a></li>
-          <li class="tab"><a class="blue-text" href="#top">Top</a></li>
-          <li class="tab"><a class="blue-text" href="#new">New</a></li>
+          <li class="tab"><a class="blue-text active" target="_self" href="/">Trending</a></li>
+          <li class="tab"><a class="blue-text" target="_self" href="/top">Top</a></li>
+          <li class="tab"><a class="blue-text" target="_self" href="/new">New</a></li>
           @if(Auth::check())
           <li class="tab"><a class="blue-text" href="#sub">Sub</a></li>
           @endif
@@ -15,12 +15,23 @@
         </ul>
       </div>
       <div class="col s1">
+        <!-- Dropdown Trigger -->
+        <a class='dropdown-button btn-floating btn-small waves-effect waves-light pink accent-3' href='#' data-activates='timeline-trending'><i class="material-icons left">query_builder</i></a>
+        <!-- Dropdown Structure -->
+        <ul id='timeline-trending' class='dropdown-content'>
+          <li><a href="#!">Minggu</a></li>
+          <li><a href="#!">Bulan</a></li>
+          <li><a href="#!">Tahun</a></li>
+          <li><a href="#!">Semua</a></li>
+        </ul>
       </div>
     </center>
   </div>
   <div id="trending">
+  fdas
   </div>
   <div id="top">
+  asdf
   </div>
   <div id="new">
   </div>
