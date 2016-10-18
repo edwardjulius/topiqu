@@ -2,8 +2,8 @@
 @section('content')
 <div class="container">
   <div class="row">
-    <center class="section">
-      <div class="col s11">
+    <div class="section">
+      <div class="col s10">
         <ul class="tabs">
           <li class="tab"><a class="blue-text active" target="_self" href="/">Trending</a></li>
           <li class="tab"><a class="blue-text" target="_self" href="/top">Top</a></li>
@@ -14,7 +14,7 @@
           <div class="indicator blue" style="z-index:1"></div>
         </ul>
       </div>
-      <div class="col s1">
+      <div class="col s2">
         <!-- Dropdown Trigger -->
         <a class='dropdown-button btn-floating btn-small waves-effect waves-light pink accent-3' href='#' data-activates='timeline-trending'><i class="material-icons left">query_builder</i></a>
         <!-- Dropdown Structure -->
@@ -25,7 +25,7 @@
           <li><a href="#!">Semua</a></li>
         </ul>
       </div>
-    </center>
+    </div>
   </div>
   <div id="trending">
   fdas
