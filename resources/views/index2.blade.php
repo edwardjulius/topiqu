@@ -13,17 +13,18 @@
           @endif
           <div class="indicator blue" style="z-index:1"></div>
         </ul>
-        <br>
-        <!-- Dropdown Trigger -->
-        <a class='dropdown-button btn-floating btn-small waves-effect waves-light pink accent-3' href='#' data-activates='timeline-trending'><i class="material-icons left">query_builder</i></a>
-        <!-- Dropdown Structure -->
-        <ul id='timeline-trending' class='dropdown-content'>
-          <li><a href="#!" class="blue-text text-darken-1">24 Jam</a></li>
-          <li><a href="#!" class="blue-text text-darken-1">Minggu</a></li>
-          <li><a href="#!" class="blue-text text-darken-1">Bulan</a></li>
-          <li><a href="#!" class="blue-text text-darken-1">Tahun</a></li>
-          <li><a href="#!" class="blue-text text-darken-1">Semua</a></li>
-        </ul>
+        <div class="section">
+          <!-- Dropdown Trigger -->
+          <a class='dropdown-button btn-floating btn-small waves-effect waves-light pink accent-3' href='#' data-activates='timeline-trending'><i class="material-icons left" style="padding-left: 1px;">query_builder</i></a>
+          <!-- Dropdown Structure -->
+          <ul id='timeline-trending' class='dropdown-content'>
+            <li><a href="#!" class="blue-text text-darken-1">24 Jam</a></li>
+            <li><a href="#!" class="blue-text text-darken-1">Minggu</a></li>
+            <li><a href="#!" class="blue-text text-darken-1">Bulan</a></li>
+            <li><a href="#!" class="blue-text text-darken-1">Tahun</a></li>
+            <li><a href="#!" class="blue-text text-darken-1">Semua</a></li>
+          </ul>
+        </div>
       </div>
     </center>
   </div>
