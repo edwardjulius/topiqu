@@ -25,7 +25,7 @@
     <!-- Nav for small sized devices -->
     <nav class="blue darken-1 hide-on-med-and-up">
       <div class="nav-wrapper container">
-        <a href="/" class="brand-logo left" style="padding-top: 3px;"><img src="{{ asset('/topiqulogo.png') }}"/></a>
+        <a href="/" class="brand-logo left" style="padding-top: 3px;"><img src="{{ asset('/icon.svg') }}"/></a>
         <ul id="nav-mobile" class="right">
         @if(Auth::check())
           <li><a href="#" data-activates="dropdown-notification" class="button-collapse"><i class="material-icons">notifications</i></a></li>
@@ -125,7 +125,9 @@
         </ul>
       </div>
     </nav>
+    <div class="container">
       @yield('content')
+    </div>
     <!--Import jQuery before materialize.js-->
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>           
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>

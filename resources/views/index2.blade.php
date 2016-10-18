@@ -1,36 +1,43 @@
 @extends('master3')
 @section('content')
-<div class="container">
   <div class="row">
     <ul class="tabs">
-      <li class="tab"><a class="blue-text" href="#trending">Trending</a></li>
+      <li class="tab"><a class="blue-text active" href="#trending">Trending</a></li>
       <li class="tab"><a class="blue-text" href="#top">Top</a></li>
       <li class="tab"><a class="blue-text" href="#new">New</a></li>
+      @if(Auth::check())
+      <li class="tab"><a class="blue-text" href="#sub">Sub</a></li>
+      @endif
       <div class="indicator blue" style="z-index:1"></div>
     </ul>
   </div>
+  <CENTER>
   <div id="trending">
     @foreach ($queries as $query)
-    <div class="card" style="display:block; overflow: auto;">
+    <div class="card" style="display:block; overflow:auto;" id="postid-{{$query->id}}">
       <div class="card-image waves-effect waves-block waves-light">
         <img class="activator">
       </div>
       <div class="card-content">
         <div class="left">
-          <p>asdf</p>
-          <p>asdf</p>
-          <a class="waves-effect waves-light btn blue darken-4"><i class="material-icons right">favorite_border</i>{{$query->votecount}}</a>&nbsp;
-          <a class="waves-effect waves-light btn blue darken-4"><i class="material-icons right">chat</i>{{$query->commentcount}}</a>
+          <br>
+          <a href="{{$query->url}}"><p class="flow-text"><h5>{{$query->title}}</h5></p></a>
+          <br>
+          <a class="waves-effect waves-light btn indigo lighten-2"><i class="material-icons right">favorite_border</i>{{$query->votecount}}</a>&nbsp;
+          <a class="waves-effect waves-light btn indigo lighten-2"><i class="material-icons right">chat</i>{{$query->commentcount}}</a>&nbsp;
+          <div class="chip">{{$query->username}}</div>
+          <div class="chip">{{$query->threadname}}</div>
+          <br><br>
         </div>
-        <!-- The 3 icons below are all aligned to the right-->
         <i class="material-icons right">more_vert</i>
-        <span class="card-title activator grey-text text-darken-4"><i class="material-icons right">open_in_browser</i></span>
+        @if($query->embed != '')
+        <a class="card-title activator grey-text text-darken-4" onclick="setIframeHeight(document.getElementById('postid-{{$query->id}}'));"><i class="material-icons right">open_in_browser</i></a>
+        @endif
         <i class="material-icons right">open_in_new</i>
-        <br>&nbsp;
       </div>
-      <div class="card-reveal">
-        <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-        <p>Here is some more information about this product that is only revealed once clicked on.</p>
+      <div class="card-reveal" id="revealid-{{$query->id}}">
+        <a class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></a>
+        {!! $query->embed !!}
       </div>
     </div>
     @endforeach
@@ -40,5 +47,20 @@
   </div>
   <div id="new">
   </div>
-</div>
+  @if(Auth::check())
+  <div id="sub">
+  </div>
+  @endif
+  </CENTER>
+  </div>
+  <script>
+  function setIframeHeight(iframe) {
+  if (iframe) {
+    var iframeWin = iframe.contentWindow || iframe.contentDocument.parentWindow;
+    if (iframeWin.document.body) {
+      iframe.height = iframeWin.document.documentElement.scrollHeight || iframeWin.document.body.scrollHeight;
+    }
+  }
+};
+  </script>
 @endsection
