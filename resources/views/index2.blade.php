@@ -2,7 +2,7 @@
 @section('content')
 <div class="container">
   <div class="row">
-    <center class="section">
+    <center>
       <div class="col s12">
         <ul class="tabs">
           <li class="tab"><a class="blue-text text-darken-1 active" target="_self" href="/">Trending</a></li>
@@ -13,6 +13,7 @@
           @endif
           <div class="indicator blue" style="z-index:1"></div>
         </ul>
+        <br>
         <!-- Dropdown Trigger -->
         <a class='dropdown-button btn-floating btn-small waves-effect waves-light pink accent-3' href='#' data-activates='timeline-trending'><i class="material-icons left">query_builder</i></a>
         <!-- Dropdown Structure -->
@@ -26,18 +27,6 @@
       </div>
     </center>
   </div>
-  <div id="trending">
-  fdas
-  </div>
-  <div id="top">
-  asdf
-  </div>
-  <div id="new">
-  </div>
-  @if(Auth::check())
-  <div id="sub">
-  </div>
-  @endif
 </div>
     <!--
   <div class="row">
