@@ -1,4 +1,4 @@
-@extends('master3')
+@extends('masternofooter')
 @section('content')
 <div class="container">
 	@if(count($errors))
