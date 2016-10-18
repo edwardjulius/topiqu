@@ -16,7 +16,7 @@
 
     <!-- Master Title and Favicon -->
     <title>topiqu &middot; topik pilihanqu</title>
-    <link rel="shortcut icon" href="{{ asset('/favicon.ico') }}">
+    <link rel="shortcut icon" href="{{ asset('/icon.svg') }}">
   </head>
   <body class="indigo lighten-5">
     <style>
