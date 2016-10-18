@@ -25,7 +25,7 @@
     <!-- Nav for small sized devices -->
     <nav class="blue darken-1 hide-on-med-and-up">
       <div class="nav-wrapper container">
-        <a href="/" class="brand-logo left" style="padding-top: 3px;"><img src="{{ asset('/topiqulogo.png') }}"/></a>
+        <a href="/" class="brand-logo left" style="padding-top: 3px;"><img src="{{ asset('/icon.svg') }}" height="50px" width="50px" /></a>
         <ul id="nav-mobile" class="right">
         @if(Auth::check())
           <li><a href="#" data-activates="dropdown-notification" class="button-collapse"><i class="material-icons">notifications</i></a></li>
