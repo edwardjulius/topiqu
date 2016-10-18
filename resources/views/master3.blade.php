@@ -23,108 +23,114 @@
       input[type="search"] {height: 100% !important;}
     </style>
     <!-- Nav for small sized devices -->
-    <nav class="blue darken-1 hide-on-med-and-up">
-      <div class="nav-wrapper container">
-        <a href="/" class="brand-logo left" style="padding-top: 3px;"><img src="{{ asset('/icon.svg') }}" height="50px" width="50px" /></a>
-        <ul id="nav-mobile" class="right">
-        @if(Auth::check())
-          <li><a href="#" data-activates="dropdown-notification" class="button-collapse"><i class="material-icons">notifications</i></a></li>
-          <li><a href="#" data-activates="dropdown-messages" class="dropdown-button"><i class="material-icons">local_post_office</i></a></li>
-          <li><a href="#" data-activates="dropdown-menu-small" class="dropdown-button"><i class="material-icons">menu</i></a>
-            <ul id='dropdown-menu-small' class='dropdown-content' style="min-width: 136px;">
-              <li><a href="#!" class="blue-text text-darken-1"><i class="material-icons left">chat_bubble_outline</i>Post</a></li>
-              <li><a href="#!" class="blue-text text-darken-1"><i class="material-icons left">search</i>Search</a></li>
-              <li><a href="#!" class="blue-text text-darken-1"><i class="material-icons left">visibility</i>Browse</a></li>
-              <li><a href="#!" class="blue-text text-darken-1"><i class="material-icons left">perm_identity</i>Profile</a></li>
-              <li><a href="#!" class="blue-text text-darken-1"><i class="material-icons left">settings</i>Settings</a></li>
-              <li class="divider"></li>
-              <li><a href="/logout" class="blue-text text-darken-1"><i class="material-icons left">lock_open</i>Logout</a></li>
-            </ul>
-          </li>
-        @else
-          <li><a href="#" data-activates="dropdown-menu-small" class="dropdown-button"><i class="material-icons">menu</i></a>
-            <ul id='dropdown-menu-small' class='dropdown-content' style="min-width: 129px;">
-              <li><a href="/login" class="blue-text text-darken-1"><i class="material-icons left">input</i>Masuk</a></li>
-              <li><a href="/register" class="blue-text text-darken-1"><i class="material-icons left">mode_edit</i>Daftar</a></li>
-              <li class="divider"></li>
-              <li><a href="#!" class="blue-text text-darken-1"><i class="material-icons left">search</i>Search</a></li>
-              <li><a href="#!" class="blue-text text-darken-1"><i class="material-icons left">visibility</i>Browse</a></li>
-            </ul>
-          </li>
-        @endif
-        </ul>
-      </div>
-    </nav>
+    <div class="navbar-fixed hide-on-med-and-up">
+      <nav class="blue darken-1">
+        <div class="nav-wrapper container">
+          <a href="/" class="brand-logo left" style="padding-top: 3px;"><img src="{{ asset('/icon.svg') }}" height="50px" width="50px" /></a>
+          <ul id="nav-mobile" class="right">
+          @if(Auth::check())
+            <li><a href="#" data-activates="dropdown-notification" class="button-collapse"><i class="material-icons">notifications</i></a></li>
+            <li><a href="#" data-activates="dropdown-messages" class="dropdown-button"><i class="material-icons">local_post_office</i></a></li>
+            <li><a href="#" data-activates="dropdown-menu-small" class="dropdown-button"><i class="material-icons">menu</i></a>
+              <ul id='dropdown-menu-small' class='dropdown-content' style="min-width: 136px;">
+                <li><a href="#!" class="blue-text text-darken-1"><i class="material-icons left">chat_bubble_outline</i>Post</a></li>
+                <li><a href="#!" class="blue-text text-darken-1"><i class="material-icons left">search</i>Search</a></li>
+                <li><a href="#!" class="blue-text text-darken-1"><i class="material-icons left">visibility</i>Browse</a></li>
+                <li><a href="#!" class="blue-text text-darken-1"><i class="material-icons left">perm_identity</i>Profile</a></li>
+                <li><a href="#!" class="blue-text text-darken-1"><i class="material-icons left">settings</i>Settings</a></li>
+                <li class="divider"></li>
+                <li><a href="/logout" class="blue-text text-darken-1"><i class="material-icons left">lock_open</i>Logout</a></li>
+              </ul>
+            </li>
+          @else
+            <li><a href="#" data-activates="dropdown-menu-small" class="dropdown-button"><i class="material-icons">menu</i></a>
+              <ul id='dropdown-menu-small' class='dropdown-content' style="min-width: 129px;">
+                <li><a href="/login" class="blue-text text-darken-1"><i class="material-icons left">input</i>Masuk</a></li>
+                <li><a href="/register" class="blue-text text-darken-1"><i class="material-icons left">mode_edit</i>Daftar</a></li>
+                <li class="divider"></li>
+                <li><a href="#!" class="blue-text text-darken-1"><i class="material-icons left">search</i>Search</a></li>
+                <li><a href="#!" class="blue-text text-darken-1"><i class="material-icons left">visibility</i>Browse</a></li>
+              </ul>
+            </li>
+          @endif
+          </ul>
+        </div>
+      </nav>
+    </div>
     <!-- Nav for medium sized devices -->
-    <nav class="blue darken-1 hide-on-small-only hide-on-large-only">
-      <div class="nav-wrapper container">
-        <a href="/" class="brand-logo left" style="padding-top: 6px;"><img src="{{ asset('/topiqulogo.png') }}" height="50px" width="50px" /></a>
-        <ul id="nav-mobile" class="right">
-        @if(Auth::check())
-          <li><a href="/" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">notifications</i></a></li>
-          <li><a href="#" data-activates="dropdown-messages" class="dropdown-button"><i class="material-icons">local_post_office</i></a></li>
-          <li><a href="#" data-activates="dropdown-menu-medium" class="dropdown-button"><i class="material-icons">menu</i></a>
-            <ul id='dropdown-menu-medium' class='dropdown-content' style="min-width: 136px;">
-              <li><a href="#!" class="blue-text text-darken-1"><i class="material-icons left">chat_bubble_outline</i>Post</a></li>
-              <li><a href="#!" class="blue-text text-darken-1"><i class="material-icons left">search</i>Search</a></li>
-              <li><a href="#!" class="blue-text text-darken-1"><i class="material-icons left">visibility</i>Browse</a></li>
-              <li><a href="#!" class="blue-text text-darken-1"><i class="material-icons left">perm_identity</i>Profile</a></li>
-              <li><a href="#!" class="blue-text text-darken-1"><i class="material-icons left">settings</i>Settings</a></li>
-              <li class="divider"></li>
-              <li><a href="/logout" class="blue-text text-darken-1"><i class="material-icons left">lock_open</i>Logout</a></li>
-            </ul>
-          </li>
-        @else
-          <li><a href="/login" style="font-size:120%;"><i class="material-icons left">input</i>Masuk</a></li>
-          <li><a href="/register" style="font-size:120%;"><i class="material-icons left">mode_edit</i>Daftar</a></li>
-          <li><a href="#" data-activates="dropdown-menu-medium" class="dropdown-button"><i class="material-icons">menu</i></a>
-            <ul id='dropdown-menu-medium' class='dropdown-content' style="min-width: 129px;">
-              <li><a href="#!" class="blue-text text-darken-1"><i class="material-icons left">search</i>Search</a></li>
-              <li><a href="#!" class="blue-text text-darken-1"><i class="material-icons left">visibility</i>Browse</a></li>
-            </ul>
-          </li>
-        @endif
-        </ul>
-      </div>
-    </nav>
+    <div class="navbar-fixed hide-on-small-only hide-on-large-only">
+      <nav class="blue darken-1">
+        <div class="nav-wrapper container">
+          <a href="/" class="brand-logo left" style="padding-top: 6px;"><img src="{{ asset('/topiqulogo.png') }}" height="50px" width="50px" /></a>
+          <ul id="nav-mobile" class="right">
+          @if(Auth::check())
+            <li><a href="/" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">notifications</i></a></li>
+            <li><a href="#" data-activates="dropdown-messages" class="dropdown-button"><i class="material-icons">local_post_office</i></a></li>
+            <li><a href="#" data-activates="dropdown-menu-medium" class="dropdown-button"><i class="material-icons">menu</i></a>
+              <ul id='dropdown-menu-medium' class='dropdown-content' style="min-width: 136px;">
+                <li><a href="#!" class="blue-text text-darken-1"><i class="material-icons left">chat_bubble_outline</i>Post</a></li>
+                <li><a href="#!" class="blue-text text-darken-1"><i class="material-icons left">search</i>Search</a></li>
+                <li><a href="#!" class="blue-text text-darken-1"><i class="material-icons left">visibility</i>Browse</a></li>
+                <li><a href="#!" class="blue-text text-darken-1"><i class="material-icons left">perm_identity</i>Profile</a></li>
+                <li><a href="#!" class="blue-text text-darken-1"><i class="material-icons left">settings</i>Settings</a></li>
+                <li class="divider"></li>
+                <li><a href="/logout" class="blue-text text-darken-1"><i class="material-icons left">lock_open</i>Logout</a></li>
+              </ul>
+            </li>
+          @else
+            <li><a href="/login" style="font-size:120%;"><i class="material-icons left">input</i>Masuk</a></li>
+            <li><a href="/register" style="font-size:120%;"><i class="material-icons left">mode_edit</i>Daftar</a></li>
+            <li><a href="#" data-activates="dropdown-menu-medium" class="dropdown-button"><i class="material-icons">menu</i></a>
+              <ul id='dropdown-menu-medium' class='dropdown-content' style="min-width: 129px;">
+                <li><a href="#!" class="blue-text text-darken-1"><i class="material-icons left">search</i>Search</a></li>
+                <li><a href="#!" class="blue-text text-darken-1"><i class="material-icons left">visibility</i>Browse</a></li>
+              </ul>
+            </li>
+          @endif
+          </ul>
+        </div>
+      </nav>
+    </div>
     <!-- Nav for large sized devices -->
-    <nav class="blue darken-1 hide-on-med-and-down">
-      <div class="nav-wrapper container">
-        <a href="/" class="brand-logo left" style="padding-top: 6px;"><img src="{{ asset('/topiqulogo.png') }}"/></a>
-        <form class="left" style="padding-left:54px;">
-          <div class="input-field">
-            <input id="search" type="search" class="blue darken-1 white-text" required>
-            <label for="search"><i class="material-icons">search</i></label>
-          </div>
-        </form>
-        <ul id="nav-mobile" class="right">
-        @if(Auth::check())
-          <li><a href="#" data-activates="mobile-demo"><i class="material-icons">notifications</i></a></li>
-          <li><a href="#" data-activates="dropdown-messages" class="dropdown-button"><i class="material-icons">local_post_office</i></a></li>
-          <li><a href="#" data-activates="dropdown-menu-large" class="dropdown-button"><i class="material-icons">menu</i></a>
-            <ul id='dropdown-menu-large' class='dropdown-content' style="min-width: 136px;">
-              <li><a href="#!" class="blue-text text-darken-1"><i class="material-icons left">chat_bubble_outline</i>Post</a></li>
-              <li><a href="#!" class="blue-text text-darken-1"><i class="material-icons left">search</i>Search</a></li>
-              <li><a href="#!" class="blue-text text-darken-1"><i class="material-icons left">visibility</i>Browse</a></li>
-              <li><a href="#!" class="blue-text text-darken-1"><i class="material-icons left">perm_identity</i>Profile</a></li>
-              <li><a href="#!" class="blue-text text-darken-1"><i class="material-icons left">settings</i>Settings</a></li>
-              <li class="divider"></li>
-              <li><a href="/logout" class="blue-text text-darken-1"><i class="material-icons left">lock_open</i>Logout</a></li>
-            </ul>
-          </li>
-        @else
-          <li><a href="/login" style="font-size:130%;"><i class="material-icons left">input</i>Masuk</a></li>
-          <li><a href="/register" style="font-size:130%;"><i class="material-icons left">mode_edit</i>Daftar</a></li>
-          <li><a href="#" data-activates="dropdown-menu-large" class="dropdown-button"><i class="material-icons">menu</i></a>
-            <ul id='dropdown-menu-large' class='dropdown-content' style="min-width: 131px;">
-              <li><a href="#!" class="blue-text text-darken-1"><i class="material-icons left">search</i>Search</a></li>
-              <li><a href="#!" class="blue-text text-darken-1"><i class="material-icons left">visibility</i>Browse</a></li>
-            </ul>
-          </li>
-        @endif
-        </ul>
-      </div>
-    </nav>
+    <div class="navbar-fixed hide-on-med-and-down">
+      <nav class="blue darken-1">
+        <div class="nav-wrapper container">
+          <a href="/" class="brand-logo left" style="padding-top: 6px;"><img src="{{ asset('/topiqulogo.png') }}"/></a>
+          <form class="left" style="padding-left:54px;">
+            <div class="input-field">
+              <input id="search" type="search" class="blue darken-1 white-text" required>
+              <label for="search"><i class="material-icons">search</i></label>
+            </div>
+          </form>
+          <ul id="nav-mobile" class="right">
+          @if(Auth::check())
+            <li><a href="#" data-activates="mobile-demo"><i class="material-icons">notifications</i></a></li>
+            <li><a href="#" data-activates="dropdown-messages" class="dropdown-button"><i class="material-icons">local_post_office</i></a></li>
+            <li><a href="#" data-activates="dropdown-menu-large" class="dropdown-button"><i class="material-icons">menu</i></a>
+              <ul id='dropdown-menu-large' class='dropdown-content' style="min-width: 136px;">
+                <li><a href="#!" class="blue-text text-darken-1"><i class="material-icons left">chat_bubble_outline</i>Post</a></li>
+                <li><a href="#!" class="blue-text text-darken-1"><i class="material-icons left">search</i>Search</a></li>
+                <li><a href="#!" class="blue-text text-darken-1"><i class="material-icons left">visibility</i>Browse</a></li>
+                <li><a href="#!" class="blue-text text-darken-1"><i class="material-icons left">perm_identity</i>Profile</a></li>
+                <li><a href="#!" class="blue-text text-darken-1"><i class="material-icons left">settings</i>Settings</a></li>
+                <li class="divider"></li>
+                <li><a href="/logout" class="blue-text text-darken-1"><i class="material-icons left">lock_open</i>Logout</a></li>
+              </ul>
+            </li>
+          @else
+            <li><a href="/login" style="font-size:130%;"><i class="material-icons left">input</i>Masuk</a></li>
+            <li><a href="/register" style="font-size:130%;"><i class="material-icons left">mode_edit</i>Daftar</a></li>
+            <li><a href="#" data-activates="dropdown-menu-large" class="dropdown-button"><i class="material-icons">menu</i></a>
+              <ul id='dropdown-menu-large' class='dropdown-content' style="min-width: 131px;">
+                <li><a href="#!" class="blue-text text-darken-1"><i class="material-icons left">search</i>Search</a></li>
+                <li><a href="#!" class="blue-text text-darken-1"><i class="material-icons left">visibility</i>Browse</a></li>
+              </ul>
+            </li>
+          @endif
+          </ul>
+        </div>
+      </nav>
+    </div>
     <div class="container">
       @yield('content')
     </div>
