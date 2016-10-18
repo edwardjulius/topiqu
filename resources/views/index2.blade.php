@@ -1,6 +1,9 @@
 @extends('master3')
 @section('content')
-
+<div class="container">
+  <div class="row">
+    <div class="col s8 offset-s2" style="overflow: hidden;">asdfasdfasdfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffasdfasdfasddfasdfasddfasdfasddfasdfasddfasdfasddfasdfasddfasdfasddfasdfasddfasdfasddfasdfasddfasdfasddfasdfasddfasdfasddfasdfasddfasdfasddfasdfasddfasdfasddfasdfasddfasdfasddfasdfasddfasdfasddfasdfasddfasdfasddfasdfasddfasdfasddfasdfasddfasdfasddfasdfasddfasdfasddfasdfasddfasdfasddfasdfasddfasdfasddfasdfasddfasdfasddfasdfasddfasdfasddfasdfasddfasdfasddfasdfasddfasdfasddfasdfasddfasdfasddfasdfasddfasdfasddfasdfasddfasdfasddfasdfasddfasdfasddfasdfasddfasdfasddfasdfasddfasdfasd</div>
+</div>
     <!--
   <div class="row">
     <ul class="tabs">
