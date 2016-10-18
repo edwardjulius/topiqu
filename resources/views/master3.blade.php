@@ -56,7 +56,7 @@
             @else
               <li><a href="#" data-activates="dropdown-menu-small" class="dropdown-button"><i class="material-icons">menu</i></a>
                 <ul id='dropdown-menu-small' class='dropdown-content' style="min-width: 129px;">
-                  <li><a href="/login" class="blue-text text-darken-1"><i class="material-icons left">input</i>Masuk</a></li>
+                  <li><a href="#modal-login" class="modal-trigger"><i class="material-icons left">input</i>Masuk</a></li>
                   <li><a href="/register" class="blue-text text-darken-1"><i class="material-icons left">mode_edit</i>Daftar</a></li>
                   <li class="divider"></li>
                   <li><a href="#!" class="blue-text text-darken-1"><i class="material-icons left">search</i>Search</a></li>
@@ -91,7 +91,7 @@
                 </ul>
               </li>
             @else
-              <li><a href="/login" style="font-size:120%;"><i class="material-icons left">input</i>Masuk</a></li>
+              <li><a href="#modal-login" style="font-size:120%;" class="modal-trigger"><i class="material-icons left">input</i>Masuk</a></li>
               <li><a href="/register" style="font-size:120%;"><i class="material-icons left">mode_edit</i>Daftar</a></li>
               <li><a href="#" data-activates="dropdown-menu-medium" class="dropdown-button"><i class="material-icons">menu</i></a>
                 <ul id='dropdown-menu-medium' class='dropdown-content' style="min-width: 129px;">
@@ -134,7 +134,7 @@
                   </ul>
                 </li>
               @else
-                <li><a href="/login" style="font-size:130%;"><i class="material-icons left">input</i>Masuk</a></li>
+                <li><a href="#modal-login" style="font-size:130%;" class="modal-trigger"><i class="material-icons left">input</i>Masuk</a></li>
                 <li><a href="/register" style="font-size:130%;"><i class="material-icons left">mode_edit</i>Daftar</a></li>
                 <li><a href="#" data-activates="dropdown-menu-large" class="dropdown-button"><i class="material-icons">menu</i></a>
                   <ul id='dropdown-menu-large' class='dropdown-content' style="min-width: 131px;">
@@ -147,6 +147,31 @@
             </div>
           </div>
         </nav>
+      </div>
+      <div id="modal-login" class="modal" style="max-width: 400px;">
+        <div class="modal-content">
+        <form method="POST" role="form" action="{{ url('/login') }}">
+        {{ csrf_field() }}
+                <input id="username" type="text" class="validate" placeholder="Username" name="username" value="{{ old('username') }}" required>
+                <input id="password" type="password" class="validate" placeholder="Password" name="password" required>
+            <p>
+              <center>
+                <input type="checkbox" id="rememberme" value="rememberme"/>
+                <label for="rememberme">Ingat Akun</label><br><br>
+              <a href="/forgot">Lupa kredensial?</a><br>
+              <a href="/register">Belum Daftar?</a>
+            </center>
+          </p>
+          <br>
+          <center>
+              <button class="btn btn-lg btn-primary btn-block pink accent-3" type="submit">Masuk</button>
+            </center>
+          </div>
+      </form>
+          <div class="modal-footer">
+            <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat"><i class="material-icons">close</i></a>
+          </div>
+        </div>
       </div>
     </header>
     <main>
@@ -206,5 +231,11 @@
     <!--Import jQuery before materialize.js-->
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>           
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+    <script>
+      $(document).ready(function()
+      {
+        $('.modal-trigger').leanModal();
+      });
+    </script>
   </body>
 </html>
