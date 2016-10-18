@@ -3,7 +3,7 @@
 <div class="container">
   <div class="row">
     <center>
-      <div class="col s12">
+      <div class="col s11">
         <ul class="tabs">
           <li class="tab"><a class="blue-text active" href="#trending">Trending</a></li>
           <li class="tab"><a class="blue-text" href="#top">Top</a></li>
@@ -13,6 +13,8 @@
           @endif
           <div class="indicator blue" style="z-index:1"></div>
         </ul>
+      </div>
+      <div class="col s1">
       </div>
     </center>
   </div>

@@ -150,7 +150,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
   </body>
   <footer class="page-footer grey darken-2">
-    <div class="container grey darken-2">
+    <div class="container grey darken-2 hide-on-med-and-down">
       <div class="row">
         <div class="col l6 s12">
           <h5 class="white-text">Topiqu</h5>
@@ -170,6 +170,20 @@
             <li><a class="grey-text text-lighten-3" href="#!">Syarat dan Ketentuan</a></li>
           </ul>
         </div>
+      </div>
+    </div>
+    <div class="container grey darken-2 hide-on-large-only center">
+      <div class="grey-text text-lighten-3">
+        <a class="grey-text text-lighten-3" href="#!">Tentang Topiqu</a>&nbsp;&middot;&nbsp;
+        <a class="grey-text text-lighten-3" href="#!">Iklan</a>&nbsp;&middot;&nbsp;
+        <a class="grey-text text-lighten-3" href="#!">Hubungi Kami</a>&nbsp;&middot;&nbsp;
+        <a class="grey-text text-lighten-3" href="#!">Karir</a>
+        <p></p>
+        <a class="grey-text text-lighten-3" href="#!">Wiki</a>&nbsp;&middot;&nbsp;
+        <a class="grey-text text-lighten-3" href="#!">Bantuan</a>&nbsp;&middot;&nbsp;
+        <a class="grey-text text-lighten-3" href="#!">FAQ</a>&nbsp;&middot;&nbsp;
+        <a class="grey-text text-lighten-3" href="#!">Syarat dan Ketentuan</a>
+        <p></p>
       </div>
     </div>
     <div class="footer-copyright grey darken-4">
