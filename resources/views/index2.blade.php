@@ -44,7 +44,7 @@
               </a>
               &nbsp;
             </div>
-            <br><br>
+            <br>
             <div style="font-weight: 300; font-size: 150%;">
               {{$query->title}}
             </div>
