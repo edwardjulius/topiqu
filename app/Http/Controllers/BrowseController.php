@@ -23,7 +23,7 @@ class BrowseController extends Controller
     public function index(Request $request)
     {
         $queries = DB::table('posts')
-            ->select('title', 'description', 'url', 'threadid', 'userid', 'created_at', 'id', 'totalcount', 'votecount', 'commentcount', 'created_at', 'embed')
+            ->select('title', 'description', 'url', 'threadid', 'userid', 'id', 'totalcount', 'votecount', 'commentcount', 'created_at', 'embed')
             ->where('created_at', '>=', Carbon::now()->subDay())
             ->orderBy('totalcount', 'desc')
             ->orderBy('created_at', 'desc')
@@ -65,6 +65,7 @@ class BrowseController extends Controller
 
             $query->threadname = $threadname->name;
             $query->username = $username->username;
+            $query->timeline = Carbon::parse($query->created_at)->diffForHumans();
         }
         return view('index2', ['queries' => $queries]);
     }
