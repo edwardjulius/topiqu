@@ -44,19 +44,63 @@
               </a>
               &nbsp;
             </div>
-            <br>
-            <div style="font-weight: 300; font-size: 150%;">
+          </div>
+          <br>
+          <div style="font-weight: 300;">
+            <div align="center" style="font-size: 150%;"> 
               {{$query->title}}
             </div>
-            <hr>
-            <div class="left" style="font-weight: 300; font-size: 90%; padding-top: 6px;">{{$query->timeline}}</div>
-            <div class="right">
-              <a href="#" class="black-text"><i class="material-icons" style="padding-right: 4px;">launch</i></a>
-              <a href="#" class="black-text"><i class="material-icons">present_to_all</i></a>
-              <a href="#" class="black-text"><i class="material-icons">more_vert</i></a>
+            @if($query->description!='')
+            <div align="left" style="font-size:120%;">
+              <blockquote>
+                {{$query->description}}
+              </blockquote>
             </div>
+            @endif
+          </div>
+          <br>
+          <div align="center">
+            @if($query->voted==true)
+            <a href="/api/devote/{{$query->id}}" class="black-text" style="font-weight: 300;">
+              <div class="chip">
+                &nbsp;
+                <img src="{{ asset('/svg_icons/loved.svg') }}" alt="Loves">
+                {{$query->votecount}}
+                &nbsp;
+              </div>
+            </a>
+            @else
+            <a href="/api/vote/{{$query->id}}" class="black-text" style="font-weight: 300;">
+              <div class="chip">
+                &nbsp;
+                <img src="{{ asset('/svg_icons/love.svg') }}" alt="Loves">
+                {{$query->votecount}}
+                &nbsp;
+              </div>
+            </a>
+            @endif
+            <div class="chip">
+              &nbsp;
+              <a href="#" class="black-text" style="font-weight: 300;">
+                <img src="{{ asset('/svg_icons/comment.svg') }}" alt="Comments">
+                {{$query->commentcount}}
+              </a>
+              &nbsp;
+            </div>
+          </div>
+          <hr>
+          <div class="left" style="font-weight: 300; font-size: 90%; padding-top: 6px;">{{$query->timeline}}</div>
+          <div class="right">
+            @if($query->url!='')
+            <a href="{{$query->url}}" class="black-text"><i class="material-icons" style="padding-right: 4px;">launch</i></a>
+            @endif
+            @if($query->embed!='')
+            <a href="#" class="black-text"><i class="material-icons">present_to_all</i></a>
+            @endif
+            <a href="#" class="black-text"><i class="material-icons">more_vert</i></a>
             <br>
           </div>
+          <br>
         </div>
       </div>
     </div>
