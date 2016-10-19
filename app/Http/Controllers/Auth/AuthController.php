@@ -75,8 +75,6 @@ class AuthController extends Controller
         return User::create([
             'username' => strtolower($data['username']),
             'email' => $data['email'],
-            'dateofbirth' => date('Y-m-d', strtotime(str_replace('/', '-', $data['dateofbirth']))),
-            'gender' => $data['gender'],
             'fullname' => $data['fullname'],
             'password' => bcrypt($data['password']),
         ]);

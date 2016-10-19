@@ -2,32 +2,64 @@
 @section('content')
 <div class="container">
   <div class="row">
-    <center>
-      <div class="col s12">
-        <ul class="tabs">
-          <li class="tab"><a class="blue-text text-darken-1 active" target="_self" href="/">Trending</a></li>
-          <li class="tab"><a class="blue-text text-darken-1" target="_self" href="/top">Top</a></li>
-          <li class="tab"><a class="blue-text text-darken-1" target="_self" href="/new">New</a></li>
-          @if(Auth::check())
-          <li class="tab"><a class="blue-text" href="#sub">Sub</a></li>
-          @endif
-          <div class="indicator blue" style="z-index:1"></div>
-        </ul>
-        <div class="section">
-          <!-- Dropdown Trigger -->
-          <a class='dropdown-button btn-floating btn-small waves-effect waves-light pink accent-3' href='#' data-activates='timeline-trending'><i class="material-icons left" style="padding-left: 1px;">query_builder</i></a>
-          <!-- Dropdown Structure -->
-          <ul id='timeline-trending' class='dropdown-content'>
-            <li><a href="#!" class="blue-text text-darken-1">24 Jam</a></li>
-            <li><a href="#!" class="blue-text text-darken-1">Minggu</a></li>
-            <li><a href="#!" class="blue-text text-darken-1">Bulan</a></li>
-            <li><a href="#!" class="blue-text text-darken-1">Tahun</a></li>
-            <li><a href="#!" class="blue-text text-darken-1">Semua</a></li>
-          </ul>
-
+    <ul class="tabs">
+      <li class="tab"><a class="blue-text text-darken-1 active" target="_self" href="/">Trending</a></li>
+      <li class="tab"><a class="blue-text text-darken-1" target="_self" href="/top">Top</a></li>
+      <li class="tab"><a class="blue-text text-darken-1" target="_self" href="/new">New</a></li>
+      @if(Auth::check())
+      <li class="tab"><a class="blue-text" href="#sub">Sub</a></li>
+      @endif
+      <div class="indicator blue" style="z-index:1"></div>
+    </ul>
+    <div class="section">
+      <!-- Dropdown Trigger -->
+      <center>
+        <a class='dropdown-button btn-floating btn-small waves-effect waves-light pink accent-3' href='#' data-activates='timeline-trending'><i class="material-icons left">query_builder</i></a></p>
+      </center>
+      <!-- Dropdown Structure -->
+      <ul id='timeline-trending' class='dropdown-content' style="min-width: 86px;">
+        <li><a href="/" class="pink-text text-accent-3">24 Jam</a></li>
+        <li><a href="#!" class="blue-text text-darken-1">Minggu</a></li>
+        <li><a href="#!" class="blue-text text-darken-1">Bulan</a></li>
+        <li><a href="#!" class="blue-text text-darken-1">Tahun</a></li>
+        <li><a href="#!" class="blue-text text-darken-1">Semua</a></li>
+      </ul>
+      @foreach($queries as $query)
+      <div class="card-panel">
+        <div class="row">
+        <div class="left">
+          <div class="chip">
+            &nbsp;
+            <a href="#" class="black-text" style="font-weight: 300;">
+              <img src="{{ asset('/svg_icons/perm_identity.svg') }}" alt="Username">
+              {{$query->username}}
+            </a>
+            &nbsp;
+          </div>
+          <div class="chip">
+            &nbsp;
+            <a href="#" class="black-text" style="font-weight: 300;">
+              <img src="{{ asset('/svg_icons/hashtag.svg') }}" alt="Topiq">
+              {{$query->threadname}}
+            </a>
+            &nbsp;
+          </div>
+        </div>
+        <div class="right" style="padding-top: 4px;">
+          <a href="#" class="black-text"><i class="material-icons" style="padding-right: 4px;">launch</i></a>
+          <a href="#" class="black-text"><i class="material-icons">present_to_all</i></a>
+          <a href="#" class="black-text"><i class="material-icons">more_vert</i></a>
+        </div>
+        <br>
+        <br>
+        <div style="font-weight: 300; font-size: 120%;">
+          <hr>
+          {{$query->title}}
+        </div>
         </div>
       </div>
-    </center>
+      @endforeach
+    </div>
   </div>
 </div>
     <!--

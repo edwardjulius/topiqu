@@ -19,7 +19,7 @@ class UserController extends Controller
     {
         // Query only non essential information from the user
         $currentUser = DB::table('users')
-            ->select('username', 'fullname', 'created_at', 'gender', 'dateofbirth', 'id')
+            ->select('username', 'fullname', 'created_at', 'id')
             ->where('username', $username)
             ->first();
 
