@@ -62,6 +62,7 @@
           @if($query->embed!='')
           <div align="center">
             {!!$query->embed!!}
+            <br>
           </div>
           @endif
           <div align="center">
