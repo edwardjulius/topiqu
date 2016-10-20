@@ -59,6 +59,11 @@
             @endif
           </div>
           <br>
+          @if($query->embed!='')
+          <div align="center">
+            {!$query->embed!}
+          </div>
+          @endif
           <div align="center">
             @if($query->voted==true)
             <a href="/api/devote/{{$query->id}}" class="black-text" style="font-weight: 300;">
@@ -93,9 +98,6 @@
           <div class="right">
             @if($query->url!='')
             <a href="{{$query->url}}" class="black-text"><i class="material-icons" style="padding-right: 4px;">launch</i></a>
-            @endif
-            @if($query->embed!='')
-            <a href="#" class="black-text"><i class="material-icons">present_to_all</i></a>
             @endif
             <a href="#" class="black-text"><i class="material-icons">more_vert</i></a>
             <br>
