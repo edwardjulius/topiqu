@@ -60,7 +60,7 @@
           </div>
           <br>
           @if($query->embed!='')
-          <div align="center embed-container">
+          <div align="center video-container" style="overflow: hidden;">
             {!!$query->embed!!}
             <br>
           </div>
