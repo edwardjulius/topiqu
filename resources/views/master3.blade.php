@@ -19,7 +19,7 @@
     <link rel="icon" href="{{ asset('/favicon.ico') }}">
 
   </head>
-  <body>
+  <body class="grey lighten-5">
     <style>
       input[type="search"] {height: 100% !important; padding-top: 21px;}
       body

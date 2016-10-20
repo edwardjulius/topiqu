@@ -64,7 +64,7 @@
             @endif
           </div>
           @if($query->embed!='')
-          <div style="overflow: hidden;" align="center">
+          <div style="overflow: hidden; width: 100%; height: auto;" align="center">
             {!!$query->embed!!}
             <br>
           </div>
