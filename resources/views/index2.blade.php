@@ -61,7 +61,7 @@
           <br>
           @if($query->embed!='')
           <div align="center">
-            {!$query->embed!}
+            {!!$query->embed!!}
           </div>
           @endif
           <div align="center">
