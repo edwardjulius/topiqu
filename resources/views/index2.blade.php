@@ -60,7 +60,7 @@
           </div>
           <br>
           @if($query->embed!='')
-          <div align="center">
+          <div align="center" style="overflow: hidden;"">
             {!!$query->embed!!}
             <br>
           </div>
@@ -111,6 +111,24 @@
     @endforeach
   </div>
 </div>
+<style>
+.embedwrapper {
+    float: none;
+    clear: both;
+    width: 100%;
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 25px;
+    height: 0;
+}
+.embedwrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+</style>
     <!--
   <div class="row">
     <ul class="tabs">
