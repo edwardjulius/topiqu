@@ -1,69 +1,130 @@
-<!-- topiqu.com -->
-@extends('master2')
+@extends('master3')
 @section('content')
-<style>
-  .demo-card-wide.mdl-card {
-    width: 512px;
-  }
-  .demo-card-wide > .mdl-card__title {
-    color: #fff;
-    height: 176px;
-    background: url('../assets/demos/welcome_card.jpg') center / cover;
-  }
-  .demo-card-wide > .mdl-card__menu {
-    color: #fff;
-  }
-</style>
-
-<div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
-  <div class="mdl-tabs__tab-bar">
-    <a href="#trending-panel" class="mdl-tabs__tab is-active">Trending</a>
-    <a href="#top-panel" class="mdl-tabs__tab">Top</a>
-    <a href="#new-panel" class="mdl-tabs__tab">New</a>
-  </div>
-  <div class="mdl-tabs__panel is-active" id="trending-panel">
+<div class="white">
+<div class="container">
+  <ul class="tabs">
+    <li class="tab"><a class="blue-text text-darken-1 active" target="_self" href="/">Trending</a></li>
+    <li class="tab"><a class="blue-text text-darken-1" target="_self" href="/top">Top</a></li>
+    <li class="tab"><a class="blue-text text-darken-1" target="_self" href="/new">New</a></li>
+    @if(Auth::check())
+    <li class="tab"><a class="blue-text" href="#sub">Sub</a></li>
+    @endif
+    <div class="indicator blue" style="z-index:1"></div>
+  </ul>
+</div>
+</div>
+<div class="grey lighten-5">
+<div class="container grey lighten-5">
+  <div class="section">
+    <!-- Dropdown Trigger -->
     <center>
-      <br>
-      <!-- Left aligned time below button -->
-      <button id="demo-menu-lower-left" class="mdl-button mdl-js-button mdl-button--icon">
-        <i class="material-icons">watch_later</i>
-      </button>
-      <ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="demo-menu-lower-left">
-        <li disabled class="mdl-menu__item">24 jam</li>
-        <li class="mdl-menu__item">1 minggu</li>
-        <li class="mdl-menu__item">1 bulan</li>
-        <li class="mdl-menu__item">1 tahun</li>
-        <li class="mdl-menu__item">semua</li>
-      </ul>
-      <!-- End of time button -->
-      <br>
-      <br>
-      @foreach ($queries as $query)
-      <div class="demo-card-wide mdl-card mdl-shadow--2dp">
-        <div class="mdl-card __title">
-          <h2 class="mdl-card__title-text"><a href="{{$query->url}}">{{$query->title}}</a></h2>
-        </div>
-        <div class="mdl-card__supporting-text">
-          {{$query->description}}
-        </div>
-        <div class="mdl-card__actions mdl-card--border">
-          <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-            Get Started
-          </a>
-        </div>
-        <div class="mdl-card__menu">
-          <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
-            <i class="material-icons">share</i>
-          </button>
+      <a class='dropdown-button btn-floating btn-small waves-effect waves-light pink accent-3' href='#' data-activates='timeline-trending'><i class="material-icons left">query_builder</i></a></p>
+    </center>
+    <!-- Dropdown Structure -->
+    <ul id='timeline-trending' class='dropdown-content' style="min-width: 86px;">
+      <li><a href="/" class="pink-text text-accent-3">24 Jam</a></li>
+      <li><a href="/weekly" class="blue-text text-darken-1">Minggu</a></li>
+      <li><a href="/monthly" class="blue-text text-darken-1">Bulan</a></li>
+      <li><a href="/yearly" class="blue-text text-darken-1">Tahun</a></li>
+      <li><a href="/alltime" class="blue-text text-darken-1">Semua</a></li>
+    </ul>
+    @foreach($queries as $query)
+    <div class="row">
+      <div class="col s12 m12 l8 offset-l2">
+        <div class="card-panel z-depth-2" style="overflow: hidden;">
+          <div class="center">
+            <div class="chip">
+              &nbsp;
+              <a href="#" class="black-text" style="font-weight: 300; font-size:120%;">
+                <img src="{{ asset('/svg_icons/perm_identity.svg') }}" alt="Username">
+                {{$query->username}}
+              </a>
+              &nbsp;
+            </div>
+            <div class="chip">
+              &nbsp;
+              <a href="#" class="black-text" style="font-weight: 300; font-size:120%;">
+                <img src="{{ asset('/svg_icons/hashtag.svg') }}" alt="Topiq">
+                {{$query->threadname}}
+              </a>
+              &nbsp;
+            </div>
+          </div>
+          <br>
+          <div style="font-weight: 300;">
+            <div align="center" style="font-size: 150%; word-wrap: break-word;"> 
+              {{$query->title}}
+            </div>
+            @if($query->description!='')
+            <div align="left" style="font-size:100%; word-wrap: break-word;">
+              <blockquote>
+                <p>{{$query->description}}</p>
+              </blockquote>
+            </div>
+            @endif
+          </div>
+          @if($query->embed!='')
+          <div style="overflow: hidden;" align="center">
+            {!!$query->embed!!}
+            <br>
+          </div>
+          @endif
+          <br>
+          <div align="center">
+            @if($query->voted==true)
+            <a href="/api/devote/{{$query->id}}" class="black-text" style="font-weight: 300;">
+              <div class="chip">
+                &nbsp;
+                <img src="{{ asset('/svg_icons/loved.svg') }}" alt="Loves">
+                {{$query->votecount}}
+                &nbsp;
+              </div>
+            </a>
+            @else
+            <a href="/api/vote/{{$query->id}}" class="black-text" style="font-weight: 300;">
+              <div class="chip" style="font-size:110%;">
+                &nbsp;
+                <img src="{{ asset('/svg_icons/love.svg') }}" alt="Loves">
+                {{$query->votecount}}
+                &nbsp;
+              </div>
+            </a>
+            @endif
+            <a href="#" class="black-text" style="font-weight: 300;">
+              <div class="chip" style="font-size:110%;">
+                &nbsp;
+                <img src="{{ asset('/svg_icons/comment.svg') }}" alt="Comments">
+                {{$query->commentcount}}
+                &nbsp;
+              </div>
+            </a>
+          </div>
+          <hr>
+          <div class="left" style="font-weight: 300; font-size: 90%; padding-top: 6px;">{{$query->timeline}}</div>
+          <div class="right">
+            @if($query->url!='')
+            <a href="{{$query->url}}" class="black-text"><i class="material-icons" style="padding-right: 4px;">launch</i></a>
+            @endif
+            <a href="" class="black-text dropdown-button" data-activates='{{$query->id}}_more_vert'><i class="material-icons">more_vert</i></a>
+            <ul id='{{$query->id}}_more_vert' class='dropdown-content' style="min-width: 86px;">
+              <li><a href="/" class="black-text">Share</a></li>
+              <li><a href="#!" class="black-text">Report</a></li>
+            </ul>
+            <br>
+          </div>
+          <br>
         </div>
       </div>
-      @endforeach
-    </center>
-  </div>
-  <div class="mdl-tabs__panel" id="top-panel">
-  </div>
-  <div class="mdl-tabs__panel" id="new-panel">
+    </div>
+    @endforeach
+    <div align="center"> 
+      {!! (new Landish\Pagination\Simple\Materialize($queries))->render() !!}
+    </div>
   </div>
 </div>
-<br>
+</div>
+<style>
+  .embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto; } 
+  .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+</style>
 @endsection

@@ -67,7 +67,7 @@ class BrowseController extends Controller
             $query->username = $username->username;
             $query->timeline = Carbon::parse($query->created_at)->diffForHumans();
         }
-        return view('index2', ['queries' => $queries]);
+        return view('index', ['queries' => $queries]);
     }
 
     public function indexWeekly(Request $request)

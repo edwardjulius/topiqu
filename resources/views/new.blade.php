@@ -51,6 +51,12 @@
             </div>
             @endif
           </div>
+          @if($query->embed!='')
+          <div style="overflow: hidden;" align="center">
+            {!!$query->embed!!}
+            <br>
+          </div>
+          @endif
           <br>
           <div align="center">
             @if($query->voted==true)
@@ -87,9 +93,6 @@
             @if($query->url!='')
             <a href="{{$query->url}}" class="black-text"><i class="material-icons" style="padding-right: 4px;">launch</i></a>
             @endif
-            @if($query->embed!='')
-            <a href="#{{$query->id}}-modal" class="black-text modal-trigger"><i class="material-icons" style="padding-right: 4px;">ondemand_video</i></a>
-            @endif
             <a href="" class="black-text dropdown-button" data-activates='{{$query->id}}_more_vert'><i class="material-icons">more_vert</i></a>
             <ul id='{{$query->id}}_more_vert' class='dropdown-content' style="min-width: 86px;">
               <li><a href="/" class="black-text">Share</a></li>
@@ -101,18 +104,6 @@
         </div>
       </div>
     </div>
-    @if($query->embed!='')
-    <div id="{{$query->id}}-modal" class="modal">
-      <div class="modal-content">
-        <div style="overflow: hidden;" align="center">
-          {!!$query->embed!!}
-        </div>
-      </div>
-      <div class="modal-footer">
-        <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat"><i class="material-icons">close</i></a>
-      </div>
-    </div>
-    @endif
     @endforeach
     <div align="center"> 
       {!! (new Landish\Pagination\Simple\Materialize($queries))->render() !!}
