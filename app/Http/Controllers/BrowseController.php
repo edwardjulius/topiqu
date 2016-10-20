@@ -73,7 +73,7 @@ class BrowseController extends Controller
     public function indexWeekly(Request $request)
     {
         $queries = DB::table('posts')
-            ->select('title', 'description', 'url', 'threadid', 'userid', 'created_at', 'id', 'totalcount', 'votecount', 'commentcount', 'created_at')
+            ->select('title', 'description', 'url', 'threadid', 'userid', 'created_at', 'id', 'totalcount', 'votecount', 'commentcount', 'created_at', 'embed')
             ->where('created_at', '>=', Carbon::now()->subWeek())
             ->orderBy('totalcount', 'desc')
             ->orderBy('created_at', 'desc')
@@ -114,6 +114,7 @@ class BrowseController extends Controller
 
             $query->threadname = $threadname->name;
             $query->username = $username->username;
+            $query->timeline = Carbon::parse($query->created_at)->diffForHumans();
         }
         return view('indexweekly', ['queries' => $queries]);
     }
@@ -121,7 +122,7 @@ class BrowseController extends Controller
     public function indexMonthly(Request $request)
     {
         $queries = DB::table('posts')
-            ->select('title', 'description', 'url', 'threadid', 'userid', 'created_at', 'id', 'totalcount', 'votecount', 'commentcount', 'created_at')
+            ->select('title', 'description', 'url', 'threadid', 'userid', 'created_at', 'id', 'totalcount', 'votecount', 'commentcount', 'created_at', 'embed')
             ->where('created_at', '>=', Carbon::now()->subMonth())
             ->orderBy('totalcount', 'desc')
             ->orderBy('created_at', 'desc')
@@ -162,6 +163,7 @@ class BrowseController extends Controller
 
             $query->threadname = $threadname->name;
             $query->username = $username->username;
+            $query->timeline = Carbon::parse($query->created_at)->diffForHumans();
         }
         return view('indexmonthly', ['queries' => $queries]);
     }
@@ -169,7 +171,7 @@ class BrowseController extends Controller
     public function indexYearly(Request $request)
     {
         $queries = DB::table('posts')
-            ->select('title', 'description', 'url', 'threadid', 'userid', 'created_at', 'id', 'totalcount', 'votecount', 'commentcount', 'created_at')
+            ->select('title', 'description', 'url', 'threadid', 'userid', 'created_at', 'id', 'totalcount', 'votecount', 'commentcount', 'created_at', 'embed')
             ->where('created_at', '>=', Carbon::now()->subYear())
             ->orderBy('totalcount', 'desc')
             ->orderBy('created_at', 'desc')
@@ -210,6 +212,7 @@ class BrowseController extends Controller
 
             $query->threadname = $threadname->name;
             $query->username = $username->username;
+            $query->timeline = Carbon::parse($query->created_at)->diffForHumans();
         }
         return view('indexyearly', ['queries' => $queries]);
     }
@@ -217,7 +220,7 @@ class BrowseController extends Controller
     public function indexAllTime(Request $request)
     {
         $queries = DB::table('posts')
-            ->select('title', 'description', 'url', 'threadid', 'userid', 'created_at', 'id', 'totalcount', 'votecount', 'commentcount', 'created_at')
+            ->select('title', 'description', 'url', 'threadid', 'userid', 'created_at', 'id', 'totalcount', 'votecount', 'commentcount', 'created_at', 'embed')
             ->orderBy('totalcount', 'desc')
             ->orderBy('created_at', 'desc')
             ->paginate(10);
@@ -257,6 +260,7 @@ class BrowseController extends Controller
 
             $query->threadname = $threadname->name;
             $query->username = $username->username;
+            $query->timeline = Carbon::parse($query->created_at)->diffForHumans();
         }
         return view('indexalltime', ['queries' => $queries]);
     }
@@ -264,7 +268,7 @@ class BrowseController extends Controller
     public function top(Request $request)
     {
         $queries = DB::table('posts')
-            ->select('title', 'description', 'url', 'threadid', 'userid', 'created_at', 'id', 'votecount', 'commentcount', 'created_at')
+            ->select('title', 'description', 'url', 'threadid', 'userid', 'created_at', 'id', 'votecount', 'commentcount', 'created_at', 'embed')
             ->orderBy('votecount', 'desc')
             ->orderBy('created_at', 'desc')
             ->paginate(10);
@@ -305,6 +309,7 @@ class BrowseController extends Controller
 
             $query->threadname = $threadname->name;
             $query->username = $username->username;
+            $query->timeline = Carbon::parse($query->created_at)->diffForHumans();
         }
         return view('indexalltime', ['queries' => $queries]);
     }

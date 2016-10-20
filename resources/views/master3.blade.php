@@ -174,11 +174,9 @@
         </div>
       </div>
     </header>
-    <main>
+    <main class="grey lighten-5">
       <!-- Content -->
-      <div class="content">
-        @yield('content')
-      </div>
+      @yield('content')
     </main>
     <footer class="page-footer grey darken-2">
       <div class="container grey darken-2 hide-on-med-and-down">
