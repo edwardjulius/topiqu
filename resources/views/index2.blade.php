@@ -26,7 +26,7 @@
     @foreach($queries as $query)
     <div class="row">
       <div class="col s12 m12 l8 offset-l2">
-        <div class="card-panel">
+        <div class="card-panel z-depth-2">
           <div class="center">
             <div class="chip">
               &nbsp;
@@ -65,6 +65,7 @@
             <br>
           </div>
           @endif
+          <br>
           <div align="center">
             @if($query->voted==true)
             <a href="/api/devote/{{$query->id}}" class="black-text" style="font-weight: 300;">
