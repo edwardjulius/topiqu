@@ -60,7 +60,7 @@
           </div>
           <br>
           @if($query->embed!='')
-          <div align="center" style="overflow: hidden;"">
+          <div align="center embed-container">
             {!!$query->embed!!}
             <br>
           </div>
@@ -112,22 +112,9 @@
   </div>
 </div>
 <style>
-.embedwrapper {
-    float: none;
-    clear: both;
-    width: 100%;
-    position: relative;
-    padding-bottom: 56.25%;
-    padding-top: 25px;
-    height: 0;
-}
-.embedwrapper iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
+<style>
+  .embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto; } 
+  .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
 </style>
     <!--
   <div class="row">
