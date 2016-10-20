@@ -35,7 +35,7 @@
           <div class="center">
             <div class="chip">
               &nbsp;
-              <a href="#" class="black-text" style="font-weight: 300;">
+              <a href="#" class="black-text" style="font-weight: 300; font-size:120%;">
                 <img src="{{ asset('/svg_icons/perm_identity.svg') }}" alt="Username">
                 {{$query->username}}
               </a>
@@ -43,7 +43,7 @@
             </div>
             <div class="chip">
               &nbsp;
-              <a href="#" class="black-text" style="font-weight: 300;">
+              <a href="#" class="black-text" style="font-weight: 300; font-size:120%;">
                 <img src="{{ asset('/svg_icons/hashtag.svg') }}" alt="Topiq">
                 {{$query->threadname}}
               </a>
@@ -56,19 +56,13 @@
               {{$query->title}}
             </div>
             @if($query->description!='')
-            <div align="left" style="font-size:120%; word-wrap: break-word;">
+            <div align="left" style="font-size:100%; word-wrap: break-word;">
               <blockquote>
                 <p>{{$query->description}}</p>
               </blockquote>
             </div>
             @endif
           </div>
-          @if($query->embed!='')
-          <div style="overflow: hidden;" align="center">
-            {!!$query->embed!!}
-            <br>
-          </div>
-          @endif
           <br>
           <div align="center">
             @if($query->voted==true)
@@ -82,7 +76,7 @@
             </a>
             @else
             <a href="/api/vote/{{$query->id}}" class="black-text" style="font-weight: 300;">
-              <div class="chip">
+              <div class="chip" style="font-size:110%;">
                 &nbsp;
                 <img src="{{ asset('/svg_icons/love.svg') }}" alt="Loves">
                 {{$query->votecount}}
@@ -91,7 +85,7 @@
             </a>
             @endif
             <a href="#" class="black-text" style="font-weight: 300;">
-              <div class="chip">
+              <div class="chip" style="font-size:110%;">
                 &nbsp;
                 <img src="{{ asset('/svg_icons/comment.svg') }}" alt="Comments">
                 {{$query->commentcount}}
@@ -105,6 +99,9 @@
             @if($query->url!='')
             <a href="{{$query->url}}" class="black-text"><i class="material-icons" style="padding-right: 4px;">launch</i></a>
             @endif
+            @if($query->embed!='')
+            <a href="#{{$query->id}}-modal" class="black-text modal-trigger"><i class="material-icons" style="padding-right: 4px;">ondemand_video</i></a>
+            @endif
             <a href="" class="black-text dropdown-button" data-activates='{{$query->id}}_more_vert'><i class="material-icons">more_vert</i></a>
             <ul id='{{$query->id}}_more_vert' class='dropdown-content' style="min-width: 86px;">
               <li><a href="/" class="black-text">Share</a></li>
@@ -116,6 +113,18 @@
         </div>
       </div>
     </div>
+    @if($query->embed!='')
+    <div id="{{$query->id}}-modal" class="modal">
+      <div class="modal-content">
+        <div style="overflow: hidden;" align="center">
+          {!!$query->embed!!}
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat"><i class="material-icons">close</i></a>
+      </div>
+    </div>
+    @endif
     @endforeach
     <div align="center"> 
       {!! (new Landish\Pagination\Simple\Materialize($queries))->render() !!}

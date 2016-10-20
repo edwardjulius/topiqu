@@ -166,8 +166,8 @@
           <center>
               <button class="btn btn-lg btn-primary btn-block pink accent-3" type="submit">Masuk</button>
             </center>
+            </form>
           </div>
-      </form>
           <div class="modal-footer">
             <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat"><i class="material-icons">close</i></a>
           </div>
