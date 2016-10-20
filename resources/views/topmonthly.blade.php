@@ -1,46 +1,130 @@
-<!-- topiqu.com -->
-<style>
-.dropdown {padding-top: 11px;}
-</style>
-@extends('master')
+@extends('master3')
 @section('content')
-@if(Auth::check())
-  @if(Auth::user()->confirmed==0)
-    <div class="alert alert-warning" role="alert">
-      <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
-      <span class="sr-only">Error:</span>
-        You have not authenticated your email address. Please check your email or click <a href="">here</a> to resend your verification code.
-    </div>
-  @endif
-@endif
-<ul class="nav nav-tabs">
-  <li role="presentation"><a href="/">Trending</a></li>
-  <li role="presentation" class="active"><a href="/top">Top</a></li>
-  <li role="presentation"><a href="/new">New</a></li>
-
-  <div class="dropdown pull-right">
-    <a id="drop1" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown"> 1 bulan <b class="caret"></b></a>
-    <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-      <li><a href=/top/>24 jam</a></li>
-      <li><a href="/top/weekly">1 minggu</a></li>
-      <li><a>1 bulan</a></li>
-      <li><a href="/top/yearly">1 tahun</a></li>
-      <li><a href="/top/alltime">semua</a></li>
+<div class="white">
+<div class="container">
+  <ul class="tabs">
+    <li class="tab"><a class="blue-text text-darken-1" target="_self" href="/">Trending</a></li>
+    <li class="tab"><a class="blue-text text-darken-1 active" target="_self" href="/top">Top</a></li>
+    <li class="tab"><a class="blue-text text-darken-1" target="_self" href="/new">New</a></li>
+    @if(Auth::check())
+    <li class="tab"><a class="blue-text" href="#sub">Sub</a></li>
+    @endif
+    <div class="indicator blue" style="z-index:1"></div>
+  </ul>
+</div>
+</div>
+<div class="grey lighten-5">
+<div class="container grey lighten-5">
+  <div class="section">
+    <!-- Dropdown Trigger -->
+    <center>
+      <a class='dropdown-button btn-floating btn-small waves-effect waves-light pink accent-3' href='#' data-activates='timeline-trending'><i class="material-icons left">query_builder</i></a></p>
+    </center>
+    <!-- Dropdown Structure -->
+    <ul id='timeline-trending' class='dropdown-content' style="min-width: 86px;">
+      <li><a href="/top" class="blue-text text-darken-1">24 Jam</a></li>
+      <li><a href="/top/weekly" class="blue-text text-darken-1">Minggu</a></li>
+      <li><a href="/top/monthly" class="pink-text text-accent-3">Bulan</a></li>
+      <li><a href="/top/yearly" class="blue-text text-darken-1">Tahun</a></li>
+      <li><a href="/top/alltime" class="blue-text text-darken-1">Semua</a></li>
     </ul>
-  </div>
-
-</ul>
-
-<div class="media">
-  <div class="media-left">
-    <a href="#">
-      <img class="media-object" data-src="..." alt="Generic placeholder image">
-    </a>
-  </div>
-  <div class="media-body">
-    <h4 class="media-heading">Top aligned media</h4>
-    <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
-    <p>Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+    @foreach($queries as $query)
+    <div class="row">
+      <div class="col s12 m12 l8 offset-l2">
+        <div class="card-panel z-depth-2" style="overflow: hidden;">
+          <div class="center">
+            <div class="chip">
+              &nbsp;
+              <a href="#" class="black-text" style="font-weight: 300;">
+                <img src="{{ asset('/svg_icons/perm_identity.svg') }}" alt="Username">
+                {{$query->username}}
+              </a>
+              &nbsp;
+            </div>
+            <div class="chip">
+              &nbsp;
+              <a href="#" class="black-text" style="font-weight: 300;">
+                <img src="{{ asset('/svg_icons/hashtag.svg') }}" alt="Topiq">
+                {{$query->threadname}}
+              </a>
+              &nbsp;
+            </div>
+          </div>
+          <br>
+          <div style="font-weight: 300;">
+            <div align="center" style="font-size: 150%; word-wrap: break-word;"> 
+              {{$query->title}}
+            </div>
+            @if($query->description!='')
+            <div align="left" style="font-size:120%; word-wrap: break-word;">
+              <blockquote>
+                <p>{{$query->description}}</p>
+              </blockquote>
+            </div>
+            @endif
+          </div>
+          @if($query->embed!='')
+          <div style="overflow: hidden;" align="center">
+            {!!$query->embed!!}
+            <br>
+          </div>
+          @endif
+          <br>
+          <div align="center">
+            @if($query->voted==true)
+            <a href="/api/devote/{{$query->id}}" class="black-text" style="font-weight: 300;">
+              <div class="chip">
+                &nbsp;
+                <img src="{{ asset('/svg_icons/loved.svg') }}" alt="Loves">
+                {{$query->votecount}}
+                &nbsp;
+              </div>
+            </a>
+            @else
+            <a href="/api/vote/{{$query->id}}" class="black-text" style="font-weight: 300;">
+              <div class="chip">
+                &nbsp;
+                <img src="{{ asset('/svg_icons/love.svg') }}" alt="Loves">
+                {{$query->votecount}}
+                &nbsp;
+              </div>
+            </a>
+            @endif
+            <a href="#" class="black-text" style="font-weight: 300;">
+              <div class="chip">
+                &nbsp;
+                <img src="{{ asset('/svg_icons/comment.svg') }}" alt="Comments">
+                {{$query->commentcount}}
+                &nbsp;
+              </div>
+            </a>
+          </div>
+          <hr>
+          <div class="left" style="font-weight: 300; font-size: 90%; padding-top: 6px;">{{$query->timeline}}</div>
+          <div class="right">
+            @if($query->url!='')
+            <a href="{{$query->url}}" class="black-text"><i class="material-icons" style="padding-right: 4px;">launch</i></a>
+            @endif
+            <a href="" class="black-text dropdown-button" data-activates='{{$query->id}}_more_vert'><i class="material-icons">more_vert</i></a>
+            <ul id='{{$query->id}}_more_vert' class='dropdown-content' style="min-width: 86px;">
+              <li><a href="/" class="black-text">Share</a></li>
+              <li><a href="#!" class="black-text">Report</a></li>
+            </ul>
+            <br>
+          </div>
+          <br>
+        </div>
+      </div>
+    </div>
+    @endforeach
+    <div align="center"> 
+      {!! (new Landish\Pagination\Simple\Materialize($queries))->render() !!}
+    </div>
   </div>
 </div>
+</div>
+<style>
+  .embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto; } 
+  .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+</style>
 @endsection

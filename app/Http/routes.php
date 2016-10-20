@@ -30,29 +30,19 @@ Route::get('/alltime', 'BrowseController@indexAllTime');
 Route::get('/top', 'BrowseController@top');
 
 // topiqu.com/top/weekly
-Route::get('/top/weekly', function () {
-    return view('topweekly');
-});
+Route::get('/top/weekly', 'BrowseController@topWeekly');
 
 // topiqu.com/top/monthly
-Route::get('/top/monthly', function () {
-    return view('topmonthly');
-});
+Route::get('/top/monthly', 'BrowseController@topMonthly');
 
 // topiqu.com/top/yearly
-Route::get('/top/yearly', function () {
-    return view('topyearly');
-});
+Route::get('/top/yearly', 'BrowseController@topYearly');
 
 // topiqu.com/top/alltime
-Route::get('/top/alltime', function () {
-    return view('topalltime');
-});
+Route::get('/top/alltime', 'BrowseController@topAllTime');
 
 // topiqu.com/new
-Route::get('/new', function () {
-    return view('new');
-});
+Route::get('/new', 'BrowseController@newBrowse');
 
 // topiqu.com/login
 Route::get('/login', function () {
@@ -94,7 +84,6 @@ Route::group(['middleware' => 'auth'], function () {
 // topiqu.com/inbox
 // topiqu.com/message/{username}
 // topiqu.com/settings
-// topiqu.com/dashboard
 // topiqu.com/post
 // topiqu.com/t/{topiq}/post
 // topiqu.com/t/{topiq}/{post}/comment

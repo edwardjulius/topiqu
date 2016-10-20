@@ -15,6 +15,8 @@
 		<br>
     @endforeach
 @endif
+<script src='https://www.google.com/recaptcha/api.js'></script>
+
 <form class="form-register" role="form" method="POST" action="{{ url('/register') }}">
 {{ csrf_field() }}
 	<div class="panel panel-default">
@@ -66,7 +68,7 @@
  			</label>
 			</div>
 			</center>
-
+			<div class="g-recaptcha" data-sitekey="6LfLwQkUAAAAAJpTYsr5LQjalfiV57GMm1dvuCZ1"></div>
 			<button class="btn btn-lg btn-primary btn-block" type="submit" onclick="validateForm()">Daftar</button>
 		</div>
 	</div>
