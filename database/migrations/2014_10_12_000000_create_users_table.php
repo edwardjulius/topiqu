@@ -17,7 +17,6 @@ class CreateUsersTable extends Migration
             $table->timestamps();
             $table->string('username')->unique();
             $table->string('email')->unique();
-            $table->string('fullname');
             $table->string('password');
             $table->boolean('confirmed')->default(0);
             $table->integer('followercount')->default(0);
