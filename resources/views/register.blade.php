@@ -33,7 +33,7 @@
 	        	</div>
 	        	<p>
 	        		<center>
-				      	<label style="font-weight: 300; font-size: 100%;" for="tos">Dengan mendaftar, Anda setuju dengan <br><a href="/tos" target="popup" onclick="window.open('../html-link.htm','name','width=600,height=400')">Syarat dan Ketentuan</a> situs ini.
+				      	<label style="font-weight: 400; font-size: 80%;" for="tos">Dengan mendaftar, Anda setuju dengan <a href="/tos" target="popup" onclick="window.open('../html-link.htm','name','width=600,height=400')">Syarat dan Ketentuan</a> situs ini.
 				      	</label>
 		   			</center>
 	   			</p>
